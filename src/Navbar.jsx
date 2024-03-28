@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 // import Difuminado from "./Difuminado"
 import classes from "/src/style/Navbar.module.css"
-import SubNav from "./SubNav"
+// import SubNav from "./SubNav"
 
 export default function Navbar() {
     
@@ -24,7 +24,7 @@ export default function Navbar() {
                 <Link className={classes.boton}>DISPONIBILIDAD</Link>
             {/* <Difuminado/> */}
         </nav>
-        <SubNav paginaActual="home"/>
+        {/* <SubNav paginaActual="home"/> */}
         </>
     )
 }
