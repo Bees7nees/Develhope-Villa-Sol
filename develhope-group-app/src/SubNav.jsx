@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Difuminado from './Difuminado';
-// import classes from ""
+import classes from "./src/style/SubNav.module.ccs"
 
 export default function SubNav({ paginaActual }) {
 
@@ -9,29 +9,30 @@ export default function SubNav({ paginaActual }) {
         nosotros:"",
         habitaciones: [
             "ÉSTANDAR", 
-            <span key="span1" className={classes.dividorVertical}></span>,
+            <span key="span1" className={classes.divisorVertical}></span>,
             "PREMIUM",
-            <span key="span2" className={classes.dividorVertical}></span>,
+            <span key="span2" className={classes.divisorVertical}></span>,
             "SUITE"],
         restaurantes: [
             "MENÚ",
-            <span key="span3" className={classes.dividorVertical}></span>,
+            <span key="span3" className={classes.divisorVertical}></span>,
             "RESTAURANTE",
+            <img src="/src/assets/chevrong.svg" className={classes.chevron}/>,
             {text: "SUNSET", subtext: "Gastronomía Andaluza"},
             {text: "BUFFET", subtext: "Gastronomía Continental"},
             {text: "SUNRISE", subtext: "Gastronomía Italiana"},
-            <span key="span4" className={classes.dividorVertical}></span>,
+            <span key="span4" className={classes.divisorVertical}></span>,
             "PLATOS ESTRELLAS",
-            <span key="span5" className={classes.dividorVertical}></span>,
+            <span key="span5" className={classes.divisorVertical}></span>,
             "HORARIOS",
-            <span key="span6" className={classes.dividorVertical}></span>,
+            <span key="span6" className={classes.divisorVertical}></span>,
             "GALERÍA"
         ],
         spa: [
             "TRATAMIENTOS",
-            <span key="span7" className={classes.dividorVertical}></span>,
+            <span key="span7" className={classes.divisorVertical}></span>,
             "HORARIO",
-            <span key="span8" className={classes.dividorVertical}></span>,
+            <span key="span8" className={classes.divisorVertical}></span>,
             "RESERVAR"], 
         galeria:"",
         contacto:""
@@ -41,7 +42,7 @@ export default function SubNav({ paginaActual }) {
     const sublinks = sublinksPagina[paginaActual] || [];
 
     return (
-        <div>
+        <div className={classes.subNavContenedor}>
             <span className={classes.divisor}></span>
             {sublinks.map((link, index) => (
                 <React.Fragment key={index}>

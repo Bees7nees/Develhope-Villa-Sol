@@ -1,0 +1,60 @@
+
+
+.subNavContenedor{
+    width: 100%;
+    height: 118px;
+    flex-shrink: 0;
+    background: #FFF;
+}
+
+
+.divisorVertical{
+    width: 1px;
+    height: 50px;
+    background: #213242;
+}
+
+.divisor{
+    width: 100%;
+    height: 3px;
+    background: #213242;
+}
+
+.dropdown{
+    width: 205px;
+    height: 212px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+}   
+
+
+.sublink{
+    color: #213242;
+    font-family: "Spline Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5px; /* 10.714% */
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.subtext{
+    color: #213242;
+    font-family: "Spline Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5px;
+    letter-spacing: 0.65px;
+}
+
+.chevorn{
+    width: 7.96px;
+    height: 15px;
+    transform: rotate(90.313deg);
+    flex-shrink: 0;
+    fill: #213242;
+}

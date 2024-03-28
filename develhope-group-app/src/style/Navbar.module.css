@@ -1,0 +1,33 @@
+
+
+.navbar{
+    width: 1437px;
+    height: 116px;
+    flex-shrink: 0;
+    background: #FFF;
+}
+
+.navTopContainer{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    left: 2rem;
+    height: 100%;
+}
+
+.logo{
+    width: 174px;
+    height: 116px;
+    flex-shrink: 0;
+}
+
+.navLinks{
+    color: #213242;
+    font-family: "Spline Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5px; /* 10.714% */
+    letter-spacing: 0.7px;
+}
