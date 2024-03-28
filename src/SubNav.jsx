@@ -1,12 +1,13 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Difuminado from './Difuminado';
-import classes from "./src/style/SubNav.module.ccs"
+import classes from "/src/style/SubNav.module.css"
 
 export default function SubNav({ paginaActual }) {
 
     const sublinksPagina = {
-        home: "",
-        nosotros:"",
+        home: [],
+        nosotros:[],
         habitaciones: [
             "ÉSTANDAR", 
             <span key="span1" className={classes.divisorVertical}></span>,
@@ -34,14 +35,15 @@ export default function SubNav({ paginaActual }) {
             "HORARIO",
             <span key="span8" className={classes.divisorVertical}></span>,
             "RESERVAR"], 
-        galeria:"",
-        contacto:""
+        galeria:[],
+        contacto:[]
     };
 
     // Obtén los enlaces correspondientes a la página actual
     const sublinks = sublinksPagina[paginaActual] || [];
 
     return (
+        <>
         <div className={classes.subNavContenedor}>
             <span className={classes.divisor}></span>
             {sublinks.map((link, index) => (
@@ -66,8 +68,9 @@ export default function SubNav({ paginaActual }) {
                     )}
                 </React.Fragment>
             ))}
-            <Difuminado/>
         </div>
+        <Difuminado/>
+        </>
     );
 }
 
