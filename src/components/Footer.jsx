@@ -35,10 +35,13 @@ export default function Footer() {
                 </section>
                 <div className={classes.placeholder}>contacto</div>
             </div>
+            <div className={classes.bottomContainer}>
+                <img className={classes.logo} src="/assets/logoWhite.svg" alt="logo"/>
                 <div className={classes.politicsContainer}>
                     <Link className={classes.politics}>Política & Privacidad</Link>
                     <p className={classes.politicstext}>Villa del sol. Todos los derechos reservados est-2024</p>
                 </div>
+            </div>
         </footer>
     )
 }

@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 116px;
+    height: 100px;
     flex-shrink: 0;
     background: #FFF;
 }
@@ -21,9 +21,10 @@
 }
 
 .logo{
-    width: 174px;
-    height: 116px;
+    width: 100px;
+    height: 110px;
     flex-shrink: 0;
+    margin-left: 2rem;
 }
 
 .navLinks{
@@ -41,14 +42,8 @@
     border-bottom: #314960;
 } */
 
-.bag{
-    width: 25px;
-    height: 25px;
-    flex-shrink: 0;
-    fill: #314960;
-    margin-inline: 1rem;
-}
 
 .boton{
-    margin-right: 40px;
+    margin-right: 2rem;
+    margin-left: 1rem;
 }
