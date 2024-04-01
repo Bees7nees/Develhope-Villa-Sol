@@ -1,19 +1,19 @@
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 //import SubNavHabitaciones from "./components/SubNavHabitaciones";
 //import Card from "./components/Card";
 //import SubNavRestaurante from "./components/SubNavRestaurante";
 //import SubNavSpa from "./components/SubNavSpa";
-//import Footer from "./components/Footer"
+import Footer from "./components/Footer"
 
 export default function App() {
 
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       {/* <SubNavRestaurante/> */}
       {/* <SubNavSpa/>  */}
       {/* <SubNavHabitaciones/> */}
-      {/* <Footer/> */}
+      <Footer/>
       {/* <Card/> */}
     </>
   )

@@ -3,7 +3,7 @@
 
 .footerContainer{
     background: #213242;
-    width: 100%;
+    width: auto;
     height: 600px;
 }
 
@@ -144,8 +144,57 @@
     justify-content: center;
     align-items: center;
     gap: 11.115px;
-    flex-shrink: 0;
     border-radius: 6.997px;
     background: #FFF;
     box-shadow: 0px -1.853px 5.558px -0.926px rgba(0, 0, 0, 0.10);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .footerContainer{
+        height: auto;
+    }
+    
+    .divisor{
+        width: 50%;
+        height: 3px;
+    }
+
+    .nosotrosFooter,
+    .reservasFooter,
+    .redesFooter {
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .downredes {
+        align-items: center;
+    }
+
+    .titulo {
+        margin-top: 1.5rem; 
+    }
+
+    .bottomContainer {
+        flex-direction: column;
+        align-items: center;
+        gap:3rem;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .titulo {
+        margin-top: 2rem; 
+    }
+
+    .placeholder {
+        padding: 1.5rem; 
+    }
 }
