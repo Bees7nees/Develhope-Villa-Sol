@@ -4,5 +4,5 @@
     display: block;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, transparent, rgb(255, 255, 255) 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.00) 10%, rgb(255, 255, 255) 95%);
 }
