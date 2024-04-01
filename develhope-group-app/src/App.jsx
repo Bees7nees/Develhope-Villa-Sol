@@ -1,12 +1,14 @@
-import "./App.css";
-import { FeedbackCard } from "./Components/FeedbackCard";
+import { useState } from 'react'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
-      <FeedbackCard className={"componente-tarjeta-de-opini-n"} />
+      
     </>
-  );
+  )
 }
 
-export default App;
+export default App
