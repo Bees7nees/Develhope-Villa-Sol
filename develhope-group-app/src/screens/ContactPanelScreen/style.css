@@ -1,0 +1,17 @@
+.contact-panel-screen {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 16.35px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 17px;
+  height: 626px;
+  justify-content: flex-end;
+  padding: 30px 34.06px 27px;
+  position: relative;
+}
+
+.contact-panel-screen .contact-panel-component {
+  flex: 1 !important;
+  flex-grow: 1 !important;
+}

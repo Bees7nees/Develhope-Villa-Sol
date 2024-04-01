@@ -1,0 +1,43 @@
+.enter-username {
+  background-color: var(--grayscalewhite);
+  border: 1px solid;
+  border-radius: 9px;
+  box-shadow: 0px 2px 2px #0000002e;
+  height: 45px;
+  width: 350px;
+}
+
+.enter-username .content {
+  align-items: center;
+  display: inline-flex;
+  gap: 5px;
+  left: 9px;
+  position: relative;
+  top: 9px;
+}
+
+.enter-username .div-2 {
+  font-family: "Montserrat", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.enter-username.status-3-inactive {
+  border-color: var(--grayscaleshaded-white);
+}
+
+.enter-username.status-3-active {
+  border-color: var(--feedform-1primaryblue);
+}
+
+.enter-username.status-3-inactive .div-2 {
+  color: var(--grayscalepale-gray);
+}
+
+.enter-username.status-3-active .div-2 {
+  color: var(--grayscaletinted-black);
+}
