@@ -5,7 +5,7 @@
     gap: 10px;
     border-radius: 10px;
     color: #E8B51A;
-    border: 2px solid transparent #E8B51A;
+    border: 2px solid #E8B51A;
     background:  #FFFF;
     font-size: 1em;
     font-weight: 500;
@@ -14,7 +14,7 @@
 }
 
 .buttonY:hover {
-    border: 2px solid transparent  #FFFF;
+    border: 2px solid #FFFF;
     background: #F0CE66;
     color: #FFFF;
 }
@@ -25,7 +25,7 @@
     align-items: flex-start;
     gap: 10px;
     border-radius: 10px;
-    border: 2px solid transparent #D8E2EB;
+    border: 2px solid #d8e2eb00;
     background-color: #355069;
     color: #FFFF;
     font-size: 1em;
@@ -35,6 +35,6 @@
 }
 
 .buttonB:hover {
-    border: 2px solid transparent  #FFFF;
+    border: 2px solid #FFFF;
     background-color: #54789b;
 }

@@ -1,7 +1,7 @@
 .title {
     display: flex;
     width: 1276px;
-    height: 198px;
+    height: 30px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -16,7 +16,7 @@
 .description { 
     display: flex;
     width: 1222px;
-    height: 320px;
+    height: 200px;
     flex-direction: column;
     justify-content: center;
     text-align: center;

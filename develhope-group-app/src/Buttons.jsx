@@ -1,10 +1,10 @@
 import classes from "./buttons.module.css"
 
-export default function Button (label, onClick) {
+export default function Button ({label, onClick, type}) {
     return (
     <>
-    <button className={classes.buttonY} onClick={onClick}>Botón Y</button>
-    <button className={classes.buttonB} onClick={onClick}>Botón B</button>
+    {type=='yellow' && <button className={classes.buttonY} onClick={onClick}><strong>{label}</strong></button>}
+    {type=='blue' && <button className={classes.buttonB} onClick={onClick}><strong>{label}</strong></button>}
     </>
     )
-}
+} 
