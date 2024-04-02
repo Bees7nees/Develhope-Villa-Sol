@@ -1,0 +1,50 @@
+@import url(font.css);
+
+
+.contenedor{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+}
+
+.contenedorTexto{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    flex-direction: column;
+}
+
+.comillas{
+    color: #213242;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+}
+
+.mensaje{
+    color: #213242;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+}
+
+.cargo{
+    color: #213242;
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    margin-top: -0.5rem;
+}

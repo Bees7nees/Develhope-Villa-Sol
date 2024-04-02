@@ -1,0 +1,11 @@
+
+
+.contenedor{
+    height: 33rem;
+    width: 60.5%;
+    display: inline-flex;
+    padding: 3.125rem 19.8125rem 6.6875rem 17.6875rem;
+    align-items: center;
+    background: lightgray url(/assets/tomate.png) 50% / cover no-repeat;
+    opacity: 0.5;
+}
