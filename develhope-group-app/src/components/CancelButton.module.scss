@@ -1,0 +1,22 @@
+.cancel-button {
+  all: unset;
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: inline-flex;
+  gap: 13.62px;
+  padding: 13.62px;
+  position: relative;
+}
+.cancel-button .text-wrapper {
+  color: var(--blue-300);
+  font-family: var(--text-large-font-family);
+  font-size: var(--text-large-font-size);
+  font-style: var(--text-large-font-style);
+  font-weight: var(--text-large-font-weight);
+  letter-spacing: var(--text-large-letter-spacing);
+  line-height: var(--text-large-line-height);
+  margin-top: -1.36px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
