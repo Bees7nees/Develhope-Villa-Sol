@@ -2,7 +2,7 @@
 
 
 .contenedor{
-    width: 100%;
+    width: 100vw;
     height: 30rem;
     display: flex;
     align-items: center;

@@ -12,7 +12,7 @@ export default function LazyLoad() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 2
+        
     };
 
 
@@ -22,7 +22,7 @@ export default function LazyLoad() {
         <h3 className={classes.titulo}>PLATOS ESTRELLAS</h3>
             <div className="slider-container">
                 <div className={classes.contenedorSlides}>
-                <Slider {...settings}>
+                <Slider {...settings}> 
                     <div>
                         <img src="/assets/croquetas.jpg" className={classes.imagen} alt="Croquetas"/>
                     </div>
@@ -38,7 +38,7 @@ export default function LazyLoad() {
                     <div>
                         <img src="/assets/tapas.jpg" className={classes.imagen} alt="Tapas"/>
                     </div>
-                </Slider>
+                </Slider> 
                 </div>
             </div>
         </section>
