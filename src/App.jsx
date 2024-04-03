@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 //import SubNavHabitaciones from "./components/SubNavHabitaciones";
-import Card from "./components/Card";
+//import Card from "./components/Card";
 //import SubNavRestaurante from "./components/SubNavRestaurante";
 //import SubNavSpa from "./components/SubNavSpa";
 // import Footer from "./components/Footer"
@@ -8,13 +8,15 @@ import Card from "./components/Card";
 // import HorarioRestaurante from "./components/HorarioRestaurante";
 
 // import Mensaje from "./components/Mensaje";
-// import LazyLoad from "./components/LazyLoad"
+//import CarouselMenu from "./components/CarouselMenu"
+import CarouselMenu from "./components/CarouselMenu"
+//import LazyLoad from "./components/CarouselMenu"
 
 export default function App() {
 
   return (
     <>
-      <Navbar/> 
+      {/* <Navbar/>  */}
       {/* <SubNavRestaurante/> */}
       {/* <SubNavSpa/>  */}
       {/* <SubNavHabitaciones/> */}
@@ -22,8 +24,8 @@ export default function App() {
       <Card/>
       <TipoMenu/> 
       <HorarioRestaurante/>
-      <Mensaje/>
-      <LazyLoad/> */}
+      <Mensaje/>*/}
+      <CarouselMenu/> 
     </>
   )
 }
