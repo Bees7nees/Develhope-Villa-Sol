@@ -8,11 +8,11 @@ import SubNavSpa from "./SubNavSpa"
 
 export default function Navbar() {
     
-        // Define una función para obtener el subnav correspondiente según el enlace seleccionado
+    
         function getSubNav() {
-            // Obtiene la ruta actual
+
             const currentPath = window.location.pathname;
-            // Verifica el enlace actual y devuelve el subnav correspondiente
+
             switch (currentPath) {
                 case '/restauranteSunset':
                     return <SubNavRestaurante />;

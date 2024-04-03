@@ -1,4 +1,4 @@
-//import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 //import SubNavHabitaciones from "./components/SubNavHabitaciones";
 //import Card from "./components/Card";
 //import SubNavRestaurante from "./components/SubNavRestaurante";
@@ -7,14 +7,14 @@
 //import TipoMenu from "./components/TipoMenu";
 //import HorarioRestaurante from "./components/HorarioRestaurante";
 
-import CarouselMenu from "./components/CarouselMenu";
+//import CarouselMenu from "./components/CarouselMenu";
 //import Mensaje from "./components/Mensaje";
 
 export default function App() {
 
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/> 
       {/* <SubNavRestaurante/> */}
       {/* <SubNavSpa/>  */}
       {/* <SubNavHabitaciones/> */}
@@ -23,7 +23,7 @@ export default function App() {
       <TipoMenu/> */}
       {/* <HorarioRestaurante/> */}
       {/* <Mensaje/> */}
-      <CarouselMenu/>
+      {/* <CarouselMenu/> */}
     </>
   )
 }
