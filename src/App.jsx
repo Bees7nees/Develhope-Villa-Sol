@@ -7,9 +7,11 @@
 // import TipoMenu from "./components/TipoMenu";
 // import HorarioRestaurante from "./components/HorarioRestaurante";
 
+import MenuMobile from "./components/MenuMobile";
+
 // import Mensaje from "./components/Mensaje";
 //import CarouselMenu from "./components/CarouselMenu"
-import CarouselMenu from "./components/CarouselMenu"
+//import CarouselMenu from "./components/CarouselMenu"
 //import LazyLoad from "./components/CarouselMenu"
 
 export default function App() {
@@ -25,7 +27,8 @@ export default function App() {
       <TipoMenu/> 
       <HorarioRestaurante/>
       <Mensaje/>*/}
-      <CarouselMenu/> 
+      {/* <CarouselMenu/>  */}
+      <MenuMobile/>
     </>
   )
 }
