@@ -1,0 +1,98 @@
+@import url(font.css);
+
+
+.navbar{
+    max-width: 46rem;
+    width: 100%;
+    height: 21rem;
+    background: #213242;
+    display: none;
+    flex-shrink: 0;
+    flex-direction: column;
+    z-index: 2;
+    top:0;
+    position: absolute;
+    transition: heigth ease 4s;
+}
+
+
+.navTopContainer{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 0.8rem;
+}
+
+
+.closeButton{
+    background-color: transparent;
+    border: none;
+    width: 25px;
+    margin-top: 1rem;
+    align-self: flex-end; 
+    margin-right: 1rem;
+    transition: opacity ease 0.5s;
+}
+
+.svg{
+    width: 100%;
+}
+
+.navLinks{
+    color: white;
+    font-family: "Spline Sans", sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0.09375rem; 
+    letter-spacing: 0.04375rem;
+    text-decoration: none;
+}
+
+
+.contenedorBurger{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-shrink: 0;
+    z-index: 2;
+    top: 0;
+    position: absolute;
+    transition: heigth ease 4s;
+    padding-top: 2.5rem;
+}
+
+
+.buttonBurger{
+    background-color: transparent;
+    border: none;
+    width: 25px;
+    align-self: flex-end; 
+    margin-right: 2rem;
+    transition: opacity ease 0.5s;
+}
+
+
+.burgerIcon{
+    fill: #B08912;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 430px){
+
+    .navbar{
+        height: 18rem;
+        gap: 0.5rem;
+    }
+} 
