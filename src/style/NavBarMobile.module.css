@@ -6,7 +6,7 @@
     width: 100%;
     height: 21rem;
     background: #213242;
-    display: none;
+    display: flex;
     flex-shrink: 0;
     flex-direction: column;
     z-index: 2;

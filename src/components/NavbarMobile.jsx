@@ -34,6 +34,7 @@ export default function NavbarMobile() {
         return (
             // isMobile &&  (
                 visible &&
+            <>
             <nav className={classes.navbar}>
                 <button className={classes.closeButton} onClick={handleCloseButton}>
                     <img src="/assets/closeButton.svg" className={classes.svg}/>
@@ -48,6 +49,12 @@ export default function NavbarMobile() {
                     <li><Link className={classes.navLinks} to="/contacto">CONTACTO</Link></li>
                 </ul>
             </nav>
+            {/* <nav className={classes.contenedorBurger}>
+                <button className={classes.buttonBurger}>
+                    <img src="/assets/burgerMenu.svg" className={classes.burgerIcon}/>
+                </button>
+            </nav> */}
+            </>
             )
         // )
 }

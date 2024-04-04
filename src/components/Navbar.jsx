@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import Difuminado from "./Difuminado"
 import style from "/src/style/Navbar.module.css"
 import classes from "/src/style/SubNav.module.css"
-import mobile from "/src/style/NavBarMobile.module.css"
 import { useState } from "react";
 
 
@@ -98,11 +97,6 @@ export default function Navbar() {
                 <Link className={style.boton}>DISPONIBILIDAD</Link>
         </nav>
         {(verHabitacionesSubNav || verRestauranteSubNav || verSpaSubNav) && <Difuminado/>}
-        <nav className={mobile.contenedorBurger}>
-            <button className={mobile.buttonBurger}>
-                <img src="/assets/burgerMenu.svg" className={mobile.burgerIcon}/>
-            </button>
-        </nav>
         </>
     )
 }
