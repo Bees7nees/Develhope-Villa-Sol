@@ -1,0 +1,44 @@
+.comments,
+.comments * {
+  box-sizing: border-box;
+}
+.comments {
+  flex-shrink: 0;
+  height: 163.5px;
+  position: relative;
+}
+.text-section {
+  background: var(--grayscale-white, #ffffff);
+  border-radius: 12.26px;
+  border-style: solid;
+  border-color: var(--blue-200, #8aa8c4);
+  border-width: 1.36px;
+  width: 476.88px;
+  height: 163.5px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 2.72px 2.72px 0px rgba(0, 0, 0, 0.18);
+}
+.more-tool {
+  height: auto;
+  position: absolute;
+  left: 449.62px;
+  top: 136.25px;
+  overflow: visible;
+}
+.add-your-comments {
+  color: var(--blue-200, #8aa8c4);
+  text-align: left;
+  font-family: var(
+    --text-regular-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-regular-font-size, 16px);
+  line-height: var(--text-regular-line-height, 24px);
+  font-weight: var(--text-regular-font-weight, 400);
+  position: absolute;
+  left: 13.62px;
+  top: 13.62px;
+}

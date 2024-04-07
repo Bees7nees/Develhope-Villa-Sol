@@ -1,0 +1,74 @@
+.email-input,
+.email-input * {
+  box-sizing: border-box;
+}
+.email-input {
+  flex-shrink: 0;
+  height: 88.56px;
+  position: relative;
+}
+.email-address {
+  color: var(--black, #1c1b1f);
+  text-align: left;
+  font-family: var(
+    --text-regular-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-regular-font-size, 16px);
+  line-height: var(--text-regular-line-height, 24px);
+  font-weight: var(--text-regular-font-weight, 400);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.enter-address-placeholder {
+  width: 476.88px;
+  height: 61.31px;
+  position: absolute;
+  left: 0px;
+  top: 27.25px;
+}
+.rectangle-8 {
+  background: var(--grayscale-white, #ffffff);
+  border-radius: 12.26px;
+  border-style: solid;
+  border-color: var(--blue-200, #8aa8c4);
+  border-width: 1.36px;
+  width: 476.88px;
+  height: 61.31px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 2.72px 2.72px 0px rgba(0, 0, 0, 0.18);
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 6.81px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 13.62px;
+  top: 13.62px;
+}
+.email {
+  flex-shrink: 0;
+  width: 35.42px;
+  height: 35.42px;
+  position: relative;
+  overflow: visible;
+}
+.enter-email-address {
+  color: var(--blue-100, #b1c5d8);
+  text-align: left;
+  font-family: var(
+    --text-regular-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-regular-font-size, 16px);
+  line-height: var(--text-regular-line-height, 24px);
+  font-weight: var(--text-regular-font-weight, 400);
+  position: relative;
+}

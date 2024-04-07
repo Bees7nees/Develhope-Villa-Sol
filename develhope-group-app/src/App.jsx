@@ -1,15 +1,11 @@
 import './App.css'
-import { CancelButton } from './components/CancelButton'
-import { ContactPromptButtons } from './components/ContactPromptButtons'
-import { SubmitButton } from './components/SubmitButton'
+import { ContactPrompt } from './components/ContactPrompt'
 
 function App() {
 
   return (
     <>
-      <CancelButton />
-      <SubmitButton />
-      <ContactPromptButtons />
+      <ContactPrompt />
     </>
   )
 }

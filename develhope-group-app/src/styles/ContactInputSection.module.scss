@@ -1,0 +1,13 @@
+.input-section,
+.input-section * {
+  box-sizing: border-box;
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 27.25px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
