@@ -1,8 +1,8 @@
 import { CancelButton } from "./CancelButton";
 import { SubmitButton } from "./SubmitButton";
-import classes from "./ContactPrompButtons.module.scss";
+import classes from "../styles/ContactPromptButtons.module.scss";
 
-export const ContactPrompButtons = () => {
+export const ContactPromptButtons = () => {
     return (
         <div className={classes["button"]}>
             <CancelButton />

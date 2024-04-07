@@ -1,4 +1,4 @@
-import classes from "./CancelButton.module.scss";
+import classes from "../styles/CancelButton.module.scss";
 
 export const CancelButton = () => {
   return (

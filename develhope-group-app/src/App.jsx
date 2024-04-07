@@ -1,6 +1,6 @@
 import './App.css'
 import { CancelButton } from './components/CancelButton'
-import { ContactPrompButtons } from './components/ContactPrompButtons'
+import { ContactPromptButtons } from './components/ContactPromptButtons'
 import { SubmitButton } from './components/SubmitButton'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <CancelButton />
       <SubmitButton />
-      <ContactPrompButtons />
+      <ContactPromptButtons />
     </>
   )
 }
