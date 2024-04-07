@@ -1,6 +1,7 @@
 import { ContactInputSection } from "./ContactInputSection";
 import { ContactNavSection } from "./ContactNavSection";
 import { ContactPromptButtons } from "./ContactPromptButtons";
+import { ContactCommentSection } from "./ContactCommentSection";
 import classes from "../styles/ContactPrompt.module.scss";
 
 export function ContactPrompt() {
@@ -9,6 +10,7 @@ export function ContactPrompt() {
       <div className={classes["contact-prompt"]}>
         <ContactNavSection />
         <ContactInputSection />
+        <ContactCommentSection />
         <ContactPromptButtons />
       </div>
     </section>

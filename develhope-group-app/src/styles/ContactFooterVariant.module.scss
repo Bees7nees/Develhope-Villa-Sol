@@ -1,0 +1,185 @@
+.contact-footer-variants,
+.contact-footer-variants * {
+  box-sizing: border-box;
+}
+.contact-footer-variants {
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 31.025rem;
+  height: 25.03338rem;
+  padding: 1.3125rem 0rem;
+  position: relative;
+  box-shadow: 0px -2.65px 7.94px -1.32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10.59px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.title {
+  color: var(--gray-900, #18181b);
+  text-align: center;
+  font-family: var(
+    --title-large-font-family,
+    "PlayfairDisplay-Bold",
+    sans-serif
+  );
+  font-size: var(--title-large-font-size, 32px);
+  line-height: var(--title-large-line-height, 40px);
+  font-weight: var(--title-large-font-weight, 700);
+  position: relative;
+  align-self: stretch;
+}
+.description {
+  color: var(--gray-600, #52525b);
+  text-wrap: balance;
+  text-align: center;
+  font-family: var(
+    --text-large-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-large-font-size, 20px);
+  line-height: var(--text-large-line-height);
+  font-weight: var(--text-large-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+}
+.input-section {
+  flex-shrink: 0;
+  width: 313px;
+  height: 145.32px;
+  position: relative;
+}
+.rectangle-9 {
+  background: var(--grayscale-white, #ffffff);
+  border-radius: 12.26px;
+  border-style: solid;
+  border-color: var(--blue-200, #8aa8c4);
+  border-width: 1.36px;
+  width: 313px;
+  height: 61px;
+  position: absolute;
+  left: 0px;
+  top: 84.05px;
+  box-shadow: 0px 2.72px 2.72px 0px rgba(0, 0, 0, 0.18);
+}
+.mail-content {
+  display: flex;
+  flex-direction: row;
+  gap: 6.81px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 13.25px;
+  top: 97.62px;
+}
+.email {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  position: static;
+}
+.rectangle-801 {
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--blue-200, #8aa8c4);
+  border-width: 1.2px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.mail {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 5.81px;
+  top: 5.43px;
+  overflow: visible;
+}
+.placeholder {
+  color: var(--blue-100, #b1c5d8);
+  text-align: left;
+  font-family: var(
+    --text-regular-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-regular-font-size, 16px);
+  line-height: var(--text-regular-line-height, 24px);
+  font-weight: var(--text-regular-font-weight, 400);
+  position: relative;
+}
+.rectangle-8 {
+  background: var(--grayscale-white, #ffffff);
+  border-radius: 12.26px;
+  border-style: solid;
+  border-color: var(--blue-200, #8aa8c4);
+  border-width: 1.36px;
+  width: 313px;
+  height: 61px;
+  position: absolute;
+  left: 0.38px;
+  top: 0.05px;
+  box-shadow: 0px 2.72px 2.72px 0px rgba(0, 0, 0, 0.18);
+}
+.user-content {
+  display: flex;
+  flex-direction: row;
+  gap: 6.81px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 13.62px;
+  top: 13.62px;
+}
+.user {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  position: static;
+}
+.supervisor-account {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 5.81px;
+  top: 5.43px;
+  overflow: visible;
+}
+.submit-button {
+  background: var(--blue-300, #628bb1);
+  border-radius: 10.9px;
+  padding: 9.54px 14.99px 9.54px 14.99px;
+  display: flex;
+  flex-direction: row;
+  gap: 13.62px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 204.38px;
+  height: 61.31px;
+  position: relative;
+  box-shadow: 1.36px 2.72px 2.72px 0px rgba(0, 0, 0, 0.4);
+}
+.write-message {
+  color: var(--grayscale-white, #ffffff);
+  text-align: left;
+  font-family: "SplineSansMono-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
