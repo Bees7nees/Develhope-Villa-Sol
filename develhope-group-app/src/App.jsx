@@ -1,12 +1,12 @@
-import { useState } from 'react'
 import './App.css'
+import { ReviewStar } from './components/ReviewStar'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      
+      <ReviewStar style="filled" />
+      <ReviewStar style="unfilled" />
     </>
   )
 }
