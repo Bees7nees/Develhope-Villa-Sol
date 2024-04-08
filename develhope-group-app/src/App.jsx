@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Imagen from "./Imagen"
+import Banner from "./Banner"
 import TitleDescription from './TitleDescription'
 import Button from './Buttons'
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <Imagen fotomain="/src/assets/fotomain.png" fotoplato="/src/assets/fotoplato.png"/>
+    <Banner fotomain="/src/assets/fotomain.png" />
     
     <TitleDescription
       title={"Hospédese en uno de los mejores hoteles en Cádiz"} 
