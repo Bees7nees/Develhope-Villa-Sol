@@ -19,8 +19,8 @@ export default function Footer() {
                 <section className={classes.reservasFooter}>
                     <Link className={classes.titulo}>RESERVAR</Link> 
                         <div className={classes.downreserva}>
-                            <Link className={classes.links}>Spa & Wellness Center</Link>
                             <Link className={classes.links}>Traslado aeropuerto y transporte</Link>
+                            <Link className={classes.links}>Spa & Wellness Center</Link>
                             <Link className={classes.links}>Lugares de interés</Link>
                         </div>
                 </section>

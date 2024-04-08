@@ -1,7 +1,8 @@
 @import url(font.css);
 
 body{
-    background-color: #314960;
+    /* background-color: #314960; */
+    background-color: #FFF;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -19,6 +20,7 @@ body{
     background: white;
     position: absolute;
     border-top: 8px solid #314960;
+    transition: ease 0.8s;
 }
 
 .listContainer{
@@ -46,7 +48,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    top: 6rem;
+    top: 4rem;
     margin-left: -2rem;
     padding: 1rem 2rem 2rem 0.5rem;
     gap: 1.5rem;

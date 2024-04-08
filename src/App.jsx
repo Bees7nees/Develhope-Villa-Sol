@@ -1,36 +1,35 @@
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 //import SubNavHabitaciones from "./components/SubNavHabitaciones";
 //import Card from "./components/Card";
 //import SubNavRestaurante from "./components/SubNavRestaurante";
 //import SubNavSpa from "./components/SubNavSpa";
-// import Footer from "./components/Footer"
-// import TipoMenu from "./components/TipoMenu";
+//import Footer from "./components/Footer"
+//import TipoMenu from "./components/TipoMenu";
 // import HorarioRestaurante from "./components/HorarioRestaurante";
 
 //import MenuMobile from "./components/MenuMobile";
-import NavbarMobile from "./components/NavbarMobile";
+//import NavbarMobile from "./components/NavbarMobile";
 
-// import Mensaje from "./components/Mensaje";
-//import CarouselMenu from "./components/CarouselMenu"
-//import CarouselMenu from "./components/CarouselMenu"
+//import Mensaje from "./components/Mensaje";
+import CarouselMenu from "./components/CarouselMenu"
 //import LazyLoad from "./components/CarouselMenu"
 
 export default function App() {
 
   return (
     <>
-      <Navbar/> 
+      {/* <Navbar/>  */}
       {/* <SubNavRestaurante/> */}
       {/* <SubNavSpa/>  */}
       {/* <SubNavHabitaciones/> */}
-      {/* <Footer/>
-      <Card/>
-      <TipoMenu/> 
-      <HorarioRestaurante/>
-      <Mensaje/>*/}
-      {/* <CarouselMenu/>  */}
+      {/* <Footer/>  */}
+      {/* <Card/> */}
+      {/* <TipoMenu/>  */}
+      {/* <HorarioRestaurante/> */}
+      {/* <Mensaje/> */}
+      <CarouselMenu/> 
       {/* <MenuMobile/> */}
-      <NavbarMobile/>
+      {/* <NavbarMobile/> */}
     </>
   )
 }

@@ -19,8 +19,7 @@
 }
 
 .nosotrosFooter,
-.reservasFooter,
-.redesFooter{
+.reservasFooter{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -91,6 +90,8 @@
     fill: #E8B51A;
 }
 
+
+
 .bottomContainer{
     display: flex;
     flex-direction: row;
@@ -103,10 +104,8 @@
 .logo{
     width: 100px;
     height: 100%;
-    flex-shrink: 0;
     margin-left: 0.5rem;
 }
-
 
 
 .politicsContainer{
@@ -152,10 +151,13 @@
 
 
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
+
     .footer {
         flex-direction: column; 
         align-items: center;
+        padding: 0;
+        gap: 50px;
     }
 
     .footerContainer{
@@ -163,7 +165,7 @@
     }
     
     .divisor{
-        width: 50%;
+        width: 90%;
         height: 3px;
     }
 
@@ -172,30 +174,32 @@
     .redesFooter {
         align-items: center; 
         text-align: center; 
+        gap: 3rem;
     }
 
-    .downredes {
+
+    .downredes,
+    .downreserva,
+    .downcontacto {
         align-items: center;
+        gap: 1rem;
     }
 
     .titulo {
-        margin-top: 1.5rem; 
+        margin-top: 0.2rem; 
     }
+
 
     .bottomContainer {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap:3rem;
-    }
-}
-
-
-@media only screen and (max-width: 480px) {
-    .titulo {
-        margin-top: 2rem; 
+        padding: 1rem;
+        margin-top: 4rem;
     }
 
     .placeholder {
-        padding: 1.5rem; 
+        display: none;
     }
 }
+
