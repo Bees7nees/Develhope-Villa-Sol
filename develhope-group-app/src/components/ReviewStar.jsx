@@ -1,14 +1,12 @@
-import PropTypes from "prop-types"
-import classes from "../styles/ReviewStar.module.scss"
+import PropTypes from "prop-types";
+import classes from "../styles/ReviewStar.module.scss";
+import { CiStar } from "react-icons/ci";
 
-export function ReviewStar ({ style }) {
-    return (
-        <div className={classes["star"]}>
-            <img className={classes["img"]} src={style === "unfilled" ? "ReviewStar-Unfilled.svg" : "ReviewStar-Filled.svg"} />
-        </div>
-    );
+export function ReviewStar() {
+    return <CiStar className={classes["star"]} />;
+    
 }
 
 ReviewStar.propTypes = {
-    style: PropTypes.oneOf(["filled", "unfilled"]),
-}
+  style: PropTypes.oneOf(["filled", "unfilled"]),
+};
