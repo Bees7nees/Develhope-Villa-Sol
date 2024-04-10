@@ -3,12 +3,13 @@ import './App.css'
 import Banner from "./Banner"
 import TitleDescription from './TitleDescription'
 import Button from './Buttons'
+import TermsConditions from './TermsConditions'
 
 function App() {
 
   return (
     <>
-    <Banner fotomain="/src/assets/fotomain.png" />
+    {/*<Banner fotomain="/src/assets/fotomain.png" />
     
     <TitleDescription
       title={"Hospédese en uno de los mejores hoteles en Cádiz"} 
@@ -16,7 +17,9 @@ function App() {
     />
 
     <Button type="yellow" label="Botón dorado"/>
-    <Button type="blue" label="Botón azul" />
+    <Button type="blue" label="Botón azul" /> */}
+
+    <TermsConditions />
     </>
   )
 }

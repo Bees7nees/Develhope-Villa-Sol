@@ -1,4 +1,4 @@
-.title {
+.title {    /*Para aplicar el componente de forma general*/
     display: flex;
     width: 1276px;
     height: 30px;
@@ -13,11 +13,41 @@
     letter-spacing: 2.25px;
 }
 
-.description { 
+.description {
     display: flex;
     width: 1222px;
     height: 200px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-}  
+    font-family: "Spline Sans Mono";
+}
+
+.intro-terms-title {    /*Para aplicar el componente con otro estilo en la introducción de "Términos & Condiciones*/
+    display: flex;
+    justify-content: center;
+    font-family: "Playfair Display";
+    color: #213242;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+}
+
+.intro-terms-description {
+    display: flex;
+    width: 1222px;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: "Spline Sans Mono";
+}
+
+.terms-title {  /*Para aplicar el componente con otro estilo en los 12 apartados de términos y condiciones*/
+    color:blue;
+}
+
+.terms-description {
+    color: aqua;
+}
