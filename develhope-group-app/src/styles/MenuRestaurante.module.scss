@@ -30,11 +30,20 @@
   height: 278px;
 }
 
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
 
+}
 .row {
-
+  border-top: solid 3px #B08912;
   height: 33%;
-  width: 420px;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .menuTitle {
     font-family: "Playfair Display", Helvetica;
