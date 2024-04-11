@@ -19,12 +19,17 @@
   z-index: 2;
 }
 
+.sliderRoom{
+  position: relative;
+}
 .custom-prev-arrow {
-  left: 10px;
+  left: 0;
+  top: 50%;
 }
 
 .custom-next-arrow {
-  right: 10px;
+  right: 0;
+  top: 50%;
 }
 .imgCarrouselRoom {
     z-index: 1;

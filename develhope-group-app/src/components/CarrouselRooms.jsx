@@ -31,7 +31,7 @@ export default function CarrouselRooms(){
 }
   return (
     <div className={styles.carrouselRoomsContainer} >  
-    <Slider {...settings}>
+    <Slider className={styles.sliderRoom}{...settings}>
     <div className="slide-item">
         <img src="../../assets/Room_Standar.jpg" alt="Habitación estándar" width={1440} height={800} className="imgCarrouselRoom"/>
       </div>
