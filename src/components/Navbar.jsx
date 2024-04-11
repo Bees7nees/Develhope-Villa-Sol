@@ -11,47 +11,46 @@ export default function Navbar() {
     const [verHabitacionesSubNav, setVerHabitacionesSubNav] = useState(false);
     const [verRestauranteSubNav, setVerRestauranteSubNav] = useState(false);
     const [verSpaSubNav, setVerSpaSubNav] = useState(false);
-    const [verDropdown, setverDropdown] = useState(false);
+    const [verDropdown, setVerDropdown] = useState(false);
 
 
     const handleHabitacionesClick = () => {
         setVerHabitacionesSubNav(!verHabitacionesSubNav);
+        setVerRestauranteSubNav(false); // Asegurar que otros submenús estén cerrados
+        setVerSpaSubNav(false);
     };
 
     const handleRestauranteClick = () => {
         setVerRestauranteSubNav(!verRestauranteSubNav);
+        setVerHabitacionesSubNav(false); 
+        setVerSpaSubNav(false);
     };
 
     const handleSpaClick = () => {
         setVerSpaSubNav(!verSpaSubNav);
+        setVerRestauranteSubNav(false); 
+        setVerHabitacionesSubNav(false);
     };
 
     const handleDropdownClick = () => {
-        setverDropdown(!verDropdown);
+        setVerDropdown(!verDropdown);
     };
 
+    
     useEffect(() => {
+        const closeDropdown = (event) => {
+            if (!event.target.closest(`.${classes.dropdown}`)) {
+                setVerDropdown(false);
+            }
+        };  
+    
+        document.addEventListener("click", closeDropdown);
+    
         return () => {
-            setVerHabitacionesSubNav(false);
-            setVerRestauranteSubNav(false);
-            setVerSpaSubNav(false);
+            document.removeEventListener("click", closeDropdown);
         };
     }, []);
-
     
-    // useEffect(() => {
-    //     const closeDropdown = (event) => {
-    //         if (!event.target.closest(`.${classes.dropdown}`)) {
-    //             setverDropdown(false);
-    //         }
-    //     };   no reacciona
-    
-    //     document.addEventListener("click", closeDropdown);
-    
-    //     return () => {
-    //         document.removeEventListener("click", closeDropdown);
-    //     };
-    // }, []);
     
     
     
@@ -134,7 +133,7 @@ export default function Navbar() {
                 <Link className={style.boton}>DISPONIBILIDAD</Link>
         </nav>
         <Difuminado />
-        {verHabitacionesSubNav && <Difuminado />}
+        {verHabitacionesSubNav && <Difuminado/>}
         {verRestauranteSubNav && <Difuminado />}
         {verSpaSubNav && <Difuminado />}
         </>
