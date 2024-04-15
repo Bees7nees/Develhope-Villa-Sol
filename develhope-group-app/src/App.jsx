@@ -1,14 +1,12 @@
-import './App.css'
-import { ReviewStar } from './components/ReviewStar'
+import "./App.css";
+import { ReviewCardCarousel } from "./components/ReviewCardCarousel";
 
 function App() {
-
   return (
     <>
-      <ReviewStar style="filled" />
-      <ReviewStar style="unfilled" />
+      <ReviewCardCarousel />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

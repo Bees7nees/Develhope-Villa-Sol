@@ -1,0 +1,17 @@
+.ReviewCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  width: 200px;
+  height: fit-content;
+  background: #ffffff;
+  border-radius: 0.625rem;
+  box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.ReviewCard h2,
+p {
+  color: black;
+}
