@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import classes from "/src/style/Footer.module.css"
+import classes from "/src/Style/Footer.module.css"
 
 export default function Footer() {
 
@@ -28,15 +28,15 @@ export default function Footer() {
                 <section className={classes.redesFooter}>
                     <span className={classes.titulo}>SIGUENOS</span>
                     <div className={classes.downredes}> 
-                        <img src="/assets/facebook.svg" className={classes.svg}/>
-                        <img src="/assets/twitter.svg" className={classes.svg}/>
-                        <img src="/assets/instagram.svg" className={classes.svg}/>
+                        <img src="/src/Assets/svg/facebook.svg" className={classes.svg}/>
+                        <img src="/src/Assets/svg/twitter.svg" className={classes.svg}/>
+                        <img src="/src/Assets/svg/instagram.svg" className={classes.svg}/>
                     </div>
                 </section>
                 <div className={classes.placeholder}>contacto</div>
             </div>
             <div className={classes.bottomContainer}>
-                <img className={classes.logo} src="/assets/logoWhite.svg" alt="logo"/>
+                <img className={classes.logo} src="/src/Assets/svg/logoWhite.svg" alt="logo"/>
                 <div className={classes.politicsContainer}>
                     <Link className={classes.politics}>Política & Privacidad</Link>
                     <p className={classes.politicstext}>Villa del sol. Todos los derechos reservados est-2024</p>

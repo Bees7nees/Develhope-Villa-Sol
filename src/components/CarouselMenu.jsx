@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import classes from "/src/style/CarouselMenu.module.css"
+import classes from "/src/Style/CarouselMenu.module.css"
 
 function ArrowRight(props) {
         const { className, style, onClick } = props;
@@ -76,19 +76,19 @@ export default function CarouselMenu() {
             <h3 className={classes.titulo}>PLATOS ESTRELLAS</h3>
             <Slider {...settings}>
                 <div>
-                <img src= "/assets/croquetas.jpg" className={classes.imagen}/>
+                <img src= "/src/Assets/img/croquetas.jpg" className={classes.imagen}/>
                 <span className={classes.pieDeFoto}>Croquetas de pulpo</span>
                 </div>
                 <div>
-                <img src="/assets/paella.png" className={classes.imagen}/>
+                <img src="/src/Assets/img/paella.png" className={classes.imagen}/>
                 <span className={classes.pieDeFoto}>Paella Valenciana</span>
                 </div>
                 <div>
-                <img src="/assets/langosta.jpg" className={classes.imagen}/>
+                <img src="/src/Assets/img/langosta.jpg" className={classes.imagen}/>
                 <span className={classes.pieDeFoto}>Langosta Noisette</span>
                 </div>
                 <div>
-                <img src="/assets/pescado.jpg" className={classes.imagen}/>
+                <img src="/src/Assets/img/pescado.jpg" className={classes.imagen}/>
                 <span className={classes.pieDeFoto}>Pesca del día</span>
                 </div>
             </Slider>

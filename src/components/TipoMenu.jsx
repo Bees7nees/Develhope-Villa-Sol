@@ -1,4 +1,4 @@
-import classes from "/src/style/TipoMenu.module.css"
+import classes from "/src/Style/TipoMenu.module.css"
 
 
 export default function TipoMenu() {

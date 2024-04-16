@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: lightgray url(/assets/tomate.png) 50% / cover no-repeat;
+    background: lightgray url(/src/Assets/img/tomate.png) 50% / cover no-repeat;
     z-index: -1;
     opacity: 0.5;
 }

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import Difuminado from "./Difuminado"
-import style from "/src/style/Navbar.module.css"
-import classes from "/src/style/SubNav.module.css"
+import Difuminado from "/src/Components/Difuminado"
+import style from "/src/Style/Navbar.module.css"
+import classes from "/src/Style/SubNav.module.css"
 import { useState, useEffect } from "react";
 
 
@@ -57,7 +57,7 @@ export default function Navbar() {
         return (
             <>
                 <nav className={style.navbar}>
-                    <img className={style.logo} src="/assets/logoBlack.svg" alt="logo"/>
+                    <img className={style.logo} src="/src/Assets/svg/logoBlack.svg" alt="logo"/>
                     <ul className={style.navTopContainer}>
                     <li><Link className={style.navLinks} to="/">HOME</Link></li>
                     <li><Link className={style.navLinks} to="/nosotros">NOSOTROS</Link></li>
@@ -87,7 +87,7 @@ export default function Navbar() {
                                     <li className={style.navLinks}>
                                     <div className={classes.contenedor} onClick={handleDropdownClick}>
                                         <span>RESTAURANTES</span> 
-                                        <img src="/assets/chevrondown.svg" className={classes.chevron}/>
+                                        <img src="/src/Assets/svg/chevrondown.svg" className={classes.chevron}/>
                                     </div>
                                 {verDropdown && (
                                 <div className={classes.dropdown}>

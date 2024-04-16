@@ -5,7 +5,7 @@
     width: 100%;
     display: inline-flex;
     align-items: center;
-    background: lightgray url(/assets/tomate.png) 50% / cover no-repeat;
+    background: lightgray url(/src/Assets/img/tomate.png) 50% / cover no-repeat;
     opacity: 0.5;
 }
 
