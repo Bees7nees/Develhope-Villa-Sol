@@ -1,0 +1,49 @@
+.sections-termscond {
+    display: flex;
+    flex-direction: column;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sections-termscond h1{
+    font-size: 32px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.sections-termscond section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sections-termscond span {
+    margin-bottom: 3rem;
+}
+
+.termscond-2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.termscond-2 img {
+    width: 925px;
+    height: 530px;
+    margin-right: 3rem;
+}
+
+.ourhistory {
+    width: 500px;
+    height: 200px;
+    margin-bottom: 4rem;
+}
+
+.contact {
+    width: 380px;
+    height: 200px;
+}
