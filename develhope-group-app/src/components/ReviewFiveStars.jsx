@@ -1,5 +1,5 @@
 import { ReviewStar } from "./ReviewStar";
-import classes from "../styles/ReviewStar.module.scss";
+import classes from "../Styles/ReviewStar.module.scss";
 
 export function ReviewFiveStars() {
     return (

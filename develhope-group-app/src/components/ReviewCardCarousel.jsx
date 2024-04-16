@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import classes from "../styles/ReviewCardCarousel.module.scss";
+import classes from "../Styles/ReviewCardCarousel.module.scss";
 import { ReviewCard } from "./ReviewCard";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
@@ -40,7 +40,7 @@ export function ReviewCardCarousel() {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <button className={classes.prevButton} onClick={handlePrevClick}>
+        <button type="button" className={classes.prevButton} onClick={handlePrevClick}>
           <IoIosArrowBack style={{ fill: "black" }} />
         </button>
         <div className={classes.contentwrapper}>
@@ -50,7 +50,7 @@ export function ReviewCardCarousel() {
             ))}
           </div>
         </div>
-        <button className={classes.nextButton} onClick={handleNextClick}>
+        <button type="button" className={classes.nextButton} onClick={handleNextClick}>
           <IoIosArrowForward style={{ fill: "black" }} />
         </button>
       </div>
