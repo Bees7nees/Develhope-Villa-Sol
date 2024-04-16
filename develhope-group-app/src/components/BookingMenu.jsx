@@ -1,6 +1,17 @@
 import styles from '../styles/BookingMenu.module.scss';
+import React, { useState } from 'react';
+import CalendarComponent from './CalendarBooking';
 
 export default function BookingMenu(){
+  
+    const [showCalendarLeft, setShowCalendarLeft] = useState(false);
+
+  
+    
+
+    const toggleCalendarLeft = () => {
+      setShowCalendarLeft(!showCalendarLeft);
+    };
     return (
         <div className={styles.bookingMenuDiv}>
             <div className={styles.bookingArrive}>
@@ -9,7 +20,7 @@ export default function BookingMenu(){
                 </div>
                 <div className={styles.textDivBookingMenu}>
                 <p className={styles.subtitle}>LLEGADA</p>
-                <p className={styles.normalTextBooking}>21 ABRIL 2024</p>
+                <CalendarComponent />
                 </div>
             </div>
             <div className={styles.arrowBooking}>
@@ -23,7 +34,7 @@ export default function BookingMenu(){
             </div>
            <div className={styles.textDivBookingMenu}>
                 <p className={styles.subtitle}>SALIDA</p>
-                <p className={styles.normalTextBooking}>22 ABRIL 2024</p>
+                <CalendarComponent />
                 </div>
             </div>
             <div className={styles.divideLine}></div>
@@ -31,10 +42,14 @@ export default function BookingMenu(){
             <div className={styles.iconSleepDiv}>
                 <img src="../../assets/Icon_ Sleep.png" className={styles.iconSleep}/>
             </div>
-            <div className={styles.textDivBookingMenu}>
+            <div>
+            <div className={styles.textDivBookingMenu} >
                 <p className={styles.subtitle}>NOCHES</p>
                 <p className={styles.normalTextBooking}>1 NOCHE</p>
+                
                 </div>
+               
+            </div>
             </div>
             <div className={styles.divideLine}></div>
             <div className={styles.hosts}>
