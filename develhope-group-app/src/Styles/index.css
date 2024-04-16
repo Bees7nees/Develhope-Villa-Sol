@@ -1,0 +1,11 @@
+:root {
+  --blue-300: rgba(98, 139, 177, 1);
+  --collection-1-color: rgba(255, 255, 255, 1);
+  --grayscalewhite: rgba(255, 255, 255, 1);
+  --text-large-font-family: "Spline Sans Mono", Helvetica;
+  --text-large-font-size: 20px;
+  --text-large-font-style: normal;
+  --text-large-font-weight: 400;
+  --text-large-letter-spacing: 0px;
+  --text-large-line-height: normal;
+}

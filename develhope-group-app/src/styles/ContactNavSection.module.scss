@@ -1,0 +1,47 @@
+.contact-prompt-header,
+.contact-prompt-header * {
+  box-sizing: border-box;
+}
+.contact-prompt-header {
+  background: var(--white, #ffffff);
+  padding: 12px 16px 12px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.expand-more {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+}
+.contact-title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+.contact {
+  color: var(--black, #1c1b1f);
+  text-align: center;
+  font-family: var(
+    --title-large-font-family,
+    "PlayfairDisplay-Bold",
+    sans-serif
+  );
+  font-size: var(--title-large-font-size, 32px);
+  line-height: var(--title-large-line-height, 40px);
+  font-weight: var(--title-large-font-weight, 700);
+  position: relative;
+  flex: 1;
+}
