@@ -1,0 +1,41 @@
+@import url(font.css);
+
+
+.contenedor{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    left: 15%;
+}
+
+.titulo{
+    color: #213242;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 0.0625rem;
+    letter-spacing: 0.075rem;
+    margin: 4rem 0 4rem 0;
+    text-align: center;
+}
+
+
+.imagen{
+    width: 1000px;
+    height: 500px;
+    border-radius: 1rem;
+    box-shadow: 8px 8px 2px 0px rgba(0, 0, 0, 0.22);
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pieDeFoto{
+    color: #213242;
+    font-family: "Spline Sans Mono";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0.0625rem; 
+    letter-spacing: 0.05rem;
+    margin-left: 2rem;
+}

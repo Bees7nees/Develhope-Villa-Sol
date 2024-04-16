@@ -1,0 +1,17 @@
+
+
+.contenedor{
+    height: 28rem;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    background: lightgray url(/src/Assets/img/tomate.png) 50% / cover no-repeat;
+    opacity: 0.5;
+}
+
+@media (max-width: 430px){
+
+    .contenedor{
+        height: 31rem;
+    }
+}

@@ -1,0 +1,79 @@
+@import url(font.css);
+
+.contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26rem;
+    height: 31rem;
+    flex-direction: column;
+}
+
+.contenedor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: lightgray url(/src/Assets/img/tomate.png) 50% / cover no-repeat;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+h3 {
+    color: #213242;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 0.0625rem;
+    letter-spacing: 0.075rem;
+}
+
+.contenedorGrande {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 22rem;
+    height: 25rem;
+}
+
+.descripcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
+    border-top: 3px solid #B08912; 
+}
+
+.texto {
+    color: #213242;
+    font-family: "Spline Sans Mono", monospace;
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 2;
+    letter-spacing: 0.05rem;
+    width: auto;
+}
+
+span{
+    color: #213242;
+    font-family: "Spline Sans Mono", monospace;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 2;
+    letter-spacing: 0.05rem;
+    width: auto;
+    font-size: 0.4rem;
+}
+
+img{
+    width: 10px;
+    height: 10px;
+}
