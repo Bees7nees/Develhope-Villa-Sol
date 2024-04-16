@@ -1,4 +1,4 @@
-import classes from "../styles/ReviewCard.module.scss";
+import classes from "../Styles/ReviewCard.module.scss";
 import { ReviewFiveStars } from "./ReviewFiveStars";
 export function ReviewCard() {
   return (
