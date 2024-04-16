@@ -1,12 +1,12 @@
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { Test } from "./Components/Test.jsx";
 
 function App() {
   return (
     <>
-      <Test></Test>
+      <Test />
       <Routes>
-        <Route path="/" element={<Test />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </>
   );
