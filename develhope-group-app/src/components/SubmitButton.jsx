@@ -1,4 +1,4 @@
-import classes from "../styles/SubmitButton.module.scss";
+import classes from "../Styles/SubmitButton.module.scss";
 
 export const SubmitButton = () => {
   console.log("Rendering SubmitButton");

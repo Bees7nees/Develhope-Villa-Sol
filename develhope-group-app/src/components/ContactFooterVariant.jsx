@@ -1,4 +1,4 @@
-import classes from "../styles/ContactFooterVariant.module.scss";
+import classes from "../Styles/ContactFooterVariant.module.scss";
 
 export function ContactFooterVariant() {
   return (

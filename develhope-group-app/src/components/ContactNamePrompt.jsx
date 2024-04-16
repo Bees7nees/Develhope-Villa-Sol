@@ -1,4 +1,4 @@
-import classes from "../styles/ContactNamePrompt.module.scss";
+import classes from "../Styles/ContactNamePrompt.module.scss";
 
 export function ContactNamePrompt() {
   return (

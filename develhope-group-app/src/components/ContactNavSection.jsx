@@ -1,4 +1,4 @@
-import classes from "../styles/ContactNavSection.module.scss";
+import classes from "../Styles/ContactNavSection.module.scss";
 
 export function ContactNavSection() {
   return (

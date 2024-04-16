@@ -1,6 +1,6 @@
-import './App.css'
-import { ContactFooterVariant } from './components/ContactFooterVariant'
-import { ContactPrompt } from './components/ContactPrompt'
+import './Styles/App.css'
+import { ContactFooterVariant } from './Components/ContactFooterVariant'
+import { ContactPrompt } from './Components/ContactPrompt'
 
 function App() {
 

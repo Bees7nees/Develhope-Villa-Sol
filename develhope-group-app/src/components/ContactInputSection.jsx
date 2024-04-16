@@ -1,6 +1,6 @@
 import { ContactEmailPrompt } from "./ContactEmailPrompt";
 import { ContactNamePrompt } from "./ContactNamePrompt";
-import classes from "../styles/ContactInputSection.module.scss";
+import classes from "../Styles/ContactInputSection.module.scss";
 
 export function ContactInputSection () {
     return (

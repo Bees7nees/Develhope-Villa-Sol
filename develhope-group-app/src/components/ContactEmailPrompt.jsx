@@ -1,4 +1,4 @@
-import classes from "../styles/ContactEmailPrompt.module.scss";
+import classes from "../Styles/ContactEmailPrompt.module.scss";
 
 export function ContactEmailPrompt() {
   return (

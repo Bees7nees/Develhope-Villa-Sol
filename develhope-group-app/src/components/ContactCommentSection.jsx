@@ -1,4 +1,4 @@
-import classes from "../styles/ContactCommentSection.module.scss";
+import classes from "../Styles/ContactCommentSection.module.scss";
 
 export function ContactCommentSection() {
   return (
