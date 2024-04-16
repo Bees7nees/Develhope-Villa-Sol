@@ -1,0 +1,68 @@
+.bookingMenuDiv {
+    display: flex;
+    width: 1009px;
+    height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.bookingArrive, .bookingLeft, .bookingNight, .hosts, .coupon {
+    width: 175px;
+    height: 64px;
+    padding: 5px 20px 5px 20px;
+    display: flex;
+}
+.normalTextBooking{
+    width: 118px;
+    margin-top: -8px;
+    font-family: "Spline Sans", Helvetica;
+    font-weight: 400;
+    text-align: left;
+}
+.inputCoupon{
+    margin-top: -8px;
+    border: none; 
+    background-color: rgba(49, 73, 96, 0.25); 
+    padding: 8px 12px; 
+    border-radius: 5px; 
+    outline: none;
+}
+.subtitle {
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Spline Sans Mono", Helvetica;
+    font-weight: 500;
+    color: #ECC140;
+}
+.textDivBookingMenu{
+    width: 95px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconCalendarDiv, .iconSleepDiv, .iconUserpDiv, .iconDiscountpDiv{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.checkButton {
+    width: 68px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+  
+    justify-content: center;
+  
+    background-color: #314960;
+    border-radius: 5px;
+}
+
+.divideLine{
+    width: 1px;
+    height: 48px;
+    background-color: #314960;
+}

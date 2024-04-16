@@ -1,0 +1,56 @@
+@import url(font.css);
+
+.restaurantDiv{
+  position: relative;
+  width: 840px;
+  height: 443px;
+}
+.menuTitleDiv{
+  width: 840px;
+  height: 155px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuTypes{
+    font-family: "Spline Sans", Helvetica;
+    font-weight: 700;
+    color: #213242;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1px;
+    text-align: left;
+
+}
+
+
+.bodyRestaurantMenu {
+  display: flex;
+  width: 840px;
+  height: 278px;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+
+}
+.row {
+  border-top: solid 3px #B08912;
+  height: 33%;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuTitle {
+    font-family: "Playfair Display", Helvetica;
+  font-weight: 800;
+  color: #213242;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  line-height: 1px; 
+}
+
