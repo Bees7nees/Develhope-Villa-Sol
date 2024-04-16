@@ -1,5 +1,5 @@
 import './App.css'
-import Banner from "./Banner"
+import Banner from "./Components/Banner"
 import TitleDescription from './TitleDescription'
 import Button from './Buttons'
 import TermsConditions from './TermsConditions'
