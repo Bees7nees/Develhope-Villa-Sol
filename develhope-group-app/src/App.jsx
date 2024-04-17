@@ -3,7 +3,7 @@ import { Test } from "./Components/Test";
 import { Routes, Route } from "react-router-dom";
 import TermsConditions from "./Pages/TermsConditions";
 
-function App() {
+export default function App() {
   return (
     <>
       <Routes>
