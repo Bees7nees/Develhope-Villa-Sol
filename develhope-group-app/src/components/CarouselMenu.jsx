@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import classes from "/src/Style/CarouselMenu.module.css"
+import classes from "/src/Styles/CarouselMenu.module.css"
 
 function ArrowRight(props) {
         const { className, style, onClick } = props;

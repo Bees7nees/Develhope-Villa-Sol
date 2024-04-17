@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from "/src/Style/HorarioRestaurante.module.css"
+import classes from "/src/Styles/HorarioRestaurante.module.css"
 
 export default function HorarioRestaurante() {
 

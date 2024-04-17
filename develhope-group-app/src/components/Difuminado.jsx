@@ -1,4 +1,4 @@
-import classes from "/src/Style/Difuminado.module.css"
+import classes from "/src/Styles/Difuminado.module.css"
 
 export default function Difuminado() {
 

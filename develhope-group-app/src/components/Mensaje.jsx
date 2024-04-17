@@ -1,4 +1,4 @@
-import classes from "/src/Style/Mensaje.module.css"
+import classes from "/src/Styles/Mensaje.module.css"
 
 export default function Mensaje() {
 

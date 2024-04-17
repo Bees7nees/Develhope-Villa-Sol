@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import classes from "/src/Style/Footer.module.css"
+import classes from "/src/Styles/Footer.module.css"
 
 export default function Footer() {
 

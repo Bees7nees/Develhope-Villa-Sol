@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from "/src/Style/NavBarMobile.module.css";
+import classes from "/src/Styles/NavBarMobile.module.css";
 import { Link } from 'react-router-dom';
 
 export default function NavbarMobile() {
