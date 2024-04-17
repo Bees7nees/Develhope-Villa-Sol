@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Difuminado from "/src/Components/Difuminado"
-import style from "/src/Style/Navbar.module.css"
-import classes from "/src/Style/SubNav.module.css"
+import style from "/src/Styles/Navbar.module.css"
+import classes from "/src/Styles/SubNav.module.css"
 import { useState, useEffect } from "react";
 
 
@@ -16,7 +16,7 @@ export default function Navbar() {
 
     const handleHabitacionesClick = () => {
         setVerHabitacionesSubNav(!verHabitacionesSubNav);
-        setVerRestauranteSubNav(false); // Asegurar que otros submenús estén cerrados
+        setVerRestauranteSubNav(false); 
         setVerSpaSubNav(false);
     };
 
@@ -130,7 +130,6 @@ export default function Navbar() {
                     <li><Link className={style.navLinks} to="/galeria">GALERÍA</Link></li>
                     <li><Link className={style.navLinks} to="/contacto">CONTACTO</Link></li>
                 </ul>
-                <Link className={style.boton}>DISPONIBILIDAD</Link>
         </nav>
         <Difuminado />
         {verHabitacionesSubNav && <Difuminado/>}
