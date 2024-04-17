@@ -16,9 +16,7 @@ export function ContactNavSection() {
           fill="#1C1B1F"
         />
       </svg>
-      <div className={classes["contact-title"]}>
-        <div className={classes["contact"]}>Contact</div>
-      </div>
+      <h1 className={classes["contact-text"]}>Contact</h1>
     </div>
   );
 }

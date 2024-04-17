@@ -5,7 +5,6 @@ export function ContactEmailPrompt() {
     <div className={classes["email-input"]}>
       <div className={classes["email-address"]}>Email Address</div>
       <div className={classes["enter-address-placeholder"]}>
-        <div className={classes["rectangle-8"]}></div>
         <div className={classes["content"]}>
           <svg
             className={classes["email"]}
@@ -40,7 +39,7 @@ export function ContactEmailPrompt() {
               strokeLinejoin="round"
             />
           </svg>
-          <div className={classes["enter-email-address"]}>Enter your email</div>
+          <input type="text" className={classes["enter-email-address"]} placeholder="Enter your email"></input>
         </div>
       </div>
     </div>

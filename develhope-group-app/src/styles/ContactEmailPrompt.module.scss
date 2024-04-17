@@ -29,28 +29,19 @@
   left: 0px;
   top: 27.25px;
 }
-.rectangle-8 {
+.content {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   background: var(--grayscale-white, #ffffff);
   border-radius: 12.26px;
   border-style: solid;
   border-color: var(--blue-200, #8aa8c4);
   border-width: 1.36px;
-  width: 476.88px;
-  height: 61.31px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
   box-shadow: 0px 2.72px 2.72px 0px rgba(0, 0, 0, 0.18);
-}
-.content {
-  display: flex;
-  flex-direction: row;
-  gap: 6.81px;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  left: 13.62px;
-  top: 13.62px;
 }
 .email {
   flex-shrink: 0;
@@ -60,6 +51,27 @@
   overflow: visible;
 }
 .enter-email-address {
+  color: var(--blue-100, #b1c5d8);
+  text-align: left;
+  font-family: var(
+    --text-regular-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-regular-font-size, 16px);
+  line-height: var(--text-regular-line-height, 24px);
+  font-weight: var(--text-regular-font-weight, 400);
+  position: relative;
+}
+
+input {
+  width: 80%;
+  left: 1rem;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
   color: var(--blue-100, #b1c5d8);
   text-align: left;
   font-family: var(

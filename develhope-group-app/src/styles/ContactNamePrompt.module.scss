@@ -30,28 +30,20 @@
   height: 61.31px;
   position: relative;
 }
-.label-bg {
+
+.content {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   background: var(--grayscale-white, #ffffff);
   border-radius: 12.26px;
   border-style: solid;
   border-color: var(--blue-200, #8aa8c4);
   border-width: 1.36px;
-  width: 476.87px;
-  height: 61.31px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
   box-shadow: 0px 2.72px 2.72px 0px rgba(0, 0, 0, 0.18);
-}
-.content {
-  display: flex;
-  flex-direction: row;
-  gap: 6.81px;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  left: 13.62px;
-  top: 13.62px;
 }
 .icons {
   flex-shrink: 0;
@@ -101,10 +93,15 @@
   top: 0%;
 }
 .enter-username {
-  color: var(--blue-50, #d8e2eb);
+  color: var(--blue-100, #b1c5d8);
   text-align: left;
-  font-family: "Montserrat-Medium", sans-serif;
-  font-size: 16.349998474121094px;
-  font-weight: 500;
+  font-family: var(
+    --text-regular-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-regular-font-size, 16px);
+  line-height: var(--text-regular-line-height, 24px);
+  font-weight: var(--text-regular-font-weight, 400);
   position: relative;
 }
