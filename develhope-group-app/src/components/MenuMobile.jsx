@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import classes from "/src/Style/MenuMobile.module.css"
+import classes from "/src/Styles/MenuMobile.module.css"
 
 export default function MenuMobile() {
 
 
     return (
         <section className={classes.contenedor}>
-        <h3>MENÚS</h3>
+        <h3 className={classes.titulosMenu}>MENÚS</h3>
         <div className={classes.contenedorGrande}>
             <div className={classes.descripcion}>
                 <p className={classes.texto}>DESAYUNO<br/><span>LUNES-VIERNES 7:00HS - 11:00HS & SÁBADO-DOMINGO 7:30HS - 11:30HS</span></p>

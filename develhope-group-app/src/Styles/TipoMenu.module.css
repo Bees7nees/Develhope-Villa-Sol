@@ -1,13 +1,28 @@
 
 
 .contenedor{
+    position: relative;
     height: 28rem;
     width: 100%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.contenedor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: lightgray url(/src/Assets/img/tomate.png) 50% / cover no-repeat;
+    z-index: -1;
     opacity: 0.5;
 }
+
+
+
 
 @media (max-width: 430px){
 

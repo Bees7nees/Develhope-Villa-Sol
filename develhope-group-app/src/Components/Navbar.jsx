@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import Difuminado from "/src/Components/Difuminado"
 import style from "/src/Styles/Navbar.module.css"
 import classes from "/src/Styles/SubNav.module.css"
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 
 export default function Navbar() {
@@ -34,25 +34,9 @@ export default function Navbar() {
 
     const handleDropdownClick = () => {
         setVerDropdown(!verDropdown);
+        console.log(verDropdown)
     };
 
-    
-    useEffect(() => {
-        const closeDropdown = (event) => {
-            if (!event.target.closest(`.${classes.dropdown}`)) {
-                setVerDropdown(false);
-            }
-        };  
-    
-        document.addEventListener("click", closeDropdown);
-    
-        return () => {
-            document.removeEventListener("click", closeDropdown);
-        };
-    }, []);
-    
-    
-    
     
         return (
             <>
@@ -130,6 +114,7 @@ export default function Navbar() {
                     <li><Link className={style.navLinks} to="/galeria">GALERÍA</Link></li>
                     <li><Link className={style.navLinks} to="/contacto">CONTACTO</Link></li>
                 </ul>
+            
         </nav>
         <Difuminado />
         {verHabitacionesSubNav && <Difuminado/>}

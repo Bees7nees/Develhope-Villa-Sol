@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import classes from "/src/Styles/Footer.module.css"
+import { ContactFooterVariant } from './ContactFooterVariant'
 
 export default function Footer() {
 
@@ -33,7 +34,7 @@ export default function Footer() {
                         <img src="/src/Assets/svg/instagram.svg" className={classes.svg}/>
                     </div>
                 </section>
-                <div className={classes.placeholder}>contacto</div>
+            <ContactFooterVariant/>
             </div>
             <div className={classes.bottomContainer}>
                 <img className={classes.logo} src="/src/Assets/svg/logoWhite.svg" alt="logo"/>

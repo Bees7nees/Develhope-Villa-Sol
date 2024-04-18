@@ -1,5 +1,5 @@
 import React from "react"
-import classes from "./title-description.module.css"
+import classes from "/src/Styles/title-description.module.css"
 
 
 export default function TitleDescription ({ title, description, styleTitle, styleDescription }) {

@@ -1,4 +1,4 @@
-@import url(/develhope-group-app/src/Assets/Fonts/font.css);
+@import url(font.css);
 
 .contenedor{
     position: relative;
@@ -22,7 +22,7 @@
     opacity: 0.5;
 }
 
-h3{
+.horarios{
     color: #213242;
     font-family: "Playfair Display",sans-serif;
     font-size: 1.5rem;

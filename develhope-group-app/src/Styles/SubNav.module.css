@@ -1,7 +1,7 @@
-@import url(/develhope-group-app/src/Assets/Fonts/font.css);
+@import url(font.css);
 
 body{
-    background-color: #FFF;
+    background-color: white;
     padding: 0;
     margin: 0;
     box-sizing: border-box;

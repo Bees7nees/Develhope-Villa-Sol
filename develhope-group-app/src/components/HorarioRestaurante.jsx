@@ -4,13 +4,9 @@ import classes from "/src/Styles/HorarioRestaurante.module.css"
 export default function HorarioRestaurante() {
 
 
-
-
-
-
     return (
         <section className={classes.contenedor}>
-            <h3>Horarios</h3>
+            <h3 className={classes.horarios}>Horarios</h3>
             <div className={classes.contenedorGrande}>
             <div className={classes.descripcion1}>
                 <span className={classes.texto}>DESAYUNO</span>

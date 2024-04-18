@@ -1,4 +1,4 @@
-import styles from '../styles/MenuRestaurante.module.scss';
+import styles from '../Styles/MenuRestaurante.module.scss';
 
 export default function MenuRestaurante(){
     return(
@@ -10,7 +10,7 @@ export default function MenuRestaurante(){
                 <div className={styles.column}>
                     <div className={styles.row}>
                         <h2 className={styles.menuTypes}>DESAYUNO</h2>
-                        <img src="../../assets/arrow_restaurant.png" alt="Arrow to the session" width={25} height={23}/>
+                        <img src="../../Assets/arrow_restaurant.png" alt="Arrow to the session" width={25} height={23}/>
                     </div>
                 <div className={styles.row}> 
                     <h2 className={styles.menuTypes}>MENÚ PRINCIPAL</h2>
