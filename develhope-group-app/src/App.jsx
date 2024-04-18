@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Banner from "./Banner"
-import TitleDescription from './TitleDescription'
-import Button from './Buttons'
-import TermsConditions from './TermsConditions'
+import './Styles/App.css'
+import Banner from "./Components/Banner"
+import TitleDescription from './Components/TitleDescription'
+import { Button }from './Components/Buttons'
+import TermsConditions from './Pages/TermsConditions'
 
 function App() {
 
   return (
-    <>
-    <Banner fotomain="/src/assets/fotomain.png" />
+    <> 
+    
+
+    <Banner fotomain="/src/assets/Img/fotomain.png" />
     
     <TitleDescription
       title={"Hospédese en uno de los mejores hoteles en Cádiz"} 

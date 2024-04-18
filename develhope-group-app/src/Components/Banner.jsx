@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from "./banner.module.css"
+import classes from "/src/Styles/banner.module.css"
 
 export default function Banner({fotomain}) {
     return (
