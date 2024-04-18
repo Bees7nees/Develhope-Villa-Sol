@@ -3,6 +3,7 @@ import Banner from "./Components/Banner"
 import TitleDescription from './Components/TitleDescription'
 import { Button }from './Components/Buttons'
 import TermsConditions from './Pages/TermsConditions'
+import Spa from './Pages/Spa'
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
     <Button type="blue" label="Botón azul" /> 
 
     <TermsConditions />
+
+    <Spa />
     </>
   )
 }

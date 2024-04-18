@@ -28,13 +28,17 @@
     margin-bottom: 3rem;
     display: flex;
     align-items: center;
-
+    h3 {
+        font-size: 24px;
+    }
 }
 
-.termscond-2 img {
+.fotomarketing {
     width: 925px;
     height: 530px;
     margin-right: 3rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .ourhistory {
@@ -44,6 +48,6 @@
 }
 
 .contact {
-    width: 380px;
+    width: 500px;
     height: 200px;
 }
