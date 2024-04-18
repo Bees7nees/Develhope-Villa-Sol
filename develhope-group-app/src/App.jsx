@@ -3,7 +3,7 @@ import Banner from "./Components/Banner"
 import TitleDescription from './Components/TitleDescription'
 import { Button }from './Components/Buttons'
 import TermsConditions from './Pages/TermsConditions'
-import Spa from './Pages/Spa'
+import SpaPage from './Pages/Spa'
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
 
     <TermsConditions />
 
-    <Spa />
+    <SpaPage />
     </>
   )
 }

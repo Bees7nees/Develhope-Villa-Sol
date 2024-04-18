@@ -51,3 +51,69 @@
     width: 500px;
     height: 200px;
 }
+
+.intro-spa {
+    text-align: center;
+    width: 900px;
+    margin: auto;
+    letter-spacing: 0.8px;
+    line-height: 200%;
+    margin-bottom: 4rem;
+
+    h2 {
+        font-size: 45px;
+        font-weight: 800;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+.h3-spa-title {
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 24px;
+}
+
+.spa-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+
+    img {
+        width: 640px;
+        height: 400px;
+    }
+
+    p {
+        width: 30%;
+        letter-spacing: 0.8px;
+        font-size: 16px;
+        margin-left: 5rem;
+        text-align: justify;
+        line-height: 35px;
+        color: #213242;
+    }
+}
+
+.tratamientos {
+    margin-top: 3rem;
+    h3 {
+        text-align: center;
+        font-family: "Playfair Display";
+        font-size: 24px;
+    }
+
+    span {
+        width: 480px;
+        height: 230px;
+    }
+}
+
+.tratamientos-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    border-top: solid 3px color #B08912;
+}
