@@ -1,4 +1,4 @@
-@import url(/develhope-group-app/src/Assets/Fonts/font.css);
+@import url(font.css);
 
 
 .contenedor{
@@ -6,7 +6,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    height: 28rem;
+    height: 40rem;
 }
 
 .contenedorTexto{

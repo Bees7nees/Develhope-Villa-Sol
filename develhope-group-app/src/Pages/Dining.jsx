@@ -1,9 +1,10 @@
 import HorarioRestaurante from "../Components/HorarioRestaurante"
-// import CarouselMenu from "../Components/CarouselMenu"
+import CarouselMenu from "../Components/CarouselMenu"
 import TipoMenu from "../Components/TipoMenu"
 import DividingLines from "../Components/DividingLines"
 import TitleDescription from "../Components/TitleDescription"
 import Banner from "/src/Components/Banner.jsx"
+import Mensaje from "../Components/Mensaje"
 
 export default function Dining() {
 
@@ -26,7 +27,8 @@ export default function Dining() {
             <DividingLines/>?
             <HorarioRestaurante />
             <DividingLines/>?
-            {/* <CarouselMenu/> */}
+            <CarouselMenu/>
+            <Mensaje/>
         </>
     )
 }

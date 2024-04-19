@@ -8,10 +8,10 @@ function ArrowRight(props) {
         return (
         <div
             className={className}
-            style={{ ...style, display: "block" }}
+            style={{ ...style}}
             onClick={onClick}
         >
-        <svg className={classes.svg} xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 47" fill="none">
+        <svg className={classes.svgRight} xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 47" fill="none">
             <path d="M0.0735302 40.8833L12.9835 23.444L0.278748 5.72679L4.25323 0.357928L20.8973 23.518L3.98467 46.3643L0.0735302 40.8833Z" fill="#213242"/>
         </svg>
         </div>
@@ -23,11 +23,11 @@ function ArrowRight(props) {
         return (
         <div
             className={className}
-            style={{ ...style, display: "block" }}
+            style={{ ...style}}
             onClick={onClick}
         >
-        <svg className={classes.svg} xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 47" fill="none" style={{ transform: "rotate(180deg)" }}>
-            <path d="M0.0735302 40.8833L12.9835 23.444L0.278748 5.72679L4.25323 0.357928L20.8973 23.518L3.98467 46.3643L0.0735302 40.8833Z" fill="#213242"/>
+        <svg className={classes.svgLeft} xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 47" fill="none" style={{ transform: "rotate(180deg)" }}>
+            <path d="M0.0735302 40.8833L12.9835 23.444L0.278748 5.72679L4.25323 0.357928L20.8973 23.518L3.98467 46.3643L0.0735302 40.8833Z" fill="red"/>
         </svg>
         </div>
         );
@@ -39,8 +39,8 @@ export default function CarouselMenu() {
         const settings = {
             dots: false,
             infinite: true,
-            speed: 400,
-            slidesToShow: 1,
+            speed: 500,
+            slidesToShow: 2,
             slidesToScroll: 1,
             initialSlide: 0,
             nextArrow: <ArrowRight />,
