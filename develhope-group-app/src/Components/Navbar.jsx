@@ -3,6 +3,7 @@ import Difuminado from "/src/Components/Difuminado"
 import style from "/src/Styles/Navbar.module.css"
 import classes from "/src/Styles/SubNav.module.css"
 import { useState} from "react";
+import { HashLink as Anchor } from 'react-router-hash-link';
 
 
 export default function Navbar() {
@@ -51,11 +52,11 @@ export default function Navbar() {
                     {verHabitacionesSubNav && ( 
                         <nav className={classes.subNavContenedor}>
                                 <ul className={classes.listContainer}>
-                                    <li><Link className={style.navLinks} to="/habitaciones#estandar">ESTÁNDAR</Link></li>
+                                    <li><Link className={style.navLinks} to="#estandar">ESTÁNDAR</Link></li>
                                     <span className={classes.divisor}></span>
-                                    <li className={style.navLinks} to="/habitaciones#premium">PREMIUM</li>
+                                    <li className={style.navLinks} to="#premium">PREMIUM</li>
                                     <span className={classes.divisor}></span>
-                                    <li><Link className={style.navLinks} to="//habitaciones#suite">SUITE</Link></li>
+                                    <li><Link className={style.navLinks} to="#suite">SUITE</Link></li>
                                 </ul>
                         </nav>
                         )}
@@ -66,7 +67,7 @@ export default function Navbar() {
                     {verRestauranteSubNav && (
                         <nav className={classes.subNavContenedor}>
                                 <ul className={classes.listContainer}>
-                                    <li><Link className={style.navLinks} to="/restaurante#menu">MENÚ</Link></li>
+                                    <li><Anchor className={style.navLinks} to="#menu">MENÚ</Anchor></li>
                                     <span className={classes.divisor}></span>
                                     <li className={style.navLinks}>
                                     <div className={classes.contenedor} onClick={handleDropdownClick}>
@@ -88,11 +89,11 @@ export default function Navbar() {
                                 )}
                                 </li>
                                 <span className={classes.divisor}></span>
-                                <li><Link className={style.navLinks} to="/restaurante#platosEstrella">PLATOS ESTRELLAS</Link></li>
+                                <li><Anchor className={style.navLinks} to="#platosEstrella">PLATOS ESTRELLAS</Anchor></li>
                                 <span className={classes.divisor}></span>
-                                <li><Link className={style.navLinks} to="/restaurante#horario">HORARIO</Link></li>
+                                <li><Anchor className={style.navLinks} to="#horario">HORARIO</Anchor></li>
                                 <span className={classes.divisor}></span>
-                                <li><Link className={style.navLinks} to="/restaurante#galeria">GALERÍA</Link></li>
+                                <li><Anchor className={style.navLinks} to="#galeria">GALERÍA</Anchor></li>
                             </ul>
                         </nav>
                     )}
@@ -103,11 +104,11 @@ export default function Navbar() {
                     {verSpaSubNav && ( 
                         <nav className={classes.subNavContenedor}>
                             <ul className={classes.listContainer}>
-                                <li><Link className={style.navLinks} to="/spa#tratamientos">TRATAMIENTOS</Link></li>
+                                <li><Link className={style.navLinks} to="#tratamientos">TRATAMIENTOS</Link></li>
                                 <span className={classes.divisor}></span>
-                                <li className={style.navLinks} to="/spa#horarios">HORARIOS</li>
+                                <li className={style.navLinks} to="#horarios">HORARIOS</li>
                                 <span className={classes.divisor}></span>
-                                <li><Link className={style.navLinks} to="/spa#barraReservas">RESERVAR</Link></li>
+                                <li><Link className={style.navLinks} to="#barraReservas">RESERVAR</Link></li>
                             </ul>
                         </nav>
                     )} 
@@ -116,10 +117,10 @@ export default function Navbar() {
                 </ul>
             
         </nav>
-        <Difuminado />
-        {verHabitacionesSubNav && <Difuminado/>}
-        {verRestauranteSubNav && <Difuminado />}
-        {verSpaSubNav && <Difuminado />}
+        {/* <Difuminado /> */}
+        {verHabitacionesSubNav && <Difuminado top="44"/>}
+        {verRestauranteSubNav && <Difuminado top="44" />}
+        {verSpaSubNav && <Difuminado top="44" />}
         </>
     )
 }

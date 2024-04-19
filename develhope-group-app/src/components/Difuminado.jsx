@@ -1,9 +1,9 @@
 import classes from "/src/Styles/Difuminado.module.css"
 
-export default function Difuminado() {
+export default function Difuminado({top}) {
 
 
     return (
-        <span className={classes.difuminado}></span>
+        <span className={classes.difuminado} style={{top: top + "%"}}></span>
     )
 }

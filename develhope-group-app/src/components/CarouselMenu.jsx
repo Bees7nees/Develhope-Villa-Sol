@@ -27,7 +27,7 @@ function ArrowRight(props) {
             onClick={onClick}
         >
         <svg className={classes.svgLeft} xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 47" fill="none" style={{ transform: "rotate(180deg)" }}>
-            <path d="M0.0735302 40.8833L12.9835 23.444L0.278748 5.72679L4.25323 0.357928L20.8973 23.518L3.98467 46.3643L0.0735302 40.8833Z" fill="red"/>
+            <path d="M0.0735302 40.8833L12.9835 23.444L0.278748 5.72679L4.25323 0.357928L20.8973 23.518L3.98467 46.3643L0.0735302 40.8833Z" fill="#213242"/>
         </svg>
         </div>
         );

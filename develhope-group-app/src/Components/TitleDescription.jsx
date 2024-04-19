@@ -2,11 +2,11 @@ import React from "react"
 import classes from "/src/Styles/title-description.module.css"
 
 
-export default function TitleDescription ({ title, description, styleTitle, styleDescription }) {
+export default function TitleDescription ({ title, description}) {
     return (
         <>
-            <h1 className={classes[styleTitle]}>{title}</h1>
-            <p className={classes[styleDescription]}>{description}</p>
+            <h1 className={classes.title}>{title}</h1>
+            <p className={classes.description}>{description}</p>
         </>
     )
 }
