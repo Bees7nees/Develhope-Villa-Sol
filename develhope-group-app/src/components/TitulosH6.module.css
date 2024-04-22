@@ -1,0 +1,35 @@
+:root {
+    --color-primario: #213242;
+    --color-primario-transparecia: #213242ce;
+    --color-amarillo-transparencia: #b08812c0;
+    --color-amarillo: #B08912;
+}
+
+/* <div className={styles.section} >
+<div>
+<h6 className={styles.titulo}><strong>{title}</strong></h6>
+<p>{parrafo}</p>
+</div>
+</div> */
+.section {
+    font-family: "Spline Sans Mono";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    text-align: start;
+    line-height: 1.7;
+    color: var(--color-primario);
+    font-family: "Spline Sans Mono";
+    text-transform: capitalize;
+    /* margin-bottom: 5ch ; */
+
+
+}
+.section p{
+    font-size: .8rem;
+}
+.titulo {
+    font-size: 1rem;
+     margin-bottom: 2ch; 
+
+}
