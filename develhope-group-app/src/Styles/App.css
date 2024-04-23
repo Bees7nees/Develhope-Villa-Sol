@@ -45,6 +45,7 @@
     width: 500px;
     height: 200px;
     margin-bottom: 4rem;
+    line-height: 24px;
 }
 
 .contact {
@@ -61,9 +62,11 @@
     margin-bottom: 4rem;
 
     h2 {
+        margin-top: 8rem;
         font-size: 45px;
         font-weight: 800;
     }
+
     p {
         font-size: 16px;
     }
@@ -104,16 +107,109 @@
         text-align: center;
         font-family: "Playfair Display";
         font-size: 24px;
+        margin-bottom: 5rem;
     }
 
     span {
-        width: 480px;
+        width: 670px;
         height: 230px;
+        border-top: 3px solid #B08912;
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    span:hover {
+        cursor: pointer;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    p {
+        font-family: "Spline Sans Mono";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.8px;
     }
 }
 
 .tratamientos-container {
     display: grid;
     grid-template-columns: auto auto;
-    border-top: solid 3px color #B08912;
+}
+
+.spa-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horarios-spa img {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15rem;
+}
+
+.horarios-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    width: 404px;
+    height: 460px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1.2px;
+    line-height: 1px;
+
+    button {
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 3rem;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    svg {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        width: 175%;
+        height: auto;
+    }
+
+    .ourhistory {
+        width: 330px;
+        margin-left: -2rem;
+    }
+    
+    .contact {
+        width: 330px;
+        margin-left: -2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    img {
+        width: 280%;
+        height: auto;
+    }
 }

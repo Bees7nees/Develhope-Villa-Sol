@@ -1,6 +1,7 @@
 import fotomasaje1 from '../assets/Img/fotomasaje1.png';
 import fotomasaje2 from '../assets/Img/fotomasaje2.png';
 import fotosauna from '../assets/Img/fotosauna.png';
+import { Button } from '../Components/Buttons';
 
 function SpaPage () {
     return (
@@ -24,16 +25,24 @@ function SpaPage () {
         <div className='tratamientos'>
             <h3>TRATAMIENTOS</h3>
             <div className='tratamientos-container'>
-                <span><h5>MASAJES</h5> <p>Nuestra amplia variedad de masajes terapéuticos le permitirán relajarse y lucir un aspecto rejuvenecido.</p></span>
-                <span><h5>FACIALES</h5> <p>Nuestra amplia variedad de masajes terapéuticos le permitirán relajarse y lucir un aspecto rejuvenecido.</p></span>
-                <span><h5>CUIDADO DE MANOS Y PIES</h5> <p>Nuestra amplia variedad de masajes terapéuticos le permitirán relajarse y lucir un aspecto rejuvenecido.</p></span>
-                <span><h5>EXPERIENCIAS EN PAREJA</h5> <p>Nuestra amplia variedad de masajes terapéuticos le permitirán relajarse y lucir un aspecto rejuvenecido.</p></span>
+                <span><h5>MASAJES</h5> <p>Experiencia calmante que combina técnicas de masaje suave con aromas relajantes para aliviar tensiones y promover bienestar.</p></span>
+                <span><h5>FACIALES</h5> <p>Renueva tu piel con una limpieza profunda, exfoliación suave y mascarilla hidratante, dejándola radiante y rejuvenecida.</p></span>
+                <span><h5>CUIDADO DE MANOS Y PIES</h5> <p>Rejuvenece tus extremidades con una exfoliación suave, masaje relajante y crema hidratante para manos y pies suaves y nutridos.</p></span>
+                <span><h5>EXPERIENCIAS EN PAREJA</h5> <p>Conexión y relajación en pareja con un masaje relajante personalizado para disfrutar de intimidad y bienestar juntos.</p></span>
             </div>
         </div>
 
         <div className='horarios-spa'>
-        <img src={fotosauna} />
-        <span className='horarios-container'></span>
+        <div className='spa-image-container'>
+            <img src={fotosauna} />
+            <span className='horarios-container'>
+                <h3>HORARIOS</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="292" height="4" viewBox="0 0 292 4" fill="none"><path d="M2 2H290" stroke="#B08912" stroke-width="3" stroke-linecap="round"/></svg>
+                <h4>LUNES - VIERNES</h4> <h4>7:00 - 21:00</h4>
+                <h4>SÁBADOS & DOMINGOS</h4> <h4>8:00 - 20:00</h4>
+                <Button type="blue" label="Reservar" />
+            </span>
+        </div>
         </div>
         </>
     )

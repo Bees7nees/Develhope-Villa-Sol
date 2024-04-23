@@ -8,6 +8,16 @@
 
 @media screen and (max-width: 768px) {
     .fotomain {
+        width: 175%;
+        height: auto;
+        
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .fotomain {
+        width: 280%;
+        height: auto;
         
     }
 }
