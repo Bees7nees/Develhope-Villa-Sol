@@ -6,7 +6,7 @@ export default function TipoMenu() {
 
 
     return (
-        <section className={classes.contenedor}>
+        <section id="menu" className={classes.contenedor}>
             <MenuRestaurante/>
         </section>
     )

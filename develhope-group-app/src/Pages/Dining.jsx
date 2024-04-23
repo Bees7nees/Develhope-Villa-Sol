@@ -25,7 +25,7 @@ export default function Dining() {
             como un destino gastronómico de renombre en la escena culinaria de Andalucía."/> 
             <TipoMenu/>
             <DividingLines/>?
-            <HorarioRestaurante />
+            <HorarioRestaurante/>
             <DividingLines/>?
             <CarouselMenu/>
             <Mensaje/>

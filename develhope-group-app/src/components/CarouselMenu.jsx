@@ -72,7 +72,7 @@ export default function CarouselMenu() {
 
 
     return (
-        <div className={classes.contenedor}>
+        <div id="platosEstrella" className={classes.contenedor}>
             <h3 className={classes.titulo}>PLATOS ESTRELLAS</h3>
             <Slider {...settings}>
                 <div>

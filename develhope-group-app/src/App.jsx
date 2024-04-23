@@ -13,12 +13,12 @@ export default function App() {
   return (
     <>
       <Navbar/>
-      <Dining/>
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Test />} />
         <Route path="/test" element={<Test />} />
         <Route path="/Terms&Conditions" element={<TermsConditions />} />
-      </Routes> */}
+        <Route path="/restauranteSunset" element={<Dining/>}/>
+      </Routes>
       <Footer/>
     </>
   );
