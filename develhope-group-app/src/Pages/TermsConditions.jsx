@@ -1,4 +1,5 @@
 import fotomarketing from '../assets/Img/fotomarketing.png';
+import DividingLines from '../Components/DividingLines';
 
 function TermsConditions () {
     return (
@@ -16,7 +17,10 @@ function TermsConditions () {
             <section>9. Normas de Conducta</section> <span>Se espera que todos los huéspedes de Villa del Sol mantengan un comportamiento adecuado y respeten las normas de convivencia. Se pueden tomar medidas disciplinarias contra aquellos que perturben la tranquilidad de otros huéspedes.</span>
             <section>10. Modificaciones y Actualizaciones</section> <span>Villa del Sol se reserva el derecho de modificar o actualizar estos términos y condiciones en cualquier momento. Los huéspedes serán informados sobre cualquier cambio relevante antes de su entrada en vigor.</span>
         </div>
-{/* Falta componente de las dos rayas de colores en esta línea y también navbar y footer */}
+        <div>
+            <DividingLines color={"#213242"} length={"1rem"} />
+            <DividingLines color={"#B08912"} length={"1rem"} />
+        </div>   
         <div className="termscond-2">
             <img src={fotomarketing} className='fotomarketing' />
             <div className="history-contact">
