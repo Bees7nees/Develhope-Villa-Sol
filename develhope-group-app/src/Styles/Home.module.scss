@@ -1,0 +1,45 @@
+@import url(App.css);
+
+.home-container {
+  margin-bottom: 5rem;
+}
+
+.divisor {
+  margin: auto;
+  width: 80vw;
+}
+
+.opiniones-clientes {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.opiniones-wrapper {
+  background-image: url("https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.opiniones-content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.opiniones-content h1 {
+  margin: auto;
+  width: 30vw;
+  border-radius: 0.5rem;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+}

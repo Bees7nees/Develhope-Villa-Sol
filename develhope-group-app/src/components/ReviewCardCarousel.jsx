@@ -5,11 +5,11 @@ import { ReviewCard } from "./ReviewCard";
 import classes from "../Styles/ReviewCardCarousel.module.scss";
 import PropTypes from "prop-types";
 
-PropTypes.shape({
+ReviewCardCarousel.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   onClick: PropTypes.func,
-});
+};
 
 function ArrowRight(props) {
   const { className, style, onClick } = props;
@@ -59,7 +59,7 @@ export default function ReviewCardCarousel() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     nextArrow: <ArrowRight />,
