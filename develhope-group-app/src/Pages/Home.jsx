@@ -23,7 +23,7 @@ export function Home() {
       <div className={classes["divisor"]}>
         <DividingLines color={"#213242"} length={"1rem"} />
         <DividingLines color={"#B08912"} length={"1rem"} />
-      </div>    
+      </div>
       {/* Aquí iría la imagen de una de las habitaciones con
             descripción y el botón para acceder a la galería, cambiando el url */}
       <div className={classes["divisor"]}>
