@@ -188,3 +188,13 @@
   font-weight: 600;
   position: relative;
 }
+
+.contact-panel {
+  position: fixed;
+  margin: auto;
+  display: flex;
+}
+
+.contact-panel-hidden {
+  display: none;
+}
