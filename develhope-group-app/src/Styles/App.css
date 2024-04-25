@@ -193,18 +193,23 @@
 
 @media screen and (max-width: 768px) {
     img {
-        width: 175%;
+        width: 200px;
         height: auto;
     }
 
     .ourhistory {
-        width: 330px;
+        width: 340px;
         margin-left: -2rem;
+        margin-bottom: 8rem;
     }
     
     .contact {
-        width: 330px;
+        width: 340px;
         margin-left: -2rem;
+    }
+
+    .spa-container p {
+        width: 100%;
     }
 }
 
