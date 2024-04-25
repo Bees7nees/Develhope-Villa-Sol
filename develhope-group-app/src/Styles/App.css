@@ -35,11 +35,17 @@
 }
 
 .fotomarketing {
-    width: 57.813rem;
-    height: 33.125rem;
+    max-width: 57.813rem;
+    min-width: 33.125rem;
     margin-right: 3rem;
-    border-bottom-left-radius: 0.625rem;
-    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .ourhistory {
@@ -151,7 +157,7 @@
     align-items: center;
 }
 
-.horarios-spa img {
+.fotosauna {
     width: 100%;
     margin: 0;
     margin-bottom: 15rem;
@@ -192,20 +198,17 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    img {
-        width: 200px;
-        height: auto;
-    }
+/* RESPONSIVE */
 
+@media screen and (max-width: 768px) {
     .ourhistory {
-        width: 340px;
+        width: 21.25rem;
         margin-left: -2rem;
         margin-bottom: 8rem;
     }
-    
+
     .contact {
-        width: 340px;
+        width: 21.25rem;
         margin-left: -2rem;
     }
 
@@ -215,8 +218,13 @@
 }
 
 @media screen and (max-width: 425px) {
-    img {
-        width: 280%;
-        height: auto;
+    .ourhistory, .contact {
+        width: 100%;
+        margin-left: 0; 
+        margin-bottom: 8rem;
+    }
+
+    .spa-container p {
+        width: 100%;
     }
 }

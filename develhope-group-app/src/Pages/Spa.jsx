@@ -41,7 +41,7 @@ function SpaPage () {
 
         <div className='horarios-spa'>
         <div className='spa-image-container'>
-            <img src={fotosauna} />
+            <picture className='fotosauna'><img src={fotosauna} /></picture>
             <span className='horarios-container'>
                 <h3>HORARIOS</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" width="292" height="4" viewBox="0 0 292 4" fill="none"><path d="M2 2H290" stroke="#B08912" stroke-width="3" stroke-linecap="round"/></svg>
