@@ -1,42 +1,39 @@
-import React, { useState } from "react";
-import BookingMenu from "./BookingMenu";
+import React, { useContext } from "react";
+import { GlobalContext } from './GlobalVariable';
+import styles from '../Styles/CounterHost.module.scss';
 
 export default function CounterHost() {
-    const [counterAdult, setCounterAdult] = useState(0);
-    const [counterChildren, setCounterChildren] = useState(0);
-    const [showBookingMenu, setShowBookingMenu] = useState(false);
+  const { numAdult, setNumAdult, numKids, setNumKids } = useContext(GlobalContext);
 
-    const sumaAdult = () => {
-        setCounterAdult((prevCounter) => prevCounter + 1);
-    };
+  const sumaAdult = () => {
+    setNumAdult((prevCounter) => prevCounter + 1);
+  };
 
-    const restaAdult = () => {
-        if (counterAdult > 0) {
-            setCounterAdult((prevCounter) => prevCounter - 1);
-        }
-    };
+  const restaAdult = () => {
+    if (numAdult > 0) {
+      setNumAdult((prevCounter) => prevCounter - 1);
+    }
+  };
 
-    const sumaChildren = () => {
-        setCounterChildren((prevCounter) => prevCounter + 1);
-    };
+  const sumaChildren = () => {
+    setNumKids((prevCounter) => prevCounter + 1);
+  };
 
-    const restaChildren = () => {
-        if (counterChildren > 0) {
-            setCounterChildren((prevCounter) => prevCounter - 1);
-        }
-    };
+  const restaChildren = () => {
+    if (numKids > 0) {
+      setNumKids((prevCounter) => prevCounter - 1);
+    }
+  };
 
-    return (
-        <div>
-            {showBookingMenu && <BookingMenu adults={counterAdult} children={counterChildren} />}
-            <h2>Adultos: {counterAdult}</h2>
-            <button onClick={sumaAdult}>+</button>
-            <button onClick={restaAdult}>-</button>
+  return (
+    <div className={styles.counterDiv}>
+      <p>Adultos: {numAdult}</p>
+      <button className={styles.counterButton} onClick={sumaAdult}>+</button>
+      <button className={styles.counterButton} onClick={restaAdult}>-</button>
 
-            <h2>Niños: {counterChildren}</h2>
-            <button onClick={sumaChildren}>+</button>
-            <button onClick={restaChildren}>-</button>
-        </div>
-    );
+      <p>Niños: {numKids}</p>
+      <button className={styles.counterButton} onClick={sumaChildren}>+</button>
+      <button className={styles.counterButton} onClick={restaChildren}>-</button>
+    </div>
+  );
 }
-

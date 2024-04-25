@@ -1,6 +1,6 @@
 
 .carrouselRoomsContainer{
-    width: 100%;
+    width: 100vw;
     height: 800px;
     position: relative;
 }
@@ -30,14 +30,14 @@
 .imgCarrouselRoom {
     z-index: 1;
     position: relative;
-    width: 100%;
-    display: block;
+    width: 100vw;
+    //display: block;
     //object-fit: fill;
 }
 
 .slideItem{
     position: relative;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
 }
 

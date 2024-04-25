@@ -1,4 +1,4 @@
-import styles from '../Styles/CarrouselRooms.module.scss';
+import styles from '../Styles/CarrouselRoomsMobile.module.scss';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -47,15 +47,15 @@ export default function CarrouselRooms(){
     <div className={styles.carrouselRoomsContainer} >  
     <Slider  {...settings} className={styles.sliderRoom}>
     <div className={styles.slideItem}>
-        <img src={RoomStandar} alt="Habitación estándar" /*width={1440} height={800} */className={styles.imgCarrouselRoom}/>
+        <img src={RoomStandar} alt="Habitación estándar" width={1440} height={800} className={styles.imgCarrouselRoom}/>
         <TitleCarrouselRooms text="HABITACION ESTÁNDAR" />
       </div>
       <div className={styles.slideItem}>
-        <img src={RoomPremium} alt="Habitación Premium"/* width={1440} height={800}*/ className={styles.imgCarrouselRoom}/>
+        <img src={RoomPremium} alt="Habitación Premium" width={1440} height={800} className={styles.imgCarrouselRoom}/>
         <TitleCarrouselRooms text="HABITACIÓN PREMIUM" />
       </div>
       <div className={styles.slideItem}>
-        <img src={RoomSuite} alt="Habitación Suite"/* width={1440} height={800} */className={styles.imgCarrouselRoom}/>
+        <img src={RoomSuite} alt="Habitación Suite" width={1440} height={800} className={styles.imgCarrouselRoom}/>
         <TitleCarrouselRooms text="HABITACIÓN SUITE" />
       </div>
     </Slider>

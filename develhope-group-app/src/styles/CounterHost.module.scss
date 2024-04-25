@@ -1,0 +1,33 @@
+.counterDiv{
+    background-color: rgba(176, 137, 18, 0.4);
+    width: 115px;
+    padding: 20px;
+   // padding-left: 40px;
+    border-radius: 10px;
+}
+
+.counterDiv p {
+    font-family: "Spline Sans", Helvetica;
+    text-align: left;
+    font-size: 20px;
+    color: rgba(49, 73, 96); 
+}
+
+.counterButton {
+    height: 25px;
+    width: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(49, 73, 96, 1);
+    border: none; 
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin: 2px;
+}
+.counterButton:hover {
+    /* Cambia el sombreado al pasar el mouse sobre el botón */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  

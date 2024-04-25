@@ -1,6 +1,6 @@
 import styles from '../Styles/BookingMenu.module.scss';
 import CalendarComponent from './CalendarBooking';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext, useRef} from 'react';
 import IconCalendar from '../Assets/Img/Icon_ Calendar.png';
 import IconArrow from '../Assets/Img/Icon_ Arrow.png';
 import IconSleep from '../Assets/Img/Icon_ Sleep.png';
@@ -8,7 +8,12 @@ import IconUser from '../Assets/Img/User.png';
 import IconDiscount from '../Assets/Img/Discount.png';
 import IconBell from '../Assets/Img/Icon_ Bell.png';
 import CounterHost from './CounterHost';
-export default function BookingMenu({ adults, children }){
+import { GlobalContext } from './GlobalVariable';
+import BellHotel from '../Assets/Sounds/bell-hotel.mp3'
+import useSound from 'use-sound';
+
+export default function BookingMenu(){
+    const [playSound] = useSound(BellHotel);
     const [firstDate, setFirstDate] = useState(new Date());
     const [lastDate, setLastDate] = useState(new Date());
     const [nights, setNights] = useState(0);
@@ -22,6 +27,38 @@ export default function BookingMenu({ adults, children }){
     useEffect(() => {
         updateNights();
     }, [firstDate, lastDate]);
+
+    const handleCounter = () => {
+        setSeeCounter(true); // Cambia el estado a su valor opuesto
+      };
+    const { textCoupon, setTextCoupon } = useContext(GlobalContext);
+    const { numNight, setNumNight } = useContext(GlobalContext);
+    const {numKids, setNumKids} =  useContext(GlobalContext);
+    const {numAdult, setNumAdult} =  useContext(GlobalContext);
+    const handleCoupon = (event) => {
+        setTextCoupon(event.target.value);
+      };
+    setNumNight(nights);
+
+    let menuRef = useRef();
+
+    useEffect(() => {
+      let handler = (e)=>{
+        if(!menuRef.current.contains(e.target)){
+            setSeeCounter(false);
+          console.log(menuRef.current);
+        }      
+      };
+  
+      document.addEventListener("mousedown", handler);
+      
+  
+      return() =>{
+        document.removeEventListener("mousedown", handler);
+      }
+  
+    });
+
 
     return (
         <div className={styles.bookingMenuDiv}>
@@ -63,13 +100,13 @@ export default function BookingMenu({ adults, children }){
             </div>
             </div>
             <div className={styles.divideLine}></div>
-            <div className={styles.hosts} onClick={() => setSeeCounter(true)}>
+            <div className={styles.hosts} onClick={handleCounter} ref={menuRef}>
             <div className={styles.iconUserpDiv}>
                 <img src={IconUser} className={styles.iconSleep}/>
             </div>
             <div className={styles.textDivBookingMenu} >
                 <p className={styles.subtitle}>HUÉSPEDES</p>
-                <p className={styles.normalTextBooking}>{adults} ADULTOS + {children} NIÑOS</p>
+                <p className={styles.normalTextBooking}> {numAdult} ADULTOS + {numKids} NIÑOS</p>
                 {seeCounter && <CounterHost /> }
                 {//Puedo hacer un menu oculto que este en oculto, el padre tenga un position relative y el menu un position relative  
                 //o un estado y un renderizado condicional (un estado que este en false y cuando le clicas este en true y cuando le clicas salga el componente (age>18 && age es el renderizado condicional))
@@ -86,10 +123,10 @@ export default function BookingMenu({ adults, children }){
             </div>
             <div className={styles.textDivBookingMenu}>
                 <p className={styles.subtitle}>CUPÓN</p>
-                <input type="text" className={styles.inputCoupon}/>
+                <input type="text" className={styles.inputCoupon} value={textCoupon} onChange={handleCoupon}/>
                 </div>
             </div>
-            <div className={styles.checkButton}>
+            <div className={styles.checkButton}  onClick={playSound}>
             <img src={IconBell} className={styles.iconBell}/>
             </div>
         </div>

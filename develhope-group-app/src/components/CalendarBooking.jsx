@@ -23,7 +23,7 @@ const CalendarComponent = ({setDate, prevDate, nextDate}) => {
           setStartDate(date)
       }
       
-      }} />
+      }}  calendarClassName={styles.myCustomCalendar} />
   );
 };
 
