@@ -5,7 +5,7 @@ import styles from '../Styles/CalendarBooking.module.scss';
 const CalendarComponent = ({setDate, prevDate, nextDate}) => {
   const [startDate, setStartDate] = useState(new Date());
   return (
-    <DatePicker className={styles.myDatePicker} selected={startDate} onChange={(date) => {
+    <DatePicker  className={styles.myDatePicker} selected={startDate} onChange={(date) => {
       if (prevDate){
         if (prevDate < date){
           setDate(date)
@@ -23,7 +23,7 @@ const CalendarComponent = ({setDate, prevDate, nextDate}) => {
           setStartDate(date)
       }
       
-      }}  calendarClassName={styles.myCustomCalendar} />
+      }} calendarClassName = {styles.calendarDesign} />
   );
 };
 

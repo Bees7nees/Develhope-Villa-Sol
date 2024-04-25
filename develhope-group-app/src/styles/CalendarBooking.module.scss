@@ -2,33 +2,10 @@
     width: 80px;
     height: 25px;
     position: absolute;
+    font-size: 16px;
     bottom: 12%;
     left: 4%;
     font-family: "Spline Sans", Helvetica;
     color: rgba(49, 73, 96); 
     border: none;
 }
-
-
-    .myDatePicker__header {
-      /* Estilos del encabezado del calendario */
-      background-color:rgba(176, 137, 18, 0.4);
-      font-family: "Spline Sans", Helvetica;
-      color: rgba(49, 73, 96); 
-      border-bottom: 1px solid #ccc;
-      padding-top: 10px;
-    }
-    .myDatePicke day-name {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        margin: 2px;
-        border-radius: 50%;
-        background-color: transparent;
-        color: #333;
-      }
-
-      .react-datepicker__day--selected{
-        background-color: rgb(44, 213, 53);;
-      }

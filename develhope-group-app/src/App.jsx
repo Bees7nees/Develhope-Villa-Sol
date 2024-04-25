@@ -1,5 +1,6 @@
 //import './App.css'
 import BookingMenu from './Components/BookingMenu'
+import CarrouselRooms from './Components/CarrouselRooms'
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   return (
     <div>
       <BookingMenu />
-     
+     <CarrouselRooms />
     </div>
   )
 }
