@@ -160,8 +160,13 @@
     align-items: center;
 }
 
+.fotosauna {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .fotosauna img {
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     margin-bottom: 15rem;
 }
@@ -294,34 +299,36 @@
         background-color: #ffffff;
         border-radius: 10px;
         display: flex;
-        width: 8rem;
+        min-width: 220px;
         height: 13rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: absolute;
         top: 24%;
-        left: 25%;
+        left: 35%;
         letter-spacing: 0.075rem;
     
         button {
-            margin-top: 0rem;
-            padding: 2%;
+            margin-top: 0.6rem;
+            padding: 4%;
+            margin-bottom: 0.3rem;
         }
     
         h3 {
             font-size: 1rem;
-            margin-bottom: -1rem;
+            margin-bottom: -0.5rem;
         }
     
         h4 {
-            font-size: 8px;
+            font-size: 12px;
             font-weight: 100;
-            margin-top: 0.6rem;
+            margin-top: 0.35rem;
+
         }
     
         svg {
-            margin-top: 2rem;
+            margin-top: 1.2rem;
         }
     }
 }
