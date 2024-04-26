@@ -8,7 +8,7 @@ export function Home() {
     <section className={classes["home-container"]}>
       <div className={classes["home-title"]}>
         <div className={classes["home-banner-content"]}>
-          <h1>Villa del Sol</h1>
+          <h1 className={classes["playfair-display"]}>Villa del Sol</h1>
           <p className={classes["home-subtitle"]}>En un lugar maravilloso</p>
           <p>Hotel playa estupendo, divino y celestial</p>
           <a href="https://maps.app.goo.gl/5EUBziEqDPUunTNb9">UBICACIÓN</a>

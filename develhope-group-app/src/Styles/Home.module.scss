@@ -1,4 +1,6 @@
 @import url(App.css);
+@import url(font.css);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .home-container a:hover {
   text-decoration: underline;
@@ -16,7 +18,12 @@
 .home-container {
   margin-bottom: 5rem;
 }
-
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:100;
+  font-style: normal;
+}
 .home-title {
   width: auto;
   height: 100vh;
@@ -46,7 +53,11 @@
 
 .home-title h1,
 .home-title p {
-  color: white;
+  color: rgb(255, 255, 255);
+  
+ 
+
+  
 }
 
 .home-title h1 {

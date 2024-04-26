@@ -6,11 +6,13 @@ import Footer from "./Components/Footer";
 import Dining from "./Pages/Dining";
 import { Home } from "./Pages/Home";
 import { ContactPrompt } from "./Components/ContactPrompt";
+import ScrollUp from "./Components/botones/ScrollUp";
 
 export default function App() {
   return (
     <>
       <Navbar/>
+      <ScrollUp/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Terms&Conditions" element={<TermsConditions />} />

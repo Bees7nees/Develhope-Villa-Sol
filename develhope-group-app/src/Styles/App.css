@@ -117,11 +117,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "PlayfairDisplay-Variable";
+  /* font-family: "PlayfairDisplay-Variable"; */
+  font-family: 'Courier New', Courier, monospace;
 }
 
 p {
-  font-family: "SplineSansMono-Variable";
+   font-family: "SplineSansMono-Variable"; 
+  
+  color: rgb(255, 255, 255);
 }
 
 a {
