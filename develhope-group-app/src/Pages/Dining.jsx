@@ -5,6 +5,8 @@ import DividingLines from "../Components/DividingLines"
 import TitleDescription from "../Components/TitleDescription"
 import Banner from "/src/Components/Banner.jsx"
 import Mensaje from "../Components/Mensaje"
+import classes from "../Styles/Home.module.scss";
+
 
 export default function Dining() {
 
@@ -24,9 +26,15 @@ export default function Dining() {
             complementa a la perfección cada bocado. Con su ambiente refinado y su excepcional calidad gastronómica, este restaurante se erige 
             como un destino gastronómico de renombre en la escena culinaria de Andalucía."/> 
             <TipoMenu/>
-            <DividingLines/>?
-            <HorarioRestaurante />
-            <DividingLines/>?
+            <div className={classes["divisor"]}>
+                <DividingLines color={"#213242"} length={"1rem"} />
+                <DividingLines color={"#B08912"} length={"1rem"} />
+            </div>
+            <HorarioRestaurante/>
+            <div className={classes["divisor"]}>
+                <DividingLines color={"#213242"} length={"1rem"} />
+                <DividingLines color={"#B08912"} length={"1rem"} />
+            </div>
             <CarouselMenu/>
             <Mensaje/>
         </>

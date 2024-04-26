@@ -4,6 +4,6 @@ export default function Difuminado({top}) {
 
 
     return (
-        <span className={classes.difuminado} style={{top: top + "%"}}></span>
+        <span className={classes.difuminado} style={{top: top + "px"}}></span>
     )
 }

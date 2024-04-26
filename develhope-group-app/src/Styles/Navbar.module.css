@@ -19,6 +19,7 @@
     list-style: none;
     height: 100%;
     gap: 3rem;
+    padding-right: 2rem;
 }
 
 .logo{
@@ -32,16 +33,11 @@
     color: #314960;
     font-family: "Spline Sans", sans-serif;
     font-size: 14px;
-    font-style: normal;
     font-weight: 600;
     line-height: 1.5px; 
     letter-spacing: 0.7px;
     text-decoration: none;
 }
-
-/* .navLinks:hover{
-    border-bottom: #314960;
-} */
 
 
 .boton{

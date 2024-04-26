@@ -5,8 +5,8 @@ export default function HorarioRestaurante() {
 
 
     return (
-        <section className={classes.contenedor}>
-            <h3 className={classes.horarios}>Horarios</h3>
+        <section id="horario" className={classes.contenedor}>
+            <h3 className={classes.horarios}>HORARIOS</h3>
             <div className={classes.contenedorGrande}>
             <div className={classes.descripcion1}>
                 <span className={classes.texto}>DESAYUNO</span>

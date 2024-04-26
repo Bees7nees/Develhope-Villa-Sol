@@ -71,8 +71,10 @@ export default function Navbar() {
                                     <span className={classes.divisor}></span>
                                     <li className={style.navLinks}>
                                     <div className={classes.contenedor} onClick={handleDropdownClick}>
-                                        <span>RESTAURANTES</span> 
-                                        <img src="/src/Assets/svg/chevrondown.svg" className={classes.chevron}/>
+                                        <span className={classes.dropdownTitle}>RESTAURANTES</span> 
+                                        <svg className={classes.chevron} xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 16 8" fill="none">
+                                            <path d="M1.89661 0.0177656L7.59471 4.95853L13.359 0.0598974L15.1133 1.58096L7.57812 7.99845L0.113354 1.52583L1.89661 0.0177656Z" fill="#213242"/>
+                                        </svg>
                                     </div>
                                 {verDropdown && (
                                 <div className={classes.dropdown}>
@@ -117,10 +119,12 @@ export default function Navbar() {
                 </ul>
             
         </nav>
-        {/* <Difuminado /> */}
-        {verHabitacionesSubNav && <Difuminado top="44"/>}
-        {verRestauranteSubNav && <Difuminado top="44" />}
-        {verSpaSubNav && <Difuminado top="44" />}
+        {
+        (verHabitacionesSubNav || verRestauranteSubNav || verSpaSubNav) ? null : <Difuminado />
+        }        
+        {verHabitacionesSubNav && <Difuminado  top="200"/>}
+        {verRestauranteSubNav && <Difuminado top="200" />}
+        {verSpaSubNav && <Difuminado  top="200"/>}
         </>
     )
 }

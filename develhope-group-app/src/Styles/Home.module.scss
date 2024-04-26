@@ -1,0 +1,125 @@
+@import url(App.css);
+
+.home-container a:hover {
+  text-decoration: underline;
+  color: #b08912;
+}
+
+.home-container a:active {
+  color: #b08912;
+}
+
+.home-container a:visited {
+  color: #b08912;
+}
+
+.home-container {
+  margin-bottom: 5rem;
+}
+
+.home-title {
+  width: auto;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/1048273/pexels-photo-1048273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+}
+
+.home-banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.home-title h1 {
+  font-family: "PlayfairDisplay-Variable-Italic";
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+}
+
+.home-title h1,
+.home-title p {
+  color: white;
+}
+
+.home-title h1 {
+  font-size: 3rem;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+}
+
+.home-title p {
+  margin-top: 0.1rem;
+}
+
+.home-title a {
+  margin-top: 0.1rem;
+}
+
+.divisor {
+  width: 90vw;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.opiniones-clientes {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.opiniones-wrapper {
+  background-image: url(../Assets/Img/background-sand-plants.jpg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.opiniones-content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.opiniones-content h1 {
+  margin: auto;
+  width: 30vw;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  text-align: center;
+}
+
+.ver-mas {
+  margin: auto;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #213242;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ver-mas:hover {
+  background-color: #b08912;
+  text-decoration: none;
+}

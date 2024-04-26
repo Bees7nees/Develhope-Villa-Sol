@@ -1,10 +1,15 @@
-import React from 'react'
-import classes from "/src/Styles/banner.module.css"
+import classes from "/src/Styles/banner.module.css";
+import PropTypes from "prop-types";
 
-export default function Banner({fotomain}) {
-    return (
+Banner.PropTypes = {
+  className: PropTypes.string,
+  fotomain: PropTypes.string,
+};
+
+export default function Banner({ fotomain }) {
+  return (
     <>
-    <img className={classes.fotomain} src={fotomain} />
+      <img className={classes.fotomain} src={fotomain}/>
     </>
-    )
+  );
 }

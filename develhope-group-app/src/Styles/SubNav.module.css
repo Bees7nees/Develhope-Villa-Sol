@@ -19,7 +19,7 @@ body{
     background: white;
     position: absolute;
     border-top: 8px solid #314960;
-    transition: ease 0.8s;
+    transition: all ease-in-out 1s;
 }
 
 .listContainer{
@@ -57,6 +57,8 @@ body{
     border-radius: 10px;
     background: #FFF;
     box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 4;
+    transition: all ease-in-out 1s;
 }   
 
 
@@ -85,21 +87,20 @@ body{
 
 .contenedor{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
     width: 100%;
 }
 
-.contenedor span{
+.dropdownTitle{
     margin-right: 1rem;
+    color: #314960;
+    font-family: "Spline Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5px; 
+    letter-spacing: 0.7px;
+    text-decoration: none;
 }
 
-.chevorn{
-    display: inline-flex;
-    width: 8;
-    height: 10px;
-    transform: rotate(90.313deg);
-    flex-shrink: 0;
-    fill: #314960;
-}
