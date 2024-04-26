@@ -8,9 +8,9 @@ TitleDescription.propTypes = {
 
 export default function TitleDescription ({ title, description}) {
     return (
-        <>
+        <div className={classes.contenedor}>
             <h1 className={classes.title}>{title}</h1>
             <p className={classes.description}>{description}</p>
-        </>
+        </div>
     )
 }
