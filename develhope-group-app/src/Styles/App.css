@@ -1,6 +1,11 @@
 @font-face {
-  font-family: "PlayfairDisplay-Regular";
-  src: url(../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+  font-family: "PlayfairDisplay-Variable";
+  src: url(../Assets/Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Variable-Italic";
+  src: url(../Assets/Fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
@@ -21,6 +26,11 @@
 @font-face {
   font-family: "PlayfairDisplay-Italic";
   src: url(../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+
+@font-face {
+  font-family: "SplineSansMono-Variable";
+  src: url(../Assets/Fonts/Spline_Sans_Mono/SplineSansMono-VariableFont_wght.ttf);
 }
 
 @font-face {
@@ -78,17 +88,45 @@
   src: url(../Assets/Fonts/Spline_Sans/static/SplineSans-Light.ttf);
 }
 
+:root {
+  --blue50: #d8e2eb;
+  --blue100: #b1c5d8;
+  --blue200: #8aa8c4;
+  --blue300: #6690b0;
+  --blue400: #527ea1;
+  --blue500: #3b6d8e;
+  --blue600: #2f5f7b;
+  --blue700: #224f6a;
+  --blue800: #163f57;
+  --blue900: #0a2a43;
+  --golden50: #fbf3d9;
+  --golden100: #f7e6b3;
+  --golden200: #f3da8d;
+  --golden300: #efcf67;
+  --golden400: #ecc140;
+  --golden500: #e8b51a;
+  --golden600: #d79b1a;
+  --golden700: #c38817;
+  --golden800: #a97414;
+  --golden900: #8a6b0f;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "PlayfairDisplay";
+  font-family: "PlayfairDisplay-Variable";
 }
 
 p {
-  font-family: "SplineSansMono-Regular";
+  font-family: "SplineSansMono-Variable";
+}
+
+a {
+  text-decoration: none;
+  font-family: "SplineSansMono-Variable";
 }
 
 .sections-termscond {

@@ -1,4 +1,3 @@
-import Banner from "../Components/Banner";
 import DividingLines from "../Components/DividingLines";
 import TitleDescription from "../Components/TitleDescription";
 import ReviewCardCarousel from "../Components/ReviewCardCarousel";
@@ -8,12 +7,13 @@ export function Home() {
   return (
     <section className={classes["home-container"]}>
       <div className={classes["home-title"]}>
-        <h1>Villa del Sol</h1>
-        <h2>En un lugar maravilloso</h2>
-        <p>Hotel playa estupendo, divino y celestial</p>
-        <a href="https://maps.app.goo.gl/5EUBziEqDPUunTNb9">UBICACIÓN</a>
+        <div className={classes["home-banner-content"]}>
+          <h1>Villa del Sol</h1>
+          <p className={classes["home-subtitle"]}>En un lugar maravilloso</p>
+          <p>Hotel playa estupendo, divino y celestial</p>
+          <a href="https://maps.app.goo.gl/5EUBziEqDPUunTNb9">UBICACIÓN</a>
+        </div>
       </div>
-      <Banner fotomain={"Assets/Img/fotomain.png"} />
       <TitleDescription
         title={"Hospédese en uno de los mejores hoteles del mundo"}
         description={
@@ -31,6 +31,11 @@ export function Home() {
         <DividingLines color={"#B08912"} length={"1rem"} />
       </div>
       {/* Aquí va parecido a lo anterior pero para la página de cocina */}
+      <section className={classes["acceso-restaurante"]}>
+        <div className={classes["acceso-restaurante-wrapper"]}>
+          
+        </div>
+      </section>
       <div className={classes["divisor"]}>
         <DividingLines color={"#213242"} length={"1rem"} />
         <DividingLines color={"#B08912"} length={"1rem"} />
@@ -40,6 +45,13 @@ export function Home() {
           <div className={classes["opiniones-content"]}>
             <h1>NUESTROS CLIENTES OPINAN</h1>
             <ReviewCardCarousel />
+            <a
+              className={classes["ver-mas"]}
+              href="https://www.tripadvisor.es/"
+              target="_blank"
+            >
+              VER MÁS {">"}
+            </a>
           </div>
         </div>
       </section>
