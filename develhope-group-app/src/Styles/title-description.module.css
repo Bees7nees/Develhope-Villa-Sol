@@ -13,10 +13,9 @@
     height: 20%;
     text-align: center;
     font-family: "Playfair Display";
-    font-size: 45px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 800;
-    line-height: 1px;
     letter-spacing: 2.25px;
     color: #213242;
 }
@@ -30,4 +29,23 @@
     font-weight: 400;
     line-height: 1.8;
     letter-spacing: 0.05rem;
+    height: fit-content;
+}
+
+
+@media (max-width : 430px){
+
+    .contenedor{
+        height: max-content;
+        margin: auto;
+    }
+
+    .description{
+        font-size: 0.6rem;
+    }
+
+
+    title{
+        font-size: 0.9rem;
+    }
 }

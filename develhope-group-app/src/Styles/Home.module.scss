@@ -27,15 +27,12 @@
 .home-title {
   width: auto;
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/1048273/pexels-photo-1048273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
+  position: absolute;
   align-items: center;
+  top: 15%;
   padding-left: 5vw;
+  z-index: 3;
 }
 
 .home-banner-content {

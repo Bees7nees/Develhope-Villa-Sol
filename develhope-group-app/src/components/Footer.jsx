@@ -6,7 +6,7 @@ export default function Footer() {
 
 
     return (
-        <footer className={classes.footerContainer}>
+        <footer id="contacto" className={classes.footerContainer}>
             <div className={classes.footer}>
                 <section className={classes.nosotrosFooter}>
                     <Link className={classes.titulo}>CONOCENOS</Link> 
@@ -39,7 +39,7 @@ export default function Footer() {
             <div className={classes.bottomContainer}>
                 <img className={classes.logo} src="/src/Assets/svg/logoWhite.svg" alt="logo"/>
                 <div className={classes.politicsContainer}>
-                    <Link className={classes.politics}>Política & Privacidad</Link>
+                    <Link className={classes.politics} to="/Terms&Conditions">Política & Privacidad</Link>
                     <p className={classes.politicstext}>Villa del sol. Todos los derechos reservados est-2024</p>
                 </div>
             </div>
