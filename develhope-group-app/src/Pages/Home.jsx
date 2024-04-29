@@ -3,6 +3,7 @@ import TitleDescription from "../Components/TitleDescription";
 import ReviewCardCarousel from "../Components/ReviewCardCarousel";
 import classes from "../Styles/Home.module.scss";
 import Banner from "../Components/Banner";
+import CarrouselRooms from "../Components/CarrouselRooms";
 
 export function Home() {
   return (
@@ -12,7 +13,9 @@ export function Home() {
           <h1 className={classes["playfair-display"]}>Villa del Sol</h1>
           <p className={classes["home-subtitle"]}>En un lugar maravilloso</p>
           <p>El mejor hotel a orillas del Mediterráneo</p>
-          <a href="https://maps.app.goo.gl/5EUBziEqDPUunTNb9">UBICACIÓN</a>
+          <a target="_blank" href="https://maps.app.goo.gl/5EUBziEqDPUunTNb9">
+            UBICACIÓN
+          </a>
         </div>
       </div>
       <Banner />
@@ -28,6 +31,7 @@ export function Home() {
       </div>
       {/* Aquí iría la imagen de una de las habitaciones con
             descripción y el botón para acceder a la galería, cambiando el url */}
+      <CarrouselRooms />
       <div className={classes["divisor"]}>
         <DividingLines color={"#213242"} length={"1rem"} />
         <DividingLines color={"#B08912"} length={"1rem"} />
