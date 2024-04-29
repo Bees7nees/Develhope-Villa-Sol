@@ -1,6 +1,6 @@
-import classes from "../Styles/buttons.module.css"
+import classes from "./buttons.module.css"
 
-export function Button ({label, onClick, type}) {
+export default function Button ({label, onClick, type}) {
     return (
     <>
     {type=='yellow' && <button className={classes.buttonY} onClick={onClick}><strong>{label}</strong></button>}

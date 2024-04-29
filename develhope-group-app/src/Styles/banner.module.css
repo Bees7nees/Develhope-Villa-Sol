@@ -1,26 +1,5 @@
 .fotomain {
     width: 100%;
-<<<<<<< HEAD
     height: 37rem;
     z-index: -1;
-=======
-    height: 47.725rem;
-    object-fit: cover;
-}
-
-@media screen and (max-width: 768px) {
-    .fotomain {
-        width: 185%;
-        height: auto;
-        
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .fotomain {
-        width: 338%;
-        height: auto;
-        
-    }
->>>>>>> TermsConditions-&-SPA
 }
