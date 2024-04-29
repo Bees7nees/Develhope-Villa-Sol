@@ -57,7 +57,7 @@ export function ContactFooterVariant() {
             Queremos seguir mejorando, y tu opinión es muy importante.
           </p>
         </section>
-        <form action="submit">
+        <form className={classes["form"]} action="submit">
           <section className={classes["input-section"]}>
             <div className={classes["user-content"]}>
               <div className={classes["user"]}>
@@ -114,7 +114,7 @@ export function ContactFooterVariant() {
               className={classes["write-message"]}
               onClick={handleShowPrompt}
             >
-              Write message
+              Escribir mensaje
             </button>
           </section>
         </form>

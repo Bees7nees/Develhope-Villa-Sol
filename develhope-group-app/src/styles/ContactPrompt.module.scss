@@ -2,6 +2,9 @@
 
 .prompt-completed-text {
   display: none;
+  font-family: "SplineSansMono-Variable";
+  font-size: 1.5rem;
+  color: var(--blue100);
 }
 
 //Contact prompt wrapper styling
@@ -58,6 +61,7 @@
 }
 
 .contact-text {
+  font-family: "PlayfairDisplay-Variable";
   text-align: center;
   font-size: 1.5rem;
   flex: 1;
