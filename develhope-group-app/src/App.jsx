@@ -9,6 +9,7 @@ import { ContactPrompt } from "./Components/ContactPrompt";
 import ScrollUp from "./Components/botones/ScrollUp";
 import Banner from "./Components/Banner";
 import NotFound from "./Components/NotFound";
+import SpaPage from "./Pages/Spa";
 
 
 
@@ -23,9 +24,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Terms&Conditions" element={<TermsConditions />} />
-        <Route path="/restauranteSunset" element={<Dining/>}/>
+        <Route path="/restauranteSunset" element={<Dining />}/>
         <Route path="/test" element={<ContactPrompt />} />
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="*" element={<NotFound />}/>
+        <Route path="/spa" element={<SpaPage />} />
       </Routes>
       <Footer/>
     </>

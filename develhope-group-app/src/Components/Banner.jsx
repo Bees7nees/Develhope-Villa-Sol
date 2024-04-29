@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useLocation } from "react-router-dom";
 import classes from "/src/Styles/banner.module.css";
 import { useEffect, useState } from "react";
@@ -50,7 +49,6 @@ export default function Banner() {
     </>
   );
 }
-=======
 import React from 'react'
 import classes from "/src/Styles/banner.module.css"
 
@@ -61,4 +59,3 @@ export default function Banner({fotomain}) {
     </>
     )
 }
->>>>>>> TermsConditions-&-SPA
