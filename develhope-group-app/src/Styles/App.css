@@ -390,26 +390,26 @@ a {
 /* RESPONSIVE Términos & Condiciones (Tablet) */
 
 @media screen and (max-width: 768px) {
-    .termscond-2 {
-        display: flex;
-        flex-direction: column;
-    }
-    .history-contact {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-bottom: 5rem;
-        text-align: center;
-        
-        .ourhistory, .contact {
-            width: 40%;
-        }
-    }
+  .termscond-2 {
+      display: flex;
+      flex-direction: column;
+  }
+  .history-contact {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 5rem;
+      text-align: center;
+      
+      .ourhistory, .contact {
+        width: 40%;
+      }
+  }
 
 /* RESPONSIVE SPA (Tablet) */
 
-    .intro-spa {
-	    width: 90%;
+  .intro-spa {
+	  width: 90%;
     }
 
     .spa-container {
@@ -505,11 +505,11 @@ a {
             font-size: 12px;
             font-weight: 100;
             margin-top: 0.35rem;
-
         }
     
         svg {
             margin-top: 1.2rem;
         }
     }
+  }
 }
