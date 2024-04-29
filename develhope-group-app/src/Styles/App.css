@@ -179,4 +179,337 @@ a {
 .contact {
   width: 380px;
   height: 200px;
+.sections-termscond {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+	  width: 90%;
+	  max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sections-termscond h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.sections-termscond section {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sections-termscond span {
+    margin-bottom: 3rem;
+}
+
+.termscond-2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.fotomarketing {
+    max-width: 57.813rem;
+    min-width: 33.125rem;
+    margin-right: 3rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.ourhistory {
+    width: 31.25rem;
+    height: 12.5rem;
+    margin-bottom: 5rem;
+    line-height: 1.5rem;
+}
+
+.contact {
+    width: 31.25rem;
+    height: 12.5rem;
+}
+
+.intro-spa {
+    text-align: center;
+    width: 56.25rem;
+    margin: auto;
+    letter-spacing: 0.003rem;
+    line-height: 200%;
+    margin-bottom: 4rem;
+
+    h2 {
+        margin-top: 8rem;
+        font-size: 48px;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.h3-spa-title {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 1.5rem;
+}
+
+.spa-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+
+    img {
+        width: 40rem;
+        height: 25rem;
+    }
+
+    p {
+        width: 30%;
+        letter-spacing: 0.05rem;
+        font-size: 1rem;
+        margin-left: 5rem;
+        text-align: justify;
+        line-height: 2.188rem;
+        color: #213242;
+    }
+}
+
+.tratamientos {
+    margin-top: 3rem;
+    h3 {
+        text-align: center;
+        font-family: "Playfair Display";
+        font-size: 1.5rem;
+        margin-bottom: 5rem;
+    }
+
+    span {
+        max-width: 90%;
+        margin-left: 3rem;
+        height: 13.125rem;
+        border-top: 3px solid #B08912;
+        
+        margin-bottom: 1rem;
+    }
+
+    span:hover {
+        cursor: pointer;
+    }
+
+    h5 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-family: "Spline Sans Mono";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.875rem;
+        letter-spacing: 0.05rem;
+    }
+}
+
+.tratamientos-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.spa-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotosauna {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fotosauna img {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15rem;
+}
+
+.horarios-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    width: 25.25rem;
+    height: 28.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.075rem;
+    line-height: 0.063rem;
+
+    button {
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    svg {
+        margin-bottom: 2rem;
+    }
+}
+
+/* RESPONSIVE Términos & Condiciones (Tablet) */
+
+@media screen and (max-width: 768px) {
+    .termscond-2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .history-contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 5rem;
+        text-align: center;
+        
+        .ourhistory, .contact {
+            width: 40%;
+        }
+    }
+
+/* RESPONSIVE SPA (Tablet) */
+
+    .intro-spa {
+	    width: 90%;
+    }
+
+    .spa-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        p {
+            width: 80%;
+            margin-left: -2rem;
+        }
+
+        img {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .tratamientos span {
+        margin-left: 1rem;
+    }
+
+    .horarios-container {
+        max-width: 30%;
+        max-height: 58%;
+        top: 32%;
+
+        svg {
+            width: 90%;
+        }
+    }
+}
+
+/* RESPONSIVE Términos & Condiciones (Móvil) */
+
+@media screen and (max-width: 430px) {
+    
+    .ourhistory, .contact {
+        font-size: 16px;
+        line-height: normal;
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+/* RESPONSIVE SPA (Móvil) */
+
+    .intro-spa {
+        h2 {
+            font-size: 36px;
+        }
+    }
+
+    .spa-container p {
+        width: 90%;
+        margin-left: 0.1rem;
+    }
+
+    .spa-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tratamientos span {
+        margin-bottom: 12rem;
+    }
+
+    .horarios-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        display: flex;
+        min-width: 220px;
+        height: 13rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 24%;
+        left: 35%;
+        letter-spacing: 0.075rem;
+    
+        button {
+            margin-top: 0.6rem;
+            padding: 4%;
+            margin-bottom: 0.3rem;
+        }
+    
+        h3 {
+            font-size: 1rem;
+            margin-bottom: -0.5rem;
+        }
+    
+        h4 {
+            font-size: 12px;
+            font-weight: 100;
+            margin-top: 0.35rem;
+
+        }
+    
+        svg {
+            margin-top: 1.2rem;
+        }
+    }
 }

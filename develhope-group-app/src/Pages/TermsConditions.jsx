@@ -1,3 +1,6 @@
+import fotomarketing from '../assets/Img/fotomarketing.png';
+import DividingLines from '../Components/DividingLines';
+
 function TermsConditions () {
     return (
         <>
@@ -14,9 +17,12 @@ function TermsConditions () {
             <section>9. Normas de Conducta</section> <span>Se espera que todos los huéspedes de Villa del Sol mantengan un comportamiento adecuado y respeten las normas de convivencia. Se pueden tomar medidas disciplinarias contra aquellos que perturben la tranquilidad de otros huéspedes.</span>
             <section>10. Modificaciones y Actualizaciones</section> <span>Villa del Sol se reserva el derecho de modificar o actualizar estos términos y condiciones en cualquier momento. Los huéspedes serán informados sobre cualquier cambio relevante antes de su entrada en vigor.</span>
         </div>
-
+        <div>
+            <DividingLines color={"#213242"} length={"1rem"} />
+            <DividingLines color={"#B08912"} length={"1rem"} />
+        </div>   
         <div className="termscond-2">
-            <img src="C:\Users\Pablo\Desktop\Villa del Sol\Develhope-App-Group-Project\develhope-group-app\src\assets\fotomarketing.png"></img>
+            <picture className='fotomarketing'><img src={fotomarketing} /></picture>
             <div className="history-contact">
                 <div className="ourhistory"><h3>DESCUBRE NUESTRA HISTORIA</h3> <p>Cádiz, una ciudad con una rica historia y una vibrante cultura, ofrece a los visitantes una experiencia única llena de lugares históricos fascinantes. En este artículo, exploraremos algunos de los sitios emblemáticos que no debes perderte durante tu visita a esta encantadora ciudad andaluza. Además, destacaremos cómo el Hotel VillaSol puede servir como tu base ideal para explorar estos tesoros históricos. ¡Prepárate para un viaje en el tiempo y la cultura en Cádiz!</p> </div>
                 <div className="contact"><h3>CONTACTO DEL DEPARTAMENTO DE MÁRKETING DE VILLASOL</h3> <p>E-mail: marketing@villasol.com</p> <p>Teléfono: +34 000 11 22 33</p> </div>

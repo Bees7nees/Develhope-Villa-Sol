@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .contenedor{
     display: flex;
@@ -48,4 +49,29 @@
     title{
         font-size: 0.9rem;
     }
+=======
+.title {    /*Para aplicar el componente de título y descripción de forma general*/
+    display: flex;
+    width: 1276px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1px;
+    letter-spacing: 2.25px;
+}
+
+.description {
+    display: flex;
+    width: 1222px;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: "Spline Sans Mono";
+>>>>>>> TermsConditions-&-SPA
 }
