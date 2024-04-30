@@ -1,0 +1,42 @@
+
+.servicios_iconos{
+width: 50%;
+/* padding: 5px; */
+    /* display: grid;
+    grid-template-columns: repeat(4,50px); */
+    display: flex;
+    flex-wrap: wrap;
+     /* gap: 20px;  */
+    justify-content: left;
+    align-items: baseline;
+box-sizing: border-box;
+    
+
+}
+.caja_icono{
+     max-width: 100%; 
+}
+.icono{
+    display: flex;
+    
+    justify-content: center;
+    align-content: flex-end;
+  min-width: 25%;  
+    max-width: 25%;  
+    opacity: 0.9;
+    flex: 1 1 40px;
+   
+}
+.icono svg{
+    padding: 5px;
+max-width: 40px;
+max-height: 40px;
+}
+.card_servicios{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    /* gap: ch; */
+    overflow: hidden;
+    width: 100%;
+}

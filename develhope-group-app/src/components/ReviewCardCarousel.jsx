@@ -6,6 +6,17 @@ import classes from "../Styles/ReviewCardCarousel.module.scss";
 import PropTypes from "prop-types";
 
 ReviewCardCarousel.propTypes = {
+  nameInput: PropTypes.string,
+  emailInput: PropTypes.string,
+};
+
+ArrowRight.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
+
+ArrowLeft.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   onClick: PropTypes.func,
@@ -22,12 +33,7 @@ function ArrowRight(props) {
         height="30"
         viewBox="0 0 21 47"
         fill="none"
-      >
-        <path
-          d="M0.0735302 40.8833L12.9835 23.444L0.278748 5.72679L4.25323 0.357928L20.8973 23.518L3.98467 46.3643L0.0735302 40.8833Z"
-          fill="#213242"
-        />
-      </svg>
+      ></svg>
     </div>
   );
 }
@@ -44,12 +50,7 @@ function ArrowLeft(props) {
         viewBox="0 0 21 47"
         fill="none"
         style={{ transform: "rotate(180deg)" }}
-      >
-        <path
-          d="M0.0735302 40.8833L12.9835 23.444L0.278748 5.72679L4.25323 0.357928L20.8973 23.518L3.98467 46.3643L0.0735302 40.8833Z"
-          fill="#213242"
-        />
-      </svg>
+      ></svg>
     </div>
   );
 }
@@ -66,22 +67,12 @@ export default function ReviewCardCarousel() {
     prevArrow: <ArrowLeft />,
     responsive: [
       {
-        breakpoint: 1024,
+        //! Breakpoint 430px NOT WORKING
+        breakpoint: 430,
         settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
+          arrows: false,
+          dots: false,
           slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],

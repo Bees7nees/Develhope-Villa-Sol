@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import {useState} from 'react'
 
+import PropTypes from "prop-types";
 import PrevArrowImg from '../Assets/Img/pre-arrow_rooms.png'
 import PostArrowImg from '../Assets/Img/post-arrow_rooms.png'
 import RoomStandar from '../Assets/Img/Room_Standar.jpg'
@@ -22,17 +23,29 @@ const NextArrow = ({ onClick }) => (
   </div>
 );
 
-function TitleCarrouselRooms({ text }){
+function TitleCarrouselRooms({ text }) {
   return (
     <div className={styles.titleCarrouselRooms}>
       <p>{text}</p>
     </div>
-  )
+  );
 }
 
-export default function CarrouselRooms(){
+PrevArrow.propTypes = {
+  onClick: PropTypes.func,
+};
+
+NextArrow.propTypes = {
+  onClick: PropTypes.func,
+};
+
+TitleCarrouselRooms.propTypes = {
+  text: PropTypes.string,
+};
+
+export default function CarrouselRooms() {
   const settings = {
-   // dots: true,
+    // dots: true,
     lazyLoad: true,
     infinite: true,
     speed: 500,
@@ -101,5 +114,4 @@ const toggleTarjeta = (tipo) => {
     </Slider>
     </div>
   );
-
 }

@@ -1,8 +1,18 @@
+.contact-panel-background {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .contact-footer-variants,
 .contact-footer-variants * {
   box-sizing: border-box;
 }
-.contact-footer-variants {
+.contact-footer-variant {
   background: #ffffff;
   border-radius: 1rem;
   display: flex;
@@ -47,6 +57,13 @@
   font-weight: var(--text-large-font-weight, 400);
   position: relative;
   align-self: stretch;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 .input-section {
   flex-shrink: 0;
@@ -163,9 +180,9 @@
   overflow: visible;
 }
 .submit-button {
+  width: fit-content;
   background: var(--blue-300, #628bb1);
   border-radius: 1rem;
-  padding: 1rem;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
@@ -179,13 +196,15 @@
   background: var(--blue-100, #b1c5d8);
 }
 .write-message {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
   background-color: transparent;
   border: none;
   cursor: pointer;
   color: var(--grayscale-white, #ffffff);
-  text-align: left;
-  font-family: "SplineSansMono-SemiBold", sans-serif;
-  font-weight: 600;
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
   position: relative;
 }
 

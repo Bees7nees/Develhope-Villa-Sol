@@ -4,6 +4,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { GlobalProvider } from '../src/Components/GlobalVariable.jsx'
 
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
     <GlobalProvider>

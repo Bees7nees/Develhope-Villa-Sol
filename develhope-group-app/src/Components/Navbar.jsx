@@ -67,7 +67,7 @@ export default function Navbar() {
                     {verRestauranteSubNav && (
                         <nav className={classes.subNavContenedor}>
                                 <ul className={classes.listContainer}>
-                                    <li><Anchor className={style.navLinks} to="#menu">MENÚ</Anchor></li>
+                                    <li><Anchor className={style.navLinks} smooth={true} to="#menu">MENÚ</Anchor></li>
                                     <span className={classes.divisor}></span>
                                     <li className={style.navLinks}>
                                     <div className={classes.contenedor} onClick={handleDropdownClick}>
@@ -91,11 +91,11 @@ export default function Navbar() {
                                 )}
                                 </li>
                                 <span className={classes.divisor}></span>
-                                <li><Anchor className={style.navLinks} to="#platosEstrella">PLATOS ESTRELLAS</Anchor></li>
+                                <li><Anchor className={style.navLinks} smooth={true} to="#platosEstrella">PLATOS ESTRELLAS</Anchor></li>
                                 <span className={classes.divisor}></span>
-                                <li><Anchor className={style.navLinks} to="#horario">HORARIO</Anchor></li>
+                                <li><Anchor className={style.navLinks} smooth={true}  to="#horario">HORARIO</Anchor></li>
                                 <span className={classes.divisor}></span>
-                                <li><Anchor className={style.navLinks} to="#galeria">GALERÍA</Anchor></li>
+                                <li><Anchor className={style.navLinks} smooth={true} to="#galeria">GALERÍA</Anchor></li>
                             </ul>
                         </nav>
                     )}
@@ -115,9 +115,8 @@ export default function Navbar() {
                         </nav>
                     )} 
                     <li><Link className={style.navLinks} to="/galeria">GALERÍA</Link></li>
-                    <li><Link className={style.navLinks} to="/contacto">CONTACTO</Link></li>
+                    <li><Anchor className={style.navLinks} smooth={true} to="#contacto">CONTACTO</Anchor></li>
                 </ul>
-            
         </nav>
         {
         (verHabitacionesSubNav || verRestauranteSubNav || verSpaSubNav) ? null : <Difuminado />

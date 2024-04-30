@@ -1,0 +1,42 @@
+
+
+
+:root {
+    --color-primario: #213242;
+    --color-primario-transparecia: #213242ce;
+    --color-amarillo-transparencia: #b08812c0;
+    --color-amarillo: #B08912;
+}
+.rooms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* max-width: 1200px; */
+    gap: 5ch;
+
+}
+.sections_room{
+    max-width: 1200px;
+}
+.navRoom{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.navRoom h3{
+    color: #213242;
+    cursor: pointer;
+    /* font-weight: bold; */
+    font-size: 1.3rem;
+}
+.navRoom h3:hover{
+    text-decoration: underline;
+    color: var(--color-primario-transparecia);
+}
+.navRoom .selected{
+    color: #B08912;
+    text-decoration: underline;
+}

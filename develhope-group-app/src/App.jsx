@@ -1,25 +1,29 @@
 import "../src/Styles/App.css";
-import { Test } from "./Components/Test";
 import { Routes, Route } from "react-router-dom";
 import TermsConditions from "./Pages/TermsConditions";
-import Navbar from "./Components/Navbar"
+import SpaPage from "./Pages/Spa";
+import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Dining from "./Pages/Dining";
 import { Home } from "./Pages/Home";
+import { ContactPrompt } from "./Components/ContactPrompt";
+import ScrollUp from "./Components/botones/ScrollUp";
+import NotFound from "./Components/NotFound";
 
 export default function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
+      <ScrollUp />
       <Routes>
-        <Route path="/test" element={<Test />} />
         <Route path="/" element={<Home />} />
         <Route path="/Terms&Conditions" element={<TermsConditions />} />
-        <Route path="/restauranteSunset" element={<Dining/>}/>
+        <Route path="/restauranteSunset" element={<Dining />} />
+        <Route path="/test" element={<ContactPrompt />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/spa" element={<SpaPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }
-
-
