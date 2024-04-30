@@ -1,7 +1,7 @@
 import fotomasaje1 from '../Assets/Img/fotomasaje1.png';
 import fotomasaje2 from '../Assets/Img/fotomasaje2.png';
 import fotosauna from '../Assets/Img/fotosauna.png';
-import { Button } from '../Components/Buttons';
+import Button from '../Components/Buttons';
 import DividingLines from '../Components/DividingLines'
 
 export default function SpaPage () {

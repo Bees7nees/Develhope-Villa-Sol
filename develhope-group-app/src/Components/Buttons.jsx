@@ -1,5 +1,5 @@
-import classes from "./buttons.module.css";
-import PropTypes from "prop-types";
+import classes from '../Styles/buttons.module.css';
+import PropTypes from 'prop-types';
 
 Button.propTypes = {
   label: PropTypes.string,
