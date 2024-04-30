@@ -17,7 +17,16 @@
   height: 50%;
 }
 .customPrevArrow {
+  cursor: pointer;
+  scale: 1.5;
   left: 2rem;
+  top: 50%;
+  color: white;
+}
+.customNextArrow {
+  cursor: pointer;
+  scale: 1.5;
+  right: 2rem;
   top: 50%;
   color: white;
 }
@@ -26,17 +35,13 @@
   color: var(--golden400);
   transition: all ease-in-out 0.2s;
 }
-.customNextArrow {
-  right: 2rem;
-  top: 50%;
-  color: white;
-}
 .imgCarrouselRoom {
   z-index: 1;
   position: relative;
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  cursor: pointer;
 }
 .slideItem {
   position: relative;
@@ -83,7 +88,7 @@
 
 .titleCard{
   font-weight: 600;
-  color: #213242;
+  color: var(--blue700);
   font-size: 24px;
   letter-spacing: 1.2px;
   line-height: 1px;
@@ -91,7 +96,7 @@
 }
 
 .textCard{
-  color: #213242;
+  color: var(--blue900);
     text-align: center;
     font-family: "Spline Sans Mono-regular", Helvetica;
     font-size: 18px;
@@ -107,9 +112,10 @@
   align-items: flex-start;
   gap: 10px;
   border-radius: 10px;
-  border: 2px solid #d8e2eb00;
-  background-color: #355069;
-  color: #FFFF;
+  border: 2px solid var(--blue700);
+  background-color: var(--blue700);
+  color: white!important;
+  text-decoration: none!important;
   font-size: 1em;
   font-weight: 500;
   cursor: pointer;
@@ -119,4 +125,5 @@
 .buttonCard:hover {
   border: 2px solid #FFFF;
   background-color: #54789b;
+  color: white!important;
 }
