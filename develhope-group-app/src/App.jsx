@@ -1,6 +1,7 @@
 import "../src/Styles/App.css";
 import { Routes, Route } from "react-router-dom";
 import TermsConditions from "./Pages/TermsConditions";
+import SpaPage from "./Pages/Spa";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Dining from "./Pages/Dining";
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/restauranteSunset" element={<Dining />} />
         <Route path="/test" element={<ContactPrompt />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/spa" element={<SpaPage />} />
       </Routes>
       <Footer />
     </>
