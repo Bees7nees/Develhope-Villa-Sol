@@ -4,7 +4,7 @@ import fotosauna from '../assets/Img/fotosauna.png';
 import { Button } from '../Components/Buttons';
 import DividingLines from '../Components/DividingLines'
 
-function SpaPage () {
+export default function SpaPage () {
     return (
         <>
         <div className='intro-spa'>
@@ -54,5 +54,3 @@ function SpaPage () {
         </>
     )
 }
-
-export default SpaPage
