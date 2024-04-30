@@ -2,23 +2,19 @@ import styles from "../Styles/CarrouselRooms.module.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { BsChevronCompactLeft } from "react-icons/bs";
+import { BsChevronCompactRight } from "react-icons/bs";
 import PropTypes from "prop-types";
 
 const PrevArrow = ({ onClick }) => (
   <div onClick={onClick}>
-    <img
-      className={styles.customPrevArrow}
-      src="../../assets/pre-arrow_rooms.png"
-    />
+    <BsChevronCompactLeft className={styles.customPrevArrow} />
   </div>
 );
 
 const NextArrow = ({ onClick }) => (
   <div onClick={onClick}>
-    <img
-      className={styles.customNextArrow}
-      src="../../assets/post-arrow_rooms.png"
-    />
+    <BsChevronCompactRight className={styles.customNextArrow} />
   </div>
 );
 
@@ -60,30 +56,24 @@ export default function CarrouselRooms() {
       <Slider {...settings} className={styles.sliderRoom}>
         <div className={styles.slideItem}>
           <img
-            src="../../assets/Room_Standar.jpg"
+            src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg"
             alt="Habitación estándar"
-            width={1440}
-            height={800}
             className={styles.imgCarrouselRoom}
           />
           <TitleCarrouselRooms text="HABITACION ESTÁNDAR" />
         </div>
         <div className={styles.slideItem}>
           <img
-            src="../../assets/Room_Premium.jpg"
+            src="https://images.pexels.com/photos/22469110/pexels-photo-22469110/free-photo-of-hotel-cama-lujo-libro.jpeg"
             alt="Habitación Premium"
-            width={1440}
-            height={800}
             className={styles.imgCarrouselRoom}
           />
           <TitleCarrouselRooms text="HABITACIÓN PREMIUM" />
         </div>
         <div className={styles.slideItem}>
           <img
-            src="../../assets/Room_Suite.png"
+            src="https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Habitación Suite"
-            width={1440}
-            height={800}
             className={styles.imgCarrouselRoom}
           />
           <TitleCarrouselRooms text="HABITACIÓN SUITE" />

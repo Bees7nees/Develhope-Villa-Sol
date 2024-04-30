@@ -4,6 +4,7 @@ import ReviewCardCarousel from "../Components/ReviewCardCarousel";
 import classes from "../Styles/Home.module.scss";
 import Banner from "../Components/Banner";
 import CarrouselRooms from "../Components/CarrouselRooms";
+import { BsClock } from "react-icons/bs";
 
 export function Home() {
   return (
@@ -26,23 +27,56 @@ export function Home() {
         }
       />
       <div className={classes["divisor"]}>
-        <DividingLines color={"#213242"} length={"1rem"} />
-        <DividingLines color={"#B08912"} length={"1rem"} />
+        <DividingLines color={"var(--blue900)"} length={"1rem"} />
+        <DividingLines color={"var(--golden500)"} length={"1rem"} />
       </div>
       {/* Aquí iría la imagen de una de las habitaciones con
             descripción y el botón para acceder a la galería, cambiando el url */}
       <CarrouselRooms />
       <div className={classes["divisor"]}>
-        <DividingLines color={"#213242"} length={"1rem"} />
-        <DividingLines color={"#B08912"} length={"1rem"} />
+        <DividingLines color={"var(--blue900)"} length={"1rem"} />
+        <DividingLines color={"var(--golden500)"} length={"1rem"} />
       </div>
       {/* Aquí va parecido a lo anterior pero para la página de cocina */}
       <section className={classes["acceso-restaurante"]}>
-        <div className={classes["acceso-restaurante-wrapper"]}></div>
+        <div className={classes["acceso-restaurante-wrapper"]}>
+          <img
+            className={classes["acceso-restaurante-img"]}
+            src="https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg"
+            alt="Restaurante Villa del Sol"
+          />
+          <div className={classes["acceso-restaurante-content"]}>
+            <div className={classes["acceso-restaurante-title"]}>
+              <h1>
+                COCINA DE <br />
+                MERCADO
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Facilisi nunc
+                pellentesque ultricies morbi pellentesque facilisis nunc
+                aliquam.
+              </p>
+            </div>
+            <div className={classes["restaurante-horario"]}>
+              <BsClock style={{ fontSize: "2rem", alignSelf: "center" }} />
+              <p className={classes["restaurante-horario-text"]}>
+                Horario <br />
+                Vestimenta informal
+              </p>
+            </div>
+            <a
+              className={classes["restaurante-reservar"]}
+              href="/restauranteSunset"
+              target="_blank"
+            >
+              Reservar {">"}
+            </a>
+          </div>
+        </div>
       </section>
       <div className={classes["divisor"]}>
-        <DividingLines color={"#213242"} length={"1rem"} />
-        <DividingLines color={"#B08912"} length={"1rem"} />
+        <DividingLines color={"var(--blue900)"} length={"1rem"} />
+        <DividingLines color={"var(--golden500)"} length={"1rem"} />
       </div>
       <section className={classes["opiniones-clientes"]}>
         <div className={classes["opiniones-wrapper"]}>
@@ -60,8 +94,8 @@ export function Home() {
         </div>
       </section>
       <div className={classes["divisor"]}>
-        <DividingLines color={"#213242"} length={"1rem"} />
-        <DividingLines color={"#B08912"} length={"1rem"} />
+        <DividingLines color={"var(--blue900)"} length={"1rem"} />
+        <DividingLines color={"var(--golden500)"} length={"1rem"} />
       </div>
     </section>
   );

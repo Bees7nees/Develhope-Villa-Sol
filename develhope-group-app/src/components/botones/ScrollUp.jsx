@@ -23,19 +23,6 @@ export default function ScrollUp() {
     <div>
       {scrollup && (
         <button
-          style={{
-            position: "fixed",
-            bottom: "3rem",
-            right: "3rem",
-            height: "3rem",
-            width: "3rem",
-            fontSize: "2rem",
-            lineHeight: "0",
-            color: "#fff",
-            cursor: "pointer",
-            border: "none",
-            borderRadius: "10px",
-          }}
           className={styles.btnScroll}
           onClick={desplazar}
         >
