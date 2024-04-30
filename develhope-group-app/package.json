@@ -10,8 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/react": "^18.2.74",
-    "@types/react-dom": "^18.2.23",
+    "cally": "^0.4.3",
+    "classnames": "^2.5.1",
+    "node-sass": "^9.0.0",
+    "react": "^18.2.0",
+    "react-datepicker": "^6.8.0",
+    "react-dom": "^18.2.0",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "use-sound": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "classnames": "^2.5.1",
     "eslint": "^8.57.0",
