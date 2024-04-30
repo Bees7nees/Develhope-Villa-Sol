@@ -6,8 +6,8 @@ import PropTypes from "prop-types";
 import { useEffect } from "react";
 
 ContactPrompt.propTypes = {
-  nameInput: PropTypes.string.isRequired,
-  emailInput: PropTypes.string.isRequired,
+  nameInput: PropTypes.string,
+  emailInput: PropTypes.string,
 };
 
 export function ContactPrompt({ nameInput, emailInput }) {
@@ -21,6 +21,11 @@ export function ContactPrompt({ nameInput, emailInput }) {
   const [messageInput, setMessageInput] = useState("");
 
   const [isSent, setIsSent] = useState(false);
+
+  localStorage.setItem("email", formEmail);
+  localStorage.setItem("name", formName);
+  localStorage.setItem("message", messageInput);
+  localStorage.setItem("isSent", isSent);
 
   const handleNameInput = (event) => {
     setNameInput(event.target.value);
@@ -38,11 +43,9 @@ export function ContactPrompt({ nameInput, emailInput }) {
   const handlePromptSend = (event) => {
     event.preventDefault();
     setIsSent(true);
-    localStorage.setItem("email", formEmail);
-    localStorage.setItem("name", formName);
-    localStorage.setItem("message", messageInput);
-    localStorage.setItem("isSent", isSent);
+  };
 
+  useEffect(() => {
     const completionTextElement = document.querySelector(
       `.${classes["prompt-completed-text"]}`
     );
@@ -53,14 +56,14 @@ export function ContactPrompt({ nameInput, emailInput }) {
       `.${classes["contact-panel"]}`
     );
     if (isSent === true) {
-      console.log("hello");
+      console.log("Client message sent!");
       completionTextElement.style.display = "block";
       completedPrompt.style.display = "none";
       setTimeout(() => {
         canceledPrompt.style.display = "none";
       }, 3000);
     }
-  };
+  }, [isSent]);
 
   const handlePromptClose = (event) => {
     event.preventDefault();
@@ -100,7 +103,8 @@ export function ContactPrompt({ nameInput, emailInput }) {
   return (
     <section className={classes["contact-panel"]}>
       <h1 className={classes["prompt-completed-text"]}>
-        Gracias y desearle unas vacaciones inolvidables. <br /> Besitos
+        Gracias por contactar con nostros. <br />
+        Te responderemos a la mayor brevedad.
       </h1>
       <form className={classes["contact-prompt"]}>
         <section className={classes["contact-prompt-header"]}>
@@ -128,8 +132,8 @@ export function ContactPrompt({ nameInput, emailInput }) {
                 type="text"
                 className={classes["enter-username"]}
                 placeholder="Nombre & Apellido"
-                value={formName}
                 onChange={handleNameInput}
+                value={formName}
               ></input>
             </div>
           </div>
@@ -143,8 +147,8 @@ export function ContactPrompt({ nameInput, emailInput }) {
                 type="text"
                 className={classes["enter-email-address"]}
                 placeholder="correo@mail.com"
-                value={formEmail}
                 onChange={handleEmailInput}
+                value={formEmail}
               ></input>
             </div>
           </div>
@@ -155,7 +159,6 @@ export function ContactPrompt({ nameInput, emailInput }) {
             className={classes["add-your-comments"]}
             placeholder="Añadir comentario..."
             onChange={handleMessageInput}
-            value={messageInput}
           ></textarea>
         </section>
         <section className={classes["buttons"]}>

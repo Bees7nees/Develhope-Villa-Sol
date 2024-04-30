@@ -3,6 +3,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ReviewCard } from "./ReviewCard";
 import classes from "../Styles/ReviewCardCarousel.module.scss";
+import PropTypes from "prop-types";
+
+ReviewCardCarousel.propTypes = {
+  nameInput: PropTypes.string,
+  emailInput: PropTypes.string,
+};
+
+ArrowRight.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
+
+ArrowLeft.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
 
 function ArrowRight(props) {
   const { className, style, onClick } = props;

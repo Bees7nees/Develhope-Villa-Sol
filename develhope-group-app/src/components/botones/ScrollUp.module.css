@@ -1,11 +1,21 @@
-
 .btnScroll{
-    background-color: #b08812c0;
+    background-color: var(--golden400);
     transition: all ease-in-out 0.2s;
     z-index: 999;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    line-height: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: white;
 }
 .btnScroll:hover{
-    background-color:#B08912 !important ;
+    background-color: var(--golden200) !important ;
     transform: scale(1.1);
 
 }
