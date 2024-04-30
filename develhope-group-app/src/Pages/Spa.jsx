@@ -44,7 +44,7 @@ export default function SpaPage () {
             <picture className='fotosauna'><img src={fotosauna} /></picture>
             <span className='horarios-container'>
                 <h3>HORARIOS</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="292" height="4" viewBox="0 0 292 4" fill="none"><path d="M2 2H290" stroke="#B08912" stroke-width="3" stroke-linecap="round"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="292" height="4" viewBox="0 0 292 4" fill="none"><path d="M2 2H290" stroke="#B08912" strokeWidth="3" strokeLinecap="round"/></svg>
                 <h4>LUNES - VIERNES</h4> <h4>7:00 - 21:00</h4>
                 <h4>SÁBADOS & DOMINGOS</h4> <h4>8:00 - 20:00</h4>
                 <Button type="blue" label="Reservar" />
