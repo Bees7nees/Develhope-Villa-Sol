@@ -1,3 +1,5 @@
+import fotomarketing from  "../Assets/Img/fotomarketing.jpg"
+
 function TermsConditions () {
     return (
         <>
@@ -16,7 +18,7 @@ function TermsConditions () {
         </div>
 
         <div className="termscond-2">
-            <img src="C:\Users\Pablo\Desktop\Villa del Sol\Develhope-App-Group-Project\develhope-group-app\src\assets\fotomarketing.png"></img>
+            <img src= {fotomarketing}></img>
             <div className="history-contact">
                 <div className="ourhistory"><h3>DESCUBRE NUESTRA HISTORIA</h3> <p>Cádiz, una ciudad con una rica historia y una vibrante cultura, ofrece a los visitantes una experiencia única llena de lugares históricos fascinantes. En este artículo, exploraremos algunos de los sitios emblemáticos que no debes perderte durante tu visita a esta encantadora ciudad andaluza. Además, destacaremos cómo el Hotel VillaSol puede servir como tu base ideal para explorar estos tesoros históricos. ¡Prepárate para un viaje en el tiempo y la cultura en Cádiz!</p> </div>
                 <div className="contact"><h3>CONTACTO DEL DEPARTAMENTO DE MÁRKETING DE VILLASOL</h3> <p>E-mail: marketing@villasol.com</p> <p>Teléfono: +34 000 11 22 33</p> </div>

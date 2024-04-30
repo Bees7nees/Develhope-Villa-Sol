@@ -1,6 +1,6 @@
-import fotomasaje1 from '../assets/Img/fotomasaje1.png';
-import fotomasaje2 from '../assets/Img/fotomasaje2.png';
-import fotosauna from '../assets/Img/fotosauna.png';
+import fotomasaje1 from '../Assets/Img/fotomasaje1.png';
+import fotomasaje2 from '../Assets/Img/fotomasaje2.png';
+import fotosauna from '../Assets/Img/fotosauna.png';
 import { Button } from '../Components/Buttons';
 import DividingLines from '../Components/DividingLines'
 
