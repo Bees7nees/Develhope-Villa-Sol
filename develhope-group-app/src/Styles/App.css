@@ -137,6 +137,7 @@ a {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10rem;
 }
 
 .sections-termscond h1 {
@@ -182,24 +183,26 @@ a {
 }
 
 .ourhistory {
-  width: 31.25rem;
+  width: 42rem;
   height: 12.5rem;
-  margin-bottom: 5rem;
+  margin: 0 0 6rem 2rem;
   line-height: 1.5rem;
 }
 
 .contact {
   width: 31.25rem;
   height: 12.5rem;
+  margin-left: 2rem;
 }
 
 .intro-spa {
   text-align: center;
   width: 56.25rem;
   margin: auto;
+  margin-top: 15rem;
   letter-spacing: 0.003rem;
   line-height: 200%;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 
   h2 {
       margin-top: 8rem;
@@ -248,7 +251,8 @@ a {
       text-align: center;
       font-family: "Playfair Display";
       font-size: 1.5rem;
-      margin-bottom: 5rem;
+      margin-top: 5rem;
+      margin-bottom: 8rem;
   }
 
   span {
@@ -256,8 +260,7 @@ a {
       margin-left: 3rem;
       height: 13.125rem;
       border-top: 3px solid #B08912;
-      
-      margin-bottom: 1rem;
+      margin-bottom: 5rem;
   }
 
   span:hover {
