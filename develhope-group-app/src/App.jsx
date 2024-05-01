@@ -8,6 +8,7 @@ import { Home } from "./Pages/Home";
 import { ContactPrompt } from "./Components/ContactPrompt";
 import ScrollUp from "./Components/botones/ScrollUp";
 import NotFound from "./Components/NotFound";
+//import { GlobalProvider } from './GlobalContext';
 
 export default function App() {
   return (

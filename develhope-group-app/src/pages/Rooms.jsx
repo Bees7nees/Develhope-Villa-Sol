@@ -1,6 +1,7 @@
 import Room from "../section/Room";
 import styles from "../Pages/Rooms.module.css";
 import { useState } from "react";
+import BookingMenu from "../Components/BookingMenu";
 
 export default function Rooms() {
   const [seccion, setseccion] = useState("todas");
@@ -26,6 +27,7 @@ export default function Rooms() {
 
   return (
     <div className={styles.rooms}>
+      <BookingMenu />
       <nav className={styles.navRoom}>
         <h3
           id="todas"

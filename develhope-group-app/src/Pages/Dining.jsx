@@ -6,6 +6,7 @@ import TitleDescription from "../Components/TitleDescription"
 import Banner from "/src/Components/Banner.jsx"
 import Mensaje from "../Components/Mensaje"
 import classes from "../Styles/Home.module.scss";
+import BookingMenu from "../Components/BookingMenu"
 
 
 export default function Dining() {
@@ -15,6 +16,7 @@ export default function Dining() {
 
     return (
         <>
+        <BookingMenu />
             <TitleDescription title="Restaurante Sunset" description="Ubicado en el corazón de Andalucía, este restaurante 5 estrellas fusiona 
             la rica tradición culinaria andaluza con un toque contemporáneo de alta cocina. Al entrar, los huéspedes son recibidos por una atmósfera 
             de elegancia y sofisticación, donde la decoración refleja la riqueza cultural de la región, con detalles que evocan la artesanía local y 

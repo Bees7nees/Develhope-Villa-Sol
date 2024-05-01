@@ -5,10 +5,12 @@ import classes from "../Styles/Home.module.scss";
 import Banner from "../Components/Banner";
 import CarrouselRooms from "../Components/CarrouselRooms";
 import { BsClock } from "react-icons/bs";
+import BookingMenu from "../Components/BookingMenu";
 
 export function Home() {
   return (
     <section className={classes["home-container"]}>
+      <BookingMenu />
       <div className={classes["home-title"]}>
         <div className={classes["home-banner-content"]}>
           <h1 className={classes["playfair-display"]}>Villa del Sol</h1>
