@@ -2,7 +2,6 @@ import DividingLines from "../Components/DividingLines";
 import TitleDescription from "../Components/TitleDescription";
 import ReviewCardCarousel from "../Components/ReviewCardCarousel";
 import classes from "../Styles/Home.module.scss";
-import Banner from "../Components/Banner";
 import CarrouselRooms from "../Components/CarrouselRooms";
 import { BsClock } from "react-icons/bs";
 import BookingMenu from "../Components/BookingMenu";
@@ -13,7 +12,7 @@ export function Home() {
       <BookingMenu />
       <div className={classes["home-title"]}>
         <div className={classes["home-banner-content"]}>
-          <h1 className={classes["playfair-display"]}>Villa del Sol</h1>
+          <h1>Villa del Sol</h1>
           <p className={classes["home-subtitle"]}>En un lugar maravilloso</p>
           <p>El mejor hotel a orillas del Mediterráneo</p>
           <a target="_blank" href="https://maps.app.goo.gl/5EUBziEqDPUunTNb9">
@@ -53,9 +52,12 @@ export function Home() {
                 MERCADO
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Facilisi nunc
-                pellentesque ultricies morbi pellentesque facilisis nunc
-                aliquam.
+                La terraza invita a los comensales a sumergirse
+                en un oasis de tranquilidad mientras saborean los
+                sabores frescos del mar. Cada bocado, desde la
+                delicadeza de las gambas blancas hasta la explosión
+                de sabor de un auténtico plato de pescaíto frito,
+                es una celebración de la riqueza culinaria de la región.
               </p>
             </div>
             <div className={classes["restaurante-horario"]}>
