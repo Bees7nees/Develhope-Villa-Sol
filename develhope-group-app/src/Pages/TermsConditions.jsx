@@ -1,8 +1,10 @@
 import fotomarketing from  "../Assets/Img/fotomarketing.jpg"
+import BookingMenu from "../Components/BookingMenu";
 
 function TermsConditions () {
     return (
         <>
+        <BookingMenu />
         <div className="sections-termscond">
             <h1>Términos & Condiciones</h1>
             <section>1. Reservas y cancelaciones</section> <span>Todas las reservas en Villa del Sol están sujetas a disponibilidad y deben ser confirmadas mediante un pago anticipado o una tarjeta de crédito válida. Se aplicarán cargos por cancelación según nuestras políticas establecidas.</span>

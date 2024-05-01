@@ -9,7 +9,7 @@ import { ContactPrompt } from "./Components/ContactPrompt";
 import ScrollUp from "./Components/botones/ScrollUp";
 import NotFound from "./Components/NotFound";
 import SpaPage from "./Pages/Spa";
-
+//import { GlobalProvider } from './GlobalContext';
 
 export default function App() {
   return (
