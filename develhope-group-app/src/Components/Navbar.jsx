@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import Difuminado from "/src/Components/Difuminado"
 import style from "/src/Styles/Navbar.module.css"
 import classes from "/src/Styles/SubNav.module.css"
-import { useState} from "react";
+import { useState } from "react";
 import { HashLink as Anchor } from 'react-router-hash-link';
 
 
@@ -42,7 +42,7 @@ export default function Navbar() {
         return (
             <>
                 <nav className={style.navbar}>
-                    <img className={style.logo} src="/src/Assets/svg/logoBlack.svg" alt="logo"/>
+                    <a href="/"><img className={style.logo} src="/src/Assets/svg/logoBlack.svg" alt="logo"/></a>
                     <ul className={style.navTopContainer}>
                     <li><Link className={style.navLinks} to="/">HOME</Link></li>
                     <li><Link className={style.navLinks} to="/nosotros">NOSOTROS</Link></li>
