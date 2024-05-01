@@ -21,7 +21,6 @@ export function Home() {
           </a>
         </div>
       </div>
-      <Banner />
       <TitleDescription
         title={"Hospédese en uno de los mejores hoteles del mundo"}
         description={
