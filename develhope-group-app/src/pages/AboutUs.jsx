@@ -1,6 +1,6 @@
 import ElementAboutUs from "../components/ElementAboutUs";
 import TitulosH1 from "../components/TitulosH1";
-import styles from "./AboutUs.module.css"
+import styles from "./Styles/AboutUs.module.css"
 
 export default function AboutUs() {
   return (

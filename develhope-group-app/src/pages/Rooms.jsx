@@ -1,5 +1,5 @@
 import Room from "../section/Room";
-import styles from "../Pages/Rooms.module.css";
+import styles from "../Styles/Rooms.module.css";
 import { useState } from "react";
 import BookingMenu from "../Components/BookingMenu";
 
