@@ -2,7 +2,6 @@
 
 
 
-
 .contenedorFound{
     display: flex;
     align-items: center;
@@ -11,6 +10,7 @@
     width: 90%;
     height: 30rem;
     margin: 5rem;
+    gap: 2rem;
 }
 
 .gatito{
