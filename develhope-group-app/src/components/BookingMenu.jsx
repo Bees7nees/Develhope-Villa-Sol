@@ -1,12 +1,6 @@
 import styles from "../Styles/BookingMenu.module.scss";
 import CalendarComponent from "./CalendarBooking";
 import { useState, useEffect, useContext, useRef } from "react";
-import IconCalendar from "../Assets/Img/Icon_ Calendar.png";
-import IconArrow from "../Assets/Img/Icon_ Arrow.png";
-import IconSleep from "../Assets/Img/Icon_ Sleep.png";
-import IconUser from "../Assets/Img/User.png";
-import IconDiscount from "../Assets/Img/Discount.png";
-import IconBell from "../Assets/Img/Icon_ Bell.png";
 import CounterHost from "./CounterHost";
 import { GlobalContext } from "./GlobalVariable";
 import BellHotel from "../Assets/Sounds/bell-hotel.mp3";
