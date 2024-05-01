@@ -8,6 +8,8 @@ import { Home } from "./Pages/Home";
 import { ContactPrompt } from "./Components/ContactPrompt";
 import ScrollUp from "./Components/botones/ScrollUp";
 import NotFound from "./Components/NotFound";
+import SpaPage from "./Pages/Spa";
+
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
         <Route path="/restauranteSunset" element={<Dining />} />
         <Route path="/test" element={<ContactPrompt />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/spa" element={<SpaPage />} />
       </Routes>
       <Footer />
     </>
