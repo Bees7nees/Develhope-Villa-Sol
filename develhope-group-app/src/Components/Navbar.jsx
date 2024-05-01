@@ -42,7 +42,7 @@ export default function Navbar() {
         return (
             <>
                 <nav className={style.navbar}>
-                    <a href="/"><img className={style.logo} src="/src/Assets/svg/logoBlack.svg" alt="logo"/></a>
+                    <Link to="/"><img className={style.logo} src="/src/Assets/svg/logoBlack.svg" alt="logo"/></Link>
                     <ul className={style.navTopContainer}>
                     <li><Link className={style.navLinks} to="/">HOME</Link></li>
                     <li><Link className={style.navLinks} to="/nosotros">NOSOTROS</Link></li>
@@ -118,12 +118,10 @@ export default function Navbar() {
                     <li><Anchor className={style.navLinks} smooth={true} to="#contacto">CONTACTO</Anchor></li>
                 </ul>
         </nav>
-        {
-        (verHabitacionesSubNav || verRestauranteSubNav || verSpaSubNav) ? null : <Difuminado />
-        }        
-        {verHabitacionesSubNav && <Difuminado  top="200"/>}
-        {verRestauranteSubNav && <Difuminado top="200" />}
-        {verSpaSubNav && <Difuminado  top="200"/>}
+        {(!verHabitacionesSubNav && !verRestauranteSubNav && !verSpaSubNav) && <Difuminado />}
+        {verHabitacionesSubNav && <Difuminado top="190"/>}
+        {verRestauranteSubNav && <Difuminado top="190" />}
+        {verSpaSubNav && <Difuminado top="190"/>}
         </>
     )
 }
