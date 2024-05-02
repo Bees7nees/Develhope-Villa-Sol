@@ -11,18 +11,21 @@ import ScrollUp from "./Components/botones/ScrollUp";
 import NotFound from "./Components/NotFound";
 import SpaPage from "./Pages/Spa";
 import Banner from "./Components/Banner";
+import BookingMenu from "./Components/BookingMenu";
 //import { GlobalProvider } from './GlobalContext';
+import Rooms from "./Pages/Rooms";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <Banner/>
+      <Banner />
       <ScrollUp />
+      <BookingMenu />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/Habitaciones" element={<Rooms />} /> */}
-        <Route path="/nosotros" element={<AboutUs/>}/>
+        <Route path="/Habitaciones" element={<Rooms />} />
+        <Route path="/nosotros" element={<AboutUs />} />
         <Route path="/Terms&Conditions" element={<TermsConditions />} />
         <Route path="/restauranteSunset" element={<Dining />} />
         <Route path="/test" element={<ContactPrompt />} />

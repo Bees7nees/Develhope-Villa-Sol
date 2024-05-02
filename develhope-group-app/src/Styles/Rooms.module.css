@@ -15,10 +15,14 @@
     align-content: center;
     /* max-width: 1200px; */
     gap: 5ch;
-
+    margin-top: 5ch;
+    margin-bottom: 5ch;
 }
 .sections_room{
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 .navRoom{
     display: flex;

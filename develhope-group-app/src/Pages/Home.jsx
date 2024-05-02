@@ -4,12 +4,10 @@ import ReviewCardCarousel from "../Components/ReviewCardCarousel";
 import classes from "../Styles/Home.module.scss";
 import CarrouselRooms from "../Components/CarrouselRooms";
 import { BsClock } from "react-icons/bs";
-import BookingMenu from "../Components/BookingMenu";
 
 export function Home() {
   return (
     <section className={classes["home-container"]}>
-      <BookingMenu />
       <div className={classes["home-title"]}>
         <div className={classes["home-banner-content"]}>
           <h1>Villa del Sol</h1>
