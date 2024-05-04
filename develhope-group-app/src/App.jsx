@@ -14,6 +14,7 @@ import Banner from "./Components/Banner";
 import BookingMenu from "./Components/BookingMenu";
 //import { GlobalProvider } from './GlobalContext';
 import Rooms from "./Pages/Rooms";
+import Card from "./Components/Card";
 
 export default function App() {
   return (

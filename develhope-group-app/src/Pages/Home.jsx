@@ -21,7 +21,7 @@ export function Home() {
       <TitleDescription
         title={"Hospédese en uno de los mejores hoteles del mundo"}
         description={
-          "Lorem ipsum dolor sit amet consectetur. Facilisi nunc pellentesque ultricies morbi pellentesque facilisis nunc aliquam. Urna neque diam vitae odio purus auctor. Amet vel gravida nec volutpat interdum suspendisse vitae mauris. Ullamcorper sit neque quis ipsum nullam rutrum. Sed amet sit auctor mauris libero nulla arcu interdum. Donec tempus sit mauris ut placerat curabitur ac eu vitae. Mollis nibh sit eu nisi viverra dolor. Pharetra consequat lobortis eu justo massa nisi blandit nunc est. Consequat tempor libero sollicitudin lacus morbi nisi."
+          "Sumérjase en una experiencia única de hospitalidad y lujo en uno de los mejores hoteles del mundo: VillaSol Hotel. Con una ubicación privilegiada en el corazón de la ciudad, nuestro hotel combina a la perfección el encanto contemporáneo con un servicio excepcional para ofrecer a nuestros huéspedes una estancia inolvidable. Desde el momento en que pise nuestro elegante vestíbulo, será recibido por nuestro atento personal, cuya principal preocupación es hacer que su estadía sea lo más placentera posible. Nuestras lujosas habitaciones y suites están diseñadas para ofrecer el máximo confort y relajación, con comodidades modernas y detalles cuidadosamente seleccionados que garantizan una experiencia de alojamiento verdaderamente excepcional. Disfrute de una exquisita oferta gastronómica en nuestros renombrados restaurantes, donde podrá deleitarse con una variedad de platos creativos preparados por chefs expertos. Desde desayunos gourmet hasta cenas elegantes, cada comida en el VillaSol Hotel es una experiencia culinaria memorable."
         }
       />
       <div className={classes["divisor"]}>
@@ -40,7 +40,7 @@ export function Home() {
         <div className={classes["acceso-restaurante-wrapper"]}>
           <img
             className={classes["acceso-restaurante-img"]}
-            src="https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg"
+            src="/src/Assets/img/terraza.png"
             alt="Restaurante Villa del Sol"
           />
           <div className={classes["acceso-restaurante-content"]}>

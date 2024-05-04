@@ -8,10 +8,8 @@ export function ReviewCard() {
         de un cliente
       </h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur. Facilisi nunc pellentesque
-        ultricies morbi pellentesque facilisis nunc aliquam. Urna neque diam
-        vitae odio purus auctor. Amet vel gravida nec volutpat interdum
-        suspendisse vitae mauris.
+      En resumen, mi experiencia en el Hotel Estrella fue nada menos que perfecta. 
+      Recomiendo encarecidamente este hotel a cualquiera que esté buscando una estancia memorable en la ciudad.
       </p>
       <p>01/01/2024</p>
       <ReviewFiveStars />

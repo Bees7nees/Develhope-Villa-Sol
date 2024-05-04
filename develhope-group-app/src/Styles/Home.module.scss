@@ -2,7 +2,7 @@
 
 .home-container a:hover {
   text-decoration: underline;
-  color: var(--golden200);
+  color: var(--blue300);
 }
 
 .home-container a:active {
@@ -64,6 +64,7 @@
 .home-title a {
   margin-top: 0.5rem;
   font-weight: 600;
+  color: var(--golden300);
 }
 
 .divisor {
@@ -79,7 +80,7 @@
   width: auto;
   height: 110vh;
   padding: 4rem;
-  background-image: url(https://images.pexels.com/photos/4871342/pexels-photo-4871342.jpeg);
+  background-image: url(src/Assets/Img/piscina.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,8 +88,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  backdrop-filter: brightness(0.5);
-  -webkit-backdrop-filter: brightness(0.5);
+  backdrop-filter: saturate(150%);
 }
 
 .acceso-restaurante-wrapper {
@@ -98,12 +98,13 @@
   height: fit-content;
   width: 65%;
   background-color: white;
+  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.27);
   border-radius: 1rem;
 }
 
 .acceso-restaurante-img {
   height: 100%;
-  width: 40%;
+  width: 60%;
   border-radius: 1rem 0 0 1rem;
 }
 
@@ -122,10 +123,12 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 3rem;
+  color: #213242;
 }
 
 .acceso-restaurante-title p {
   line-height: 1.5rem;
+  color: #213242;
 }
 
 .acceso-restaurante-content h1 {
@@ -142,12 +145,13 @@
 
 .restaurante-horario-text {
   line-height: 2rem;
+  color: #213242;
 }
 
 .restaurante-reservar {
   padding: 0.75rem;
   border-radius: 0.5rem;
-  background-color: var(--blue300);
+  background-color: #213242;
   box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
   color: white !important;
   text-align: center;
@@ -167,8 +171,8 @@
 }
 
 .opiniones-wrapper {
-  background-image: url(../Assets/Img/background-sand-plants.jpg);
-  backdrop-filter: blur(10px);
+  background-image: url(../Assets/Img/spaHome.png);
+  backdrop-filter: blur(3.79);
   -webkit-backdrop-filter: blur(10px);
   background-attachment: fixed;
   background-position: center;
@@ -192,10 +196,10 @@
   width: 30vw;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.50);
   box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
   font-family: "FairplayDisplay-Variable";
-  color: white;
+  color: #213242;
   text-align: center;
 }
 
@@ -203,7 +207,7 @@
   margin: auto;
   padding: 0.75rem;
   border-radius: 0.5rem;
-  background-color: var(--blue300);
+  background-color: #213242;
   box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
   color: white !important;
   text-align: center;
