@@ -466,3 +466,17 @@ a {
       }
   }
 }
+
+/* Font media queries START */
+
+@media screen and (max-width: 431px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Font media queries END */

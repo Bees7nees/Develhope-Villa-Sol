@@ -56,6 +56,7 @@ function ArrowLeft(props) {
 }
 
 export default function ReviewCardCarousel() {
+
   const settings = {
     dots: true,
     infinite: false,
@@ -67,15 +68,13 @@ export default function ReviewCardCarousel() {
     prevArrow: <ArrowLeft />,
     responsive: [
       {
-        //! Breakpoint 430px NOT WORKING
-        breakpoint: 430,
+        breakpoint: 600,
         settings: {
-          arrows: false,
           dots: false,
           slidesToShow: 1,
         },
       },
-    ],
+    ]
   };
   return (
     <div>

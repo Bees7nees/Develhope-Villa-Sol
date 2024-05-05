@@ -16,6 +16,7 @@
   position: relative;
   height: 50%;
 }
+/* custom arrows */
 .customPrevArrow {
   cursor: pointer;
   scale: 1.5;
@@ -35,6 +36,8 @@
   color: var(--golden400);
   transition: all ease-in-out 0.2s;
 }
+/* custom arrows end */
+/* images */
 .imgCarrouselRoom {
   z-index: 1;
   position: relative;
@@ -66,7 +69,8 @@
   font-size: 24px;
   letter-spacing: 1.2px;
 }
-
+/* images end */
+/* card pop up */
 .tarjeta {
   position: absolute;
   top: 50%;
@@ -86,44 +90,88 @@
   flex-direction: column;
 }
 
-.titleCard{
-  font-weight: 600;
+.titleCard {
   color: var(--blue700);
   font-size: 24px;
   letter-spacing: 1.2px;
-  line-height: 1px;
-  font-family: "Spline Sans Mono", Helvetica;
 }
 
-.textCard{
+.textCard {
   color: var(--blue900);
-    text-align: center;
-    font-family: "Spline Sans Mono-regular", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.8;
-    letter-spacing: 0.8px;
-    padding: 50px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 50px;
 }
+
+.textCardPhone {
+  display: none;
+  color: var(--blue900);
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 50px;
+}
+
+/* card pop up end */
 
 .buttonCard {
   display: inline-flex;
   padding: 16px 32px;
   align-items: flex-start;
-  gap: 10px;
   border-radius: 10px;
   border: 2px solid var(--blue700);
   background-color: var(--blue700);
-  color: white!important;
-  text-decoration: none!important;
+  color: white !important;
+  font-family: "SplineSansMono-Variable";
+  text-decoration: none !important;
   font-size: 1em;
-  font-weight: 500;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 .buttonCard:hover {
-  border: 2px solid #FFFF;
+  border: 2px solid #ffff;
   background-color: #54789b;
-  color: white!important;
+  color: white !important;
+}
+
+@media screen and (max-width: 431px) {
+  .carrouselRoomsContainer {
+    height: max-content;
+  }
+  .customNextArrow {
+    right: 1rem;
+  }
+  .customPrevArrow {
+    left: 1rem;
+  }
+  .customNextArrow, .customPrevArrow {
+    width: 30px;
+    height: 30px;
+  }
+  .titleCarrouselRooms {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .tarjeta {
+    top: 40%;
+    width: fit-content;
+    height: max;
+    padding: 0.2rem;
+    gap: 1rem;
+  }
+  .titleCard {
+    font-size: 18px;
+  }
+  .textCard {
+    display: none;
+  }
+  .textCardPhone {
+    display: block;
+    border: none;
+    font-size: 16px;
+  }
 }

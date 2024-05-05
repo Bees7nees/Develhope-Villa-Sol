@@ -98,7 +98,16 @@ export default function CarrouselRooms() {
                 encantadores alrededores de Cádiz. Además podrás disfrutar de un
                 fabuloso desayuno buffet incluido en la estancia.
               </p>
-              <a href="/Habitaciones" className={styles.buttonCard}>Conocer más</a>
+              <textarea className={styles.textCardPhone}>
+                Sumérgete en el confort de nuestra habitación estándar, donde te
+                recibirá una lujosa cama king size al final del día lleno de
+                aventuras. Desde tu balcón privado, contempla las vistas de los
+                encantadores alrededores de Cádiz. Además podrás disfrutar de un
+                fabuloso desayuno buffet incluido en la estancia.
+              </textarea>
+              <a href="/Habitaciones" className={styles.buttonCard}>
+                Conocer más
+              </a>
             </div>
           )}
         </div>
@@ -125,6 +134,14 @@ export default function CarrouselRooms() {
                 refrescante ducha para revitalizarte por la mañana o relajarte
                 por la noche.
               </p>
+              <textarea className={styles.textCardPhone}>
+                Disfruta de un nivel superior con nuestra habitación premium,
+                donde el espacio adicional te permite moverte con facultad y
+                disfrutar de una experiencia más indulgente. إs de todas las
+                comodidades de la habitación estándar, encontrarás una
+                refrescante ducha para revitalizarte por la opción o relajarte
+                por la noche.
+              </textarea>
               <button className={styles.buttonCard}>Conocer más</button>
             </div>
           )}
@@ -155,6 +172,17 @@ export default function CarrouselRooms() {
                 privado, y relájate en la bañera para una experiencia de spa en
                 la comodidad de tu propia habitación.
               </p>
+              <textarea className={styles.textCardPhone}>
+                Sumérgete en el lujo sin igual de nuestra suite, donde cada
+                detalle ha sido cuidadosamente desarrollado para ofrecerte una
+                experiencia de hospedaje extraordinaria. Disfruta de un amplio
+                salón donde puedes relajarte y disfrutar de momentos de
+                tranquilidad, después de todas las comodidades de las
+                habitaciones anteriores. Déjate consentir con un desayuno
+                exquisito mientras contemplas las fotos desde tu balcón
+                privado, y relájate en la bañera para una experiencia de spa en
+                la comodidad de tu propia habitación.
+              </textarea>
               <button className={styles.buttonCard}>Conocer más</button>
             </div>
           )}

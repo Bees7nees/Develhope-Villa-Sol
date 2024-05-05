@@ -16,12 +16,15 @@
   text-align: center;
 }
 
-.ReviewCard h2 {
-  font-family: "PlayfairDisplay-Variable";
-}
+
 
 .ReviewCard p {
   font-family: "SplineSansMono-Variable";
-  font-size: 1rem;
   color: black;
+}
+
+@media screen and (max-width: 431px) {
+  .ReviewCard {
+    gap: 0.5rem;
+  }
 }
