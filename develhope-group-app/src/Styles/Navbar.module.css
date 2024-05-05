@@ -39,6 +39,12 @@
     text-decoration: none;
 }
 
+.navLinks:hover {
+    color: #53718b;
+    border-bottom: 2px solid #314960;
+    transition: border-bottom-color 200ms ease-in-out 25ms, color 200ms ease-in-out 25ms;
+}
+
 
 .boton{
     margin-right: 2rem;

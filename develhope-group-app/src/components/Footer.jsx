@@ -37,7 +37,7 @@ export default function Footer() {
             <ContactFooterVariant/>
             </div>
             <div className={classes.bottomContainer}>
-                <img className={classes.logo} src="/src/Assets/svg/logoWhite.svg" alt="logo"/>
+                <a href="/"><img className={classes.logo} src="/src/Assets/svg/logoWhite.svg" alt="logo"/></a>
                 <div className={classes.politicsContainer}>
                     <Link className={classes.politics} to="/Terms&Conditions">Política & Privacidad</Link>
                     <p className={classes.politicstext}>Villa del sol. Todos los derechos reservados est-2024</p>
