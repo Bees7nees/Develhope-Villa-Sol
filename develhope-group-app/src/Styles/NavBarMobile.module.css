@@ -1,18 +1,31 @@
-@import url(/develhope-group-app/src/Assets/Fonts/font.css);
+@import url(font.css);
 
-.navbar {
+
+@media (min-width: 432px) {
+    .navbar{
+        visibility: hidden;
+    }
+
+    .contenedorBurger{
+        display: none;
+    }
+}
+
+@media (max-width: 431px) {
+
+.navbar.visible {
     max-width: 46rem;
     width: 100%;
-    height: 21rem;
+    height: 18rem;
     background: #213242;
     display: flex;
-    visibility: hidden;
     flex-shrink: 0;
     flex-direction: column;
-    z-index: 2;
-    top:0;
+    z-index: 50;
+    top:50;
     position: absolute;
     transition: height ease 4s;
+    visibility: visible;
 }
 
 .navTopContainer {
@@ -46,6 +59,11 @@
     line-height: 0.09375rem; 
     letter-spacing: 0.04375rem;
     text-decoration: none;
+    margin-left: 2rem;
+}
+
+.navLinks:hover {
+    color:#B08912;
 }
 
 .contenedorBurger {
@@ -57,7 +75,6 @@
     top: 0;
     position: absolute;
     padding-top: 2.5rem;
-    visibility: hidden;
 }
 
 .buttonBurger {
@@ -73,23 +90,4 @@
     fill: #B08912;
 }
 
-
-
-@media (max-width: 768px) {
-
-    .navbar.visible {
-        visibility: visible;
-    }
-    
-    .contenedorBurger {
-        visibility: visible;
-    }
-}
-
-@media (max-width: 430px) {
-
-    .navbar {
-        height: 18rem;
-        gap: 0.5rem;
-    }
 }

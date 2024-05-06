@@ -59,3 +59,11 @@
   height: 1.8rem;
   margin-right: 2rem;
 }
+
+
+@media (max-width: 430px){
+
+  .restaurantDiv{
+      display: none;
+  }
+}

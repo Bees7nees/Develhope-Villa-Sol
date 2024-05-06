@@ -14,14 +14,19 @@ import Banner from "./Components/Banner";
 import BookingMenu from "./Components/BookingMenu";
 //import { GlobalProvider } from './GlobalContext';
 import Rooms from "./Pages/Rooms";
+import NavbarMobile from "./Components/NavbarMobile";
+import { useEffect, useState } from "react";
 
 export default function App() {
+
+
   return (
     <>
+      <NavbarMobile/> 
       <Navbar />
       <Banner />
       <ScrollUp />
-      <BookingMenu />
+      {/* <BookingMenu /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Habitaciones" element={<Rooms />} />
