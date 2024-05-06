@@ -90,7 +90,7 @@ export function ContactFooterVariant() {
                 </svg>
               </div>
               <input
-                type="text"
+                type="email"
                 name="correo"
                 className={classes["placeholder"]}
                 placeholder="Correo"

@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import classes from "../Styles/ContactPrompt.module.scss";
 import { BsPersonCircle } from "react-icons/bs";
 import { BsEnvelopeAt } from "react-icons/bs";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
+import emailjs from '@emailjs/browser';
 
 ContactPrompt.propTypes = {
   nameInput: PropTypes.string,
@@ -22,11 +24,6 @@ export function ContactPrompt({ nameInput, emailInput }) {
 
   const [isSent, setIsSent] = useState(false);
 
-  localStorage.setItem("email", formEmail);
-  localStorage.setItem("name", formName);
-  localStorage.setItem("message", messageInput);
-  localStorage.setItem("isSent", isSent);
-
   const handleNameInput = (event) => {
     setNameInput(event.target.value);
   };
@@ -37,12 +34,50 @@ export function ContactPrompt({ nameInput, emailInput }) {
 
   const handleMessageInput = (event) => {
     setMessageInput(event.target.value);
-    console.log(messageInput);
   };
 
-  const handlePromptSend = (event) => {
+  const [formData, setFormData] = useState([]);
+  const formRef = useRef();
+
+  useEffect(() => {
+    const storedFormData = localStorage.getItem("formData");
+    if (storedFormData) {
+      setFormData(JSON.parse(storedFormData));
+    }
+  }, []);
+
+  const handlePromptSend = async (event) => {
     event.preventDefault();
     setIsSent(true);
+
+    const newFormData = {
+      id: uuidv4(),
+      formName: formName,
+      formEmail: formEmail,
+      messageInput: messageInput,
+      formDate: new Date().toLocaleDateString(),
+    };
+
+    try {
+      const updatedFormData = [...formData, newFormData];
+      setFormData(updatedFormData);
+      localStorage.setItem("formData", JSON.stringify(updatedFormData));
+    } catch (error) {
+      console.error("Error storing form data:", error);
+    }
+
+    emailjs
+      .sendForm('service_o1z5ae4', 'template_9t7i90n', formRef.current, {
+        publicKey: '20JS_vGzAR3qUxTjq',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   useEffect(() => {
@@ -67,14 +102,6 @@ export function ContactPrompt({ nameInput, emailInput }) {
 
   const handlePromptClose = (event) => {
     event.preventDefault();
-    setNameInput("");
-    setEmailInput("");
-    setMessageInput("");
-    setIsSent(false);
-    localStorage.setItem("email", formEmail);
-    localStorage.setItem("name", formName);
-    localStorage.setItem("message", messageInput);
-    localStorage.setItem("isSent", isSent);
 
     const canceledPrompt = document.querySelector(
       `.${classes["contact-panel"]}`
@@ -83,30 +110,13 @@ export function ContactPrompt({ nameInput, emailInput }) {
     canceledPrompt.style.display = "none";
   };
 
-  useEffect(() => {
-    const savedEmail = localStorage.getItem("email");
-    const savedName = localStorage.getItem("name");
-    const savedMessage = localStorage.getItem("message");
-
-    if (savedMessage) {
-      setMessageInput(savedMessage);
-    }
-
-    if (savedEmail) {
-      setEmailInput(savedEmail);
-    }
-    if (savedName) {
-      setNameInput(savedName);
-    }
-  }, []);
-
   return (
     <section className={classes["contact-panel"]}>
       <h1 className={classes["prompt-completed-text"]}>
         Gracias por contactar con nostros. <br />
-        Te responderemos a la mayor brevedad.
+        Te responderemos con la mayor brevedad.
       </h1>
-      <form className={classes["contact-prompt"]}>
+      <form ref={formRef} className={classes["contact-prompt"]}>
         <section className={classes["contact-prompt-header"]}>
           <svg
             className={classes["expand-more"]}
@@ -130,6 +140,7 @@ export function ContactPrompt({ nameInput, emailInput }) {
               <BsPersonCircle className={classes["icons"]} />
               <input
                 type="text"
+                name="user_name"
                 className={classes["enter-username"]}
                 placeholder="Nombre & Apellido"
                 onChange={handleNameInput}
@@ -144,11 +155,13 @@ export function ContactPrompt({ nameInput, emailInput }) {
             <div className={classes["mail-content"]}>
               <BsEnvelopeAt className={classes["icons"]} />
               <input
-                type="text"
+                type="email"
+                name="user_email"
                 className={classes["enter-email-address"]}
                 placeholder="correo@mail.com"
                 onChange={handleEmailInput}
                 value={formEmail}
+                required
               ></input>
             </div>
           </div>
@@ -156,6 +169,7 @@ export function ContactPrompt({ nameInput, emailInput }) {
         <section className={classes["comments"]}>
           <textarea
             type="text"
+            name="message"
             className={classes["add-your-comments"]}
             placeholder="Añadir comentario..."
             onChange={handleMessageInput}
