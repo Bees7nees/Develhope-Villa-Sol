@@ -12,7 +12,6 @@ export function ContactFooterVariant() {
     promptVisibility === false
       ? setPromptVisibility(true)
       : setPromptVisibility(false);
-    
   };
 
   const handleClosePrompt = (event) => {
@@ -29,15 +28,6 @@ export function ContactFooterVariant() {
     setEmailInput(event.target.value);
     console.log(emailInput);
   };
-
-  //! NOT WORKING
-  // const handleFormInput = (event) => {
-  //   event.preventDefault();
-  //   setNameInput("");
-  //   setEmailInput("");
-  // };
-
-
 
   return (
     <>

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "../Styles/CalendarBooking.module.scss";
+import PropTypes from "prop-types";
 
 const CalendarComponent = ({ setDate, prevDate, nextDate }) => {
   const [startDate, setStartDate] = useState(new Date());
@@ -28,6 +29,10 @@ const CalendarComponent = ({ setDate, prevDate, nextDate }) => {
       calendarClassName={styles.calendarDesign}
     />
   );
+};
+
+CalendarComponent.propTypes = {
+  setDate: PropTypes.func,
 };
 
 export default CalendarComponent;
