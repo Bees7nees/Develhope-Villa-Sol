@@ -26,7 +26,7 @@ export default function App() {
       <Navbar />
       <Banner />
       <ScrollUp />
-      {/* <BookingMenu /> */}
+      <BookingMenu />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Habitaciones" element={<Rooms />} />
