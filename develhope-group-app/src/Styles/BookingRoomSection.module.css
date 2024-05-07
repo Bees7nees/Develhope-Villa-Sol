@@ -1,0 +1,18 @@
+.BookingRoomDiv{
+    width: 62rem;
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    border-radius: 1rem;
+    padding: 0.5rem 4rem 0.5rem 4rem;
+}
+.PhotoRoom {
+    border-radius: 0.6rem;
+    margin-right: 1.25rem;
+}
+
+.DescriptionRoomBooking{
+    margin-right: 1.25rem;
+}

@@ -14,7 +14,7 @@ import Banner from "./Components/Banner";
 import BookingMenu from "./Components/BookingMenu";
 //import { GlobalProvider } from './GlobalContext';
 import Rooms from "./Pages/Rooms";
-
+import Booking from "./Pages/Booking"
 export default function App() {
   return (
     <>
@@ -29,6 +29,7 @@ export default function App() {
         <Route path="/Terms&Conditions" element={<TermsConditions />} />
         <Route path="/restauranteSunset" element={<Dining />} />
         <Route path="/test" element={<ContactPrompt />} />
+        <Route path="/Booking" element={<Booking/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/spa" element={<SpaPage />} />
       </Routes>
