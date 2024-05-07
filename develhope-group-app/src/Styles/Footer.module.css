@@ -56,10 +56,7 @@
 }
 
 .titulo:hover {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
-  transition: border-bottom-color 200ms ease-in-out 25ms,
-    color 200ms ease-in-out 25ms;
+  color: #96cae9;
 }
 
 .downcontacto,
@@ -82,10 +79,7 @@
 }
 
 .links:hover {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
-  transition: border-bottom-color 200ms ease-in-out 25ms,
-    color 200ms ease-in-out 25ms;
+  color: #96cae9;
 }
 
 .divisor {
