@@ -92,7 +92,6 @@ export default function BookingMenu() {
   }
 
   return (
-    <section className={styles.bookingMenuBackground}>
       <div className={styles.bookingMenuDiv}>
         <div className={styles.bookingArrive}>
           <BsCalendarWeek className={styles.iconCalendar} />
@@ -162,6 +161,5 @@ export default function BookingMenu() {
           <PiCallBellLight className={styles.iconBell} />
         </div>
       </div>
-    </section>
   );
 }

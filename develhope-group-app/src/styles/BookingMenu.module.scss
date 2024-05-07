@@ -1,13 +1,13 @@
-.bookingMenuBackground {
-  z-index: 2;
-  position: fixed;
-  bottom: -35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 20rem;
-  width: 100%;
-  transition: all 0.5s ease-in-out;
-}
+// .bookingMenuBackground {
+//   z-index: 2;
+//   position: fixed;
+//   bottom: 5vh;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   height: 20rem;
+//   width: 100%;
+//   transition: all 0.5s ease-in-out;
+// }
 
 // .bookingMenuBackground:hover {
 //   bottom: -30%;
@@ -17,7 +17,7 @@
   z-index: 2;
   position: fixed;
   left: 50%;
-  top: 50%;
+  bottom: -3vh;
   transform: translate(-50%, -50%);
   width: fit-content;
   padding: 0.5rem 1rem;
