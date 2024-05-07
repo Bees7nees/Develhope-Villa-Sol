@@ -116,7 +116,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+span,
+section {
   font-family: "PlayfairDisplay-Variable";
 }
 
@@ -137,7 +139,7 @@ a {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .sections-termscond h1 {
@@ -174,7 +176,6 @@ a {
   margin-right: 3rem;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
-  overflow: hidden;
 
   img {
       width: 100%;
@@ -183,10 +184,10 @@ a {
 }
 
 .ourhistory {
-  width: 42rem;
+  width: 90%;
   height: 12.5rem;
-  margin: 0 0 6rem 2rem;
-  line-height: 1.5rem;
+  margin: 3rem 0 6rem 2rem;
+  line-height: 1.8rem;
 }
 
 .contact {
@@ -340,71 +341,38 @@ a {
   }
 }
 
-/* RESPONSIVE Términos & Condiciones (Tablet) */
+/* RESPONSIVE 
+Términos & Condiciones (Móvil) */
 
-@media screen and (max-width: 768px) {
-  .termscond-2 {
-      display: flex;
-      flex-direction: column;
+@media screen and (max-width: 430px) {
+
+  .sections-termscond span{
+    font-size: 12px;
+    width: 100%;
   }
+
   .history-contact {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin-bottom: 5rem;
-      text-align: center;
-      
-      .ourhistory, .contact {
-          width: 40%;
-      }
-  }
-
-/* RESPONSIVE SPA (Tablet) */
-
-  .intro-spa {
     width: 90%;
   }
 
-  .spa-container {
-      display: flex;
-      flex-direction: column-reverse;
-
-      p {
-          width: 80%;
-          margin-left: -2rem;
-      }
-
-      img {
-          margin-bottom: 2rem;
-      }
+  .termscond-2 {
+    display: flex;
+    flex-direction: column;
+    img{
+      width: 90%;
+      height: 90%;
+    }
   }
 
-  .tratamientos span {
-      margin-left: 1rem;
-  }
-
-  .horarios-container {
-      max-width: 30%;
-      max-height: 58%;
-      top: 32%;
-
-      svg {
-          width: 90%;
-      }
-  }
-}
-
-/* RESPONSIVE Términos & Condiciones (Móvil) */
-
-@media screen and (max-width: 430px) {
-  
   .ourhistory, .contact {
-      font-size: 16px;
-      line-height: normal;
-
+    width: 85%;
       h3 {
           font-size: 16px;
       }
+  }
+
+  .ourhistory {
+    margin-bottom: 18rem;
   }
 
 /* RESPONSIVE SPA (Móvil) */
