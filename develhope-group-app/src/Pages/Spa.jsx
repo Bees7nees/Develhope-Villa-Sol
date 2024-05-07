@@ -75,7 +75,7 @@ export default function SpaPage() {
           </span>
         </div>
       </div>
-
+    <br/>
       <div className="horarios-spa">
         <div className="spa-image-container">
           <picture className="fotosauna">
