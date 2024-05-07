@@ -19,10 +19,25 @@ import { useEffect, useState } from "react";
 
 export default function App() {
 
+    const [showNavbarMobile, setShowNavbarMobile] = useState(false)
+
+  useEffect(() => {
+    const handleMobile = () => {
+      setShowNavbarMobile(window.innerWidth <= 680); //no pararle al número, es mi cinta scotch :D
+    };
+
+    handleMobile(); 
+
+    window.addEventListener('resize', handleMobile);
+
+    return () => {
+        window.removeEventListener('resize', handleMobile);
+    };
+}, []);
 
   return (
     <>
-      <NavbarMobile/> 
+      {showNavbarMobile && <NavbarMobile/>} 
       <Navbar />
       <Banner />
       <ScrollUp />

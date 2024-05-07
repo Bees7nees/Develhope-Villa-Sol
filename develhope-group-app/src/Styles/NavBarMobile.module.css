@@ -1,31 +1,18 @@
 @import url(font.css);
 
-
-@media (min-width: 432px) {
-    .navbar{
-        visibility: hidden;
-    }
-
-    .contenedorBurger{
-        display: none;
-    }
-}
-
-@media (max-width: 431px) {
-
-.navbar.visible {
+.navbar {
     max-width: 46rem;
     width: 100%;
-    height: 18rem;
+    height: 21rem;
     background: #213242;
     display: flex;
+    visibility: hidden;
     flex-shrink: 0;
     flex-direction: column;
-    z-index: 50;
-    top:50;
+    z-index: 5;
+    top:0;
     position: absolute;
     transition: height ease 4s;
-    visibility: visible;
 }
 
 .navTopContainer {
@@ -62,32 +49,54 @@
     margin-left: 2rem;
 }
 
-.navLinks:hover {
+.navLinks:hover{
     color:#B08912;
+    transition: ease-in-out 0.5s;
 }
 
 .contenedorBurger {
     width: 100%;
     display: flex;
     justify-content: right;
-    flex-shrink: 0;
     z-index: 2;
     top: 0;
     position: absolute;
     padding-top: 2.5rem;
+    visibility: hidden;
 }
 
 .buttonBurger {
     background-color: transparent;
     border: none;
-    width: 25px;
     align-self: flex-end; 
     margin-right: 2rem;
     transition: opacity ease 0.5s;
 }
 
+.buttonBurger img{
+    width: 80%;
+    height: 80%;
+}
+
 .burgerIcon {
     fill: #B08912;
 }
+
+
+
+@media (max-width: 440px) {
+
+    .navbar.visible {
+        visibility: visible;
+    }
+
+    .navbar {
+        height: 18rem;
+        gap: 0.5rem;
+    }
+
+    .contenedorBurger {
+        visibility: visible;
+    }
 
 }

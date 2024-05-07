@@ -134,9 +134,7 @@ export default function Navbar() {
                 </ul>
         </nav>
         {(!verHabitacionesSubNav && !verRestauranteSubNav && !verSpaSubNav) && <Difuminado />}
-        {verHabitacionesSubNav && <Difuminado top="190"/>}
-        {verRestauranteSubNav && <Difuminado top="190" />}
-        {verSpaSubNav && <Difuminado top="190"/>}
+        <Difuminado top={verHabitacionesSubNav || verRestauranteSubNav || verSpaSubNav ? "190" : "95"} />
         </>
     )
 }
