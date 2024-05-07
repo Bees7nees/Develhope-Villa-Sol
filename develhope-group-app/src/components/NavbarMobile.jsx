@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classes from "/src/Styles/NavBarMobile.module.css";
 import { Link } from 'react-router-dom';
+import { HashLink as Anchor } from 'react-router-hash-link';
 
 export default function NavbarMobile() {
     const [visible, setVisible] = useState(false);
@@ -26,8 +27,8 @@ export default function NavbarMobile() {
                     <li><Link className={classes.navLinks} to="/habitaciones">HABITACIONES</Link></li>
                     <li><Link className={classes.navLinks} to="/restauranteSunset">RESTAURANTES</Link></li>
                     <li><Link className={classes.navLinks} to="/spa">SPA</Link></li>
-                    <li><Link className={classes.navLinks} to="/galeria">GALERÍA</Link></li>
-                    <li><Link className={classes.navLinks} to="/contacto">CONTACTO</Link></li>
+                    <li><Link className={classes.navLinks} to="#galeria">GALERÍA</Link></li>
+                    <li><Anchor className={classes.navLinks} to="#contacto">CONTACTO</Anchor></li>
                 </ul>
             </nav>
         </>

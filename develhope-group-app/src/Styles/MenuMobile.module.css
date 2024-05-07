@@ -1,12 +1,21 @@
 @import url(font.css);
 
+
+@media (min-width: 432px){
+    .contenedor{
+        display: none;
+    }
+}
+
+@media (max-width: 431px){
+
 .contenedor {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 26rem;
-    height: 31rem;
+    height: 35rem;
     flex-direction: column;
 }
 
@@ -31,6 +40,7 @@
     font-weight: 800;
     line-height: 0.0625rem;
     letter-spacing: 0.075rem;
+    margin-bottom: 3rem;
 }
 
 .contenedorGrande {
@@ -77,3 +87,6 @@ img{
     width: 10px;
     height: 10px;
 }
+
+}
+

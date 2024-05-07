@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import Difuminado from "/src/Components/Difuminado"
 import style from "/src/Styles/Navbar.module.css"
 import classes from "/src/Styles/SubNav.module.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HashLink as Anchor } from 'react-router-hash-link';
+
 
 
 export default function Navbar() {
@@ -13,7 +14,17 @@ export default function Navbar() {
     const [verRestauranteSubNav, setVerRestauranteSubNav] = useState(false);
     const [verSpaSubNav, setVerSpaSubNav] = useState(false);
     const [verDropdown, setVerDropdown] = useState(false);
+    const location = useLocation();
 
+    useEffect(() => {
+        if (location.pathname === "/" || location.pathname === "/nosotros") {
+            setVerHabitacionesSubNav(false);
+            setVerRestauranteSubNav(false);
+            setVerSpaSubNav(false);
+            setVerDropdown(false);
+        }
+    }, [location]);
+    
 
     const handleHabitacionesClick = () => {
         setVerHabitacionesSubNav(!verHabitacionesSubNav);
@@ -32,6 +43,8 @@ export default function Navbar() {
         setVerRestauranteSubNav(false); 
         setVerHabitacionesSubNav(false);
     };
+
+
 
     const handleDropdownClick = () => {
         setVerDropdown(!verDropdown);
@@ -52,6 +65,8 @@ export default function Navbar() {
                     {verHabitacionesSubNav && ( 
                         <nav className={classes.subNavContenedor}>
                                 <ul className={classes.listContainer}>
+                                    <li><Link className={style.navLinks} to="#todas">TODAS</Link></li>
+                                    <span className={classes.divisor}></span>
                                     <li><Link className={style.navLinks} to="#estandar">ESTÁNDAR</Link></li>
                                     <span className={classes.divisor}></span>
                                     <li className={style.navLinks} to="#premium">PREMIUM</li>
@@ -119,9 +134,7 @@ export default function Navbar() {
                 </ul>
         </nav>
         {(!verHabitacionesSubNav && !verRestauranteSubNav && !verSpaSubNav) && <Difuminado />}
-        {verHabitacionesSubNav && <Difuminado top="190"/>}
-        {verRestauranteSubNav && <Difuminado top="190" />}
-        {verSpaSubNav && <Difuminado top="190"/>}
+        <Difuminado top={verHabitacionesSubNav || verRestauranteSubNav || verSpaSubNav ? "190" : "95"} />
         </>
     )
 }

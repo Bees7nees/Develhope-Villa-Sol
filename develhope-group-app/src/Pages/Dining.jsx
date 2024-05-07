@@ -6,11 +6,11 @@ import TitleDescription from "../Components/TitleDescription"
 import Mensaje from "../Components/Mensaje"
 import classes from "../Styles/Home.module.scss";
 import BookingMenu from "../Components/BookingMenu"
+import { useEffect, useState } from "react"
+import MenuMobile from "../Components/MenuMobile"
 
 
 export default function Dining() {
-
-
 
 
     return (
@@ -30,8 +30,8 @@ export default function Dining() {
                 <DividingLines color={"#213242"} length={"1rem"} />
                 <DividingLines color={"#B08912"} length={"1rem"} />
             </div>
+            <MenuMobile/>  
             <HorarioRestaurante/>
-            
             <div className={classes["divisor"]}>
                 <DividingLines color={"#213242"} length={"1rem"} />
                 <DividingLines color={"#B08912"} length={"1rem"} />

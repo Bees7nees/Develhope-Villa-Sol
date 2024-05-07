@@ -44,3 +44,21 @@
     letter-spacing: 0.05rem;
     margin-left: 2rem;
 }
+
+
+@media (max-width: 431px){
+
+    .contenedor{
+        height: 30rem;
+        margin-top: 4rem;
+    }
+
+    .contenedor div{
+        margin-inline: 0;
+    }
+
+    .imagen{
+        width: 20rem;
+        height: 20rem;
+    }
+}

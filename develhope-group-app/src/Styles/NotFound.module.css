@@ -24,7 +24,7 @@
     font-family: "Playfair Display";
     font-size: 2rem;
     font-weight: 800;
-    line-height: 0.0625rem;
+    line-height: 1;
     letter-spacing: 0.14063rem;
 }
 
@@ -48,4 +48,29 @@
 .link:hover{
     color:#E8B51A;
     border-bottom: #E8B51A solid 2px;
+}
+
+
+@media (max-width: 431px){
+    
+    .contenedorFound{
+        margin: 1rem;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .titulo{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .subtitulo{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .gatito{
+        width: 20rem;
+        height: 15rem;
+    }
 }

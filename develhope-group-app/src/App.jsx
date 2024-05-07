@@ -14,10 +14,30 @@ import Banner from "./Components/Banner";
 import BookingMenu from "./Components/BookingMenu";
 //import { GlobalProvider } from './GlobalContext';
 import Rooms from "./Pages/Rooms";
+import NavbarMobile from "./Components/NavbarMobile";
+import { useEffect, useState } from "react";
 import Booking from "./Pages/Booking"
 export default function App() {
+
+    const [showNavbarMobile, setShowNavbarMobile] = useState(false)
+
+  useEffect(() => {
+    const handleMobile = () => {
+      setShowNavbarMobile(window.innerWidth <= 680); //no pararle al número, es mi cinta scotch :D
+    };
+
+    handleMobile(); 
+
+    window.addEventListener('resize', handleMobile);
+
+    return () => {
+        window.removeEventListener('resize', handleMobile);
+    };
+}, []);
+
   return (
     <>
+      {showNavbarMobile && <NavbarMobile/>} 
       <Navbar />
       <Banner />
       <ScrollUp />

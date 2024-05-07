@@ -27,6 +27,6 @@
 @media (max-width: 430px){
 
     .contenedor{
-        height: 31rem;
+        display: none;
     }
 }

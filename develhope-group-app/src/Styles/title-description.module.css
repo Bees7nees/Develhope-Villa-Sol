@@ -30,14 +30,21 @@
   height: fit-content;
 }
 
+
+
 @media (max-width: 431px) {
+
   .contenedor {
     height: max-content;
-    margin: auto;
+    margin: 2rem;
     gap: 1rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .description{
+    font-size: 0.5rem;
   }
 }
