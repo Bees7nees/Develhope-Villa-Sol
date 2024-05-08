@@ -26,7 +26,7 @@ export default function Room({ habitacion, url }) {
       descripcionCompleta =
         "Disfruta de un nivel superior con nuestra habitación premium, donde el espacio adicional te permite moverte con libertad y disfrutar de una experiencia más indulgente. Además de todas las comodidades de la habitación estándar, encontrarás una refrescante ducha para revitalizarte por la mañana o relajarte por la noche. Despierta cada día con energía renovada y prepárate para descubrir los tesoros de Cádiz sabiendo que tu confort está asegurado en cada detalle.";
       break;
-    case "IMPERIAL":
+    case "SUITE":
       parrafo =
         "Vive el lujo en su máxima expresión: déjate cautivar por nuestra suite, un espacio de ensueño donde el confort y la elegancia se encuentran.";
       descripcionCompleta =

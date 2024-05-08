@@ -57,12 +57,12 @@ export default function Rooms() {
         </li>
         <span className={classes.divisor}></span>
         <li
-          id="imperial"
-          className={seccion === "imperial" ? `${styles.selected} ${styles.navlinks}` : styles.navlinks}
+          id="suite"
+          className={seccion === "suite" ? `${styles.selected} ${styles.navlinks}` : styles.navlinks}
           onClick={handlespan}
         >
           {" "}
-          IMPERIAL
+          SUITE
         </li>
       </ul>
       </nav>
@@ -70,22 +70,22 @@ export default function Rooms() {
       <div className={styles.sections_room}>
         {seccion === "todas" && (
           <>
-            <Room habitacion="ESTÁNDAR" url="src\assets\room_img\room1.png" />
-            <Room habitacion="PREMIUN" url="src\assets\room_img\room1.png" />
-            <Room habitacion="IMPERIAL" url="src\assets\room_img\room1.png" />
+            <Room habitacion="ESTÁNDAR" url="src/Assets/Img/Room_Standar.jpg" />
+            <Room habitacion="PREMIUN" url="src/Assets/Img/Room_Premium.jpg" />
+            <Room habitacion="SUITE" url="src/Assets/Img/Room_Suite.png" />
           </>
         )}
 
-        {seccion === "imperial" && (
-          <Room habitacion="IMPERIAL" url="src\assets\room_img\room1.png" />
+        {seccion === "suite" && (
+          <Room habitacion="SUITE" url="src/Assets/Img/Room_Suite.png" />
         )}
 
         {seccion === "estandar" && (
-          <Room habitacion="ESTÁNDAR" url="src\assets\room_img\room1.png" />
+          <Room habitacion="ESTÁNDAR" url="src/Assets/Img/Room_Standar.jpg" />
         )}
 
         {seccion === "premiun" && (
-          <Room habitacion="PREMIUN" url="src\assets\room_img\room1.png" />
+          <Room habitacion="PREMIUN" url="src/Assets/Img/Room_Premium.jpg" />
         )}
       </div>
     </div>

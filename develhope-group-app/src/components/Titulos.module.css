@@ -7,7 +7,6 @@
 }
 .section{
  font-family: "Spline Sans Mono";
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,6 +19,6 @@ width: 70%;
 }
 .titulo{
     font-size: 1.5rem;
-     /* margin-bottom: 2ch;  */
+    margin-bottom: 2ch; 
     color: var(--color-primario);
 }
