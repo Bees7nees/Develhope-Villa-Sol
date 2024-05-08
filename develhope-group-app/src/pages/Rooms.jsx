@@ -1,7 +1,9 @@
 import Room from "../Components/Room";
 import styles from "../Styles/Rooms.module.css";
 import { useState } from "react";
-import BookingMenu from "../Components/BookingMenu";
+import classes from "/src/Styles/SubNav.module.css"
+import Difuminado from "/src/Components/Difuminado"
+
 
 export default function Rooms() {
   const [seccion, setseccion] = useState("todas");
@@ -27,38 +29,44 @@ export default function Rooms() {
 
   return (
     <div className={styles.rooms}>
-      <nav className={styles.navRoom}>
-        <h3
+    <nav className={styles.subNavContenedor}>
+      <ul className={styles.listContainer}>
+        <li
           id="todas"
-          className={seccion === "todas" ? styles.selected : ""}
+          className={seccion === "todas" ? `${styles.selected} ${styles.navlinks}` : styles.navlinks}
           onClick={handlespan}
         >
           {" "}
           TODAS{" "}
-        </h3>
-        <h3
+        </li>
+        <span className={classes.divisor}></span>
+        <li
           id="estandar"
-          className={seccion === "estandar" ? styles.selected : ""}
+          className={seccion === "estandar" ? `${styles.selected} ${styles.navlinks}` : styles.navlinks}
           onClick={handlespan}
         >
           ESTÁNDAR{" "}
-        </h3>
-        <h3
+        </li>
+        <span className={classes.divisor}></span>
+        <li
           id="premiun"
-          className={seccion === "premiun" ? styles.selected : ""}
+          className={seccion === "premiun" ? `${styles.selected} ${styles.navlinks}` : styles.navlinks}
           onClick={handlespan}
         >
           PREMIUN
-        </h3>
-        <h3
+        </li>
+        <span className={classes.divisor}></span>
+        <li
           id="imperial"
-          className={seccion === "imperial" ? styles.selected : ""}
+          className={seccion === "imperial" ? `${styles.selected} ${styles.navlinks}` : styles.navlinks}
           onClick={handlespan}
         >
           {" "}
           IMPERIAL
-        </h3>
+        </li>
+      </ul>
       </nav>
+      <Difuminado top={190}/>
       <div className={styles.sections_room}>
         {seccion === "todas" && (
           <>

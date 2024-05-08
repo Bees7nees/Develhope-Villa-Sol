@@ -10,15 +10,13 @@ import { HashLink as Anchor } from 'react-router-hash-link';
 export default function Navbar() {
     
     
-    const [verHabitacionesSubNav, setVerHabitacionesSubNav] = useState(false);
     const [verRestauranteSubNav, setVerRestauranteSubNav] = useState(false);
     const [verSpaSubNav, setVerSpaSubNav] = useState(false);
     const [verDropdown, setVerDropdown] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
-        if (location.pathname === "/" || location.pathname === "/nosotros") {
-            setVerHabitacionesSubNav(false);
+        if (location.pathname === "/" || location.pathname === "/nosotros" || location.pathname === "/habitaciones") {
             setVerRestauranteSubNav(false);
             setVerSpaSubNav(false);
             setVerDropdown(false);
@@ -26,25 +24,15 @@ export default function Navbar() {
     }, [location]);
     
 
-    const handleHabitacionesClick = () => {
-        setVerHabitacionesSubNav(!verHabitacionesSubNav);
-        setVerRestauranteSubNav(false); 
-        setVerSpaSubNav(false);
-    };
-
     const handleRestauranteClick = () => {
         setVerRestauranteSubNav(!verRestauranteSubNav);
-        setVerHabitacionesSubNav(false); 
         setVerSpaSubNav(false);
     };
 
     const handleSpaClick = () => {
         setVerSpaSubNav(!verSpaSubNav);
         setVerRestauranteSubNav(false); 
-        setVerHabitacionesSubNav(false);
     };
-
-
 
     const handleDropdownClick = () => {
         setVerDropdown(!verDropdown);
@@ -60,22 +48,9 @@ export default function Navbar() {
                     <li><Link className={style.navLinks} to="/">HOME</Link></li>
                     <li><Link className={style.navLinks} to="/nosotros">NOSOTROS</Link></li>
                     <li>
-                        <Link onClick={handleHabitacionesClick} className={style.navLinks} to="/habitaciones">HABITACIONES</Link>
+                        <Link className={style.navLinks} to="/habitaciones">HABITACIONES</Link>
                     </li>
-                    {verHabitacionesSubNav && ( 
-                        <nav className={classes.subNavContenedor}>
-                                <ul className={classes.listContainer}>
-                                    <li><Link className={style.navLinks} to="#todas">TODAS</Link></li>
-                                    <span className={classes.divisor}></span>
-                                    <li><Link className={style.navLinks} to="#estandar">ESTÁNDAR</Link></li>
-                                    <span className={classes.divisor}></span>
-                                    <li className={style.navLinks} to="#premium">PREMIUM</li>
-                                    <span className={classes.divisor}></span>
-                                    <li><Link className={style.navLinks} to="#suite">SUITE</Link></li>
-                                </ul>
-                        </nav>
-                        )}
-                    
+
                     <li>
                         <Link onClick={handleRestauranteClick} className={style.navLinks} to="/restauranteSunset">RESTAURANTES</Link>
                     </li>
@@ -133,8 +108,8 @@ export default function Navbar() {
                     <li><Anchor className={style.navLinks} smooth={true} to="#contacto">CONTACTO</Anchor></li>
                 </ul>
         </nav>
-        {(!verHabitacionesSubNav && !verRestauranteSubNav && !verSpaSubNav) && <Difuminado />}
-        <Difuminado top={verHabitacionesSubNav || verRestauranteSubNav || verSpaSubNav ? "190" : "95"} />
+        {(!verRestauranteSubNav && !verSpaSubNav) && <Difuminado />}
+        <Difuminado top={verRestauranteSubNav || verSpaSubNav ? "190" : "95"} />       
         </>
     )
 }
