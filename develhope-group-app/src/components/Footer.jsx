@@ -12,7 +12,7 @@ export default function Footer() {
                     <Link className={classes.titulo}>CONOCENOS</Link> 
                         <div className={classes.downcontacto}>
                             <Link className={classes.links}>Eventos y Conferencias</Link>
-                            <Link className={classes.links}>Restaurantes y Buffet</Link>
+                            <Link className={classes.links} to={"/restauranteSunset"}>Restaurantes y Buffet</Link>
                             <Link className={classes.links}>Preguntas Frecuentes</Link>
                         </div>
                 </section>
@@ -21,7 +21,7 @@ export default function Footer() {
                     <Link className={classes.titulo}>RESERVAR</Link> 
                         <div className={classes.downreserva}>
                             <Link className={classes.links}>Traslado aeropuerto y transporte</Link>
-                            <Link className={classes.links}>Spa & Wellness Center</Link>
+                            <Link className={classes.links} to={"/spa"}>Spa & Wellness Center</Link>
                             <Link className={classes.links}>Lugares de interés</Link>
                         </div>
                 </section>
