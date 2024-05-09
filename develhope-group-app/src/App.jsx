@@ -1,5 +1,5 @@
 import "../src/Styles/App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route ,useLocation} from "react-router-dom";
 import TermsConditions from "./Pages/TermsConditions";
 import Navbar from "./Components/Navbar";
 import AboutUs from "./Pages/AboutUs";
@@ -17,9 +17,18 @@ import Rooms from "./Pages/Rooms";
 import NavbarMobile from "./Components/NavbarMobile";
 import { useEffect, useState } from "react";
 import Booking from "./Pages/Booking"
+import CookiesBanner from "./Components/Cookies.jsx";//NUEVO*****
+import Login from "./Pages/Login";//NUEVO*****
+import BotonLogin from "./Components/BotonLogin";//NUEVO*****
+import { UserGlobalProvider } from "./globalvariable/usuarioglobal";//NUEVO****
+
+
+
 export default function App() {
-
-
+// NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
+  const location = useLocation();
+  const showLogin = !location.pathname.includes('/Login');
+  // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
 
   
     const [showNavbarMobile, setShowNavbarMobile] = useState(false)
@@ -39,12 +48,23 @@ export default function App() {
 }, []);
 
   return (
+    <UserGlobalProvider> 
     <>
       {showNavbarMobile && <NavbarMobile/>} 
-      <Navbar />
+      <CookiesBanner/>
+      {/* {showBotonLogin && <BotonLogin/>}  */}
       <Banner />
       <ScrollUp />
-      <BookingMenu />
+      {showLogin && (
+          <>
+            <Navbar />
+            <BookingMenu />
+            <Footer />
+          </>
+        )}
+     
+      
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Habitaciones" element={<Rooms />} />
@@ -55,8 +75,11 @@ export default function App() {
         <Route path="/Booking" element={<Booking/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/spa" element={<SpaPage />} />
+        <Route path="/Login" element={<Login/>} />
       </Routes>
-      <Footer />
+      {showLogin &&   <Footer />}
+     
     </>
+    </UserGlobalProvider> 
   );
 }

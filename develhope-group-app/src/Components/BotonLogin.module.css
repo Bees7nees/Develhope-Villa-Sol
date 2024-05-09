@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+:root {
+    --color-primario: #213242;
+    --color-primario-transparecia: #21324249;
+    --color-amarillo-transparencia: #b0881223;
+    --color-amarillo: #B08912;
+  }
+
+  .contenedor_btnLogin{
+    /* min-width: calc(2ch + 30px + 13ch); */
+    /* max-width: 300px; */
+    position: relative;
+    /* border: 1px solid black; */
+   
+
+  }
+.Boton_Login{
+   
+    /* bottom: 3ch;
+    left: 3ch; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: 1rem;
+    z-index: 22;
+    background-color: transparent;
+    cursor: pointer;
+     transition: scale 0.2s ease;
+    
+    /* max-width: 200px; */
+
+}
+.Boton_Login  span{
+    background-color: var( --color-primario) ;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+
+}
+.Boton_Login:hover svg{
+    fill: var(--color-amarillo);
+    
+
+}
+.Boton_Login:hover span{
+    background-color: var(--color-amarillo);
+}
+.Boton_Login button svg{
+    transition: all 0.4s ease;
+    
+
+}
+.Boton_Login:active {
+    scale: 0.8;
+    
+
+}
+/* DROPDOWN */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity:1;
+        
+    }
+}
+.dropdownLogin{
+    font-family: "Playfair Display";
+    font-weight: 500;
+    color: rgb(223, 0, 0);
+    font-size: 1rem;
+    position :fixed;
+    z-index: 1;
+    bottom: calc(15%);
+    left :3ch;
+  
+    width: 200px ;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow:  0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.6s ease;
+}
+.dropdownLogin div:first-child  .divReservas{
+all: initial;
+padding: 3px;
+background-color: var(--color-primario);
+border-radius: 50%;
+min-width:15px;
+min-height:15px;
+max-width:15px;
+max-height:15px;
+color: white;
+font-weight: 700;
+display: flex;
+justify-content: center;
+align-items:center;
+cursor: pointer;
+/* font-family: inherit; */
+
+}
+.dropdownLogin div:first-child  .divReservas:hover{
+border-radius: 50%;
+}
+.dropdownLogin div{
+    padding: 0.5rem 1rem;
+    cursor:pointer;
+}
+.dropdownLogin div:hover{
+    
+    background-color: var(--color-amarillo-transparencia);
+    color: white !important;
+    
+}
+.dropdownLogin div:hover svg{
+    fill: white ;
+}
+
+.dropdownLogin div:first-child {
+    color: var(--color-primario);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+    display: flex;
+    justify-content: space-between;
+}
+.dropdownLogin div:last-child {
+  display: flex;
+  flex-direction: row;
+  
+}
+.dropdownLogin div:first-child:hover {
+    border-radius:  5px 5px 0 0 ;
+}
+.dropdownLogin div:last-child:hover {
+    border-radius: 0px 0px 5px 5px ;
+  
+}

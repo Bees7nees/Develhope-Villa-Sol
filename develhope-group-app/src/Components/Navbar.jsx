@@ -4,6 +4,7 @@ import style from "/src/Styles/Navbar.module.css"
 import classes from "/src/Styles/SubNav.module.css"
 import { useEffect, useState } from "react";
 import { HashLink as Anchor } from 'react-router-hash-link';
+import BotonLogin from "./BotonLogin";
 
 
 
@@ -106,6 +107,8 @@ export default function Navbar() {
                     )} 
                     <li><Link className={style.navLinks} to="/galeria">GALERÍA</Link></li>
                     <li><Anchor className={style.navLinks} smooth={true} to="#contacto">CONTACTO</Anchor></li>
+                    
+        <BotonLogin/> 
                 </ul>
         </nav>
         {(!verRestauranteSubNav && !verSpaSubNav) && <Difuminado />}

@@ -1,4 +1,4 @@
-import styles from "./Cookies.module.css";
+import styles from "../Styles/Cookies.module.css";
 import React, { useState, useEffect } from "react";
 
 export default function CookiesBanner() {
