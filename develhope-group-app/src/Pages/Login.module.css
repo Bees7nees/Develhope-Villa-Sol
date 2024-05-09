@@ -213,6 +213,7 @@ transition: all 0.1s ease;
   margin-bottom: 30px;
   justify-self: flex-start;
   font-size: 2rem;
+  font-weight: 600;
   font-family: "Playfair Display";
   color: #213242;
 }
@@ -220,6 +221,22 @@ transition: all 0.1s ease;
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+  .visibleR p{
+    margin-top: -30px;
+    margin-bottom: 30px;
+    justify-self: flex-start;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Playfair Display";
+    color: #213242;
+  }
+ 
+  .form .inputR{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
   }
   .novisible {
      display: none;  
