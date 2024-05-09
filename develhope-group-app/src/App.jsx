@@ -28,6 +28,8 @@ export default function App() {
 // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
   const location = useLocation();
   const showLogin = !location.pathname.includes('/Login');
+  const showBanner = !location.pathname.includes('/habitaciones');
+
   // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
 
   
@@ -55,8 +57,9 @@ export default function App() {
       {/* {showBotonLogin && <BotonLogin/>}  */}
       {showLogin &&   <Navbar /> }
       {showLogin &&    <BookingMenu /> }
+      {showBanner &&       <Banner /> }
          
-      <Banner />
+   
       <ScrollUp />
      
   

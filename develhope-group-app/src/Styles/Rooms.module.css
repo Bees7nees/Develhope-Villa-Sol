@@ -18,10 +18,11 @@
     margin-bottom: 5ch;
 }
 .sections_room{
-    max-width: 1200px;
+    max-width: 1300px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+ margin-top: 5ch; 
 }
 
 .subNavContenedor{
