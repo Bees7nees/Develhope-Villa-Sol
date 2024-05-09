@@ -27,11 +27,32 @@
   background-image: url('./fondoLogin.svg');
   background-size: cover; 
   background-repeat: no-repeat;
-  
 
 }
 
-  
+  .linktoHome {
+fill:var(--color-primario);
+position: fixed;
+top: 2ch;
+left: 2ch;
+width: 300px;
+display: flex;
+gap: 5px;
+justify-content: estart;
+
+font-size: 1.5rem;
+font-weight: 600;
+color: var(--color-primario);
+transition: all 0.1s ease;
+  }
+
+  .linktoHome:hover{
+    color: var(--color-amarillo);
+    fill: var(--color-amarillo);
+  }
+  .linktoHome:active{
+    scale:0.9;
+  }
   .form {
    
     position: relative;

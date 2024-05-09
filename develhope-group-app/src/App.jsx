@@ -12,7 +12,7 @@ import NotFound from "./Components/NotFound";
 import SpaPage from "./Pages/Spa";
 import Banner from "./Components/Banner";
 import BookingMenu from "./Components/BookingMenu";
-//import { GlobalProvider } from './GlobalContext';
+// import { GlobalProvider } from './GlobalContext';
 import Rooms from "./Pages/Rooms";
 import NavbarMobile from "./Components/NavbarMobile";
 import { useEffect, useState } from "react";
@@ -53,16 +53,13 @@ export default function App() {
       {showNavbarMobile && <NavbarMobile/>} 
       <CookiesBanner/>
       {/* {showBotonLogin && <BotonLogin/>}  */}
+      {showLogin &&   <Navbar /> }
+      {showLogin &&    <BookingMenu /> }
+         
       <Banner />
       <ScrollUp />
-      {showLogin && (
-          <>
-            <Navbar />
-            <BookingMenu />
-            <Footer />
-          </>
-        )}
      
+  
       
       
       <Routes>
@@ -78,6 +75,7 @@ export default function App() {
         <Route path="/Login" element={<Login/>} />
       </Routes>
       {showLogin &&   <Footer />}
+   
      
     </>
     </UserGlobalProvider> 
