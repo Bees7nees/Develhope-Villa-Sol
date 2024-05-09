@@ -78,9 +78,9 @@
     font-size: 1rem;
     position :fixed;
     z-index: 1;
-    bottom: calc(15%);
-    left :3ch;
-  
+    top: 15%;
+   right :4ch;
+  z-index: 9999;
     width: 200px ;
     height: auto;
     background-color: rgb(255, 255, 255);
