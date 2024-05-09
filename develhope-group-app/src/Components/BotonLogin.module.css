@@ -141,3 +141,8 @@ border-radius: 50%;
     border-radius: 0px 0px 5px 5px ;
   
 }
+@media (max-width: 800px) {
+    .contenedor_btnLogin {
+      display: none;
+    }
+  }
