@@ -17,7 +17,7 @@ export default function Navbar() {
     const location = useLocation();
 
     useEffect(() => {
-        if (location.pathname === "/" || location.pathname === "/nosotros" || location.pathname === "/habitaciones") {
+        if (location.pathname === "/" || location.pathname === "/nosotros" || location.pathname === "/habitaciones" || location.pathname === "/galeria") {
             setVerRestauranteSubNav(false);
             setVerSpaSubNav(false);
             setVerDropdown(false);

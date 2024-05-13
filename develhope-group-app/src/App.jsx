@@ -58,13 +58,7 @@ export default function App() {
       {showLogin &&   <Navbar /> }
       {showLogin &&    <BookingMenu /> }
       {showBanner &&       <Banner /> }
-         
-   
       <ScrollUp />
-     
-  
-      
-      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Habitaciones" element={<Rooms />} />
@@ -78,8 +72,6 @@ export default function App() {
         <Route path="/Login" element={<Login/>} />
       </Routes>
       {showLogin &&   <Footer />}
-   
-     
     </>
     </UserGlobalProvider> 
   );
