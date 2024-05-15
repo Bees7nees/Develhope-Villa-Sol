@@ -67,7 +67,8 @@ export default function App() {
         <Route path="/Booking" element={<Booking/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/spa" element={<SpaPage />} />
-        <Route path="/Login" element={<Login/>} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Galeria" element={<Galery />} />
       </Routes>
       {showLogin &&   <Footer />}
     </>
