@@ -20,9 +20,7 @@ import Booking from "./Pages/Booking"
 import CookiesBanner from "./Components/Cookies.jsx";//NUEVO*****
 import Login from "./Pages/Login";//NUEVO*****
 import BotonLogin from "./Components/BotonLogin";//NUEVO*****
-import { UserGlobalProvider } from "./globalvariable/usuarioglobal";//NUEVO****
-
-
+import { UserGlobalProvider } from "./globalvariable/Usuarioglobal.jsx";//NUEVO****
 
 export default function App() {
 // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
