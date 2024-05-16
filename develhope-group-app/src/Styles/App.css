@@ -343,6 +343,24 @@ a {
   }
 }
 
+.galery-button {
+  margin: 0 0 3rem 4rem;
+  padding: 1rem;
+}   
+
+.gal-imgs {
+  margin: 1rem 1rem 5rem 1rem;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  img {
+    width: 30%;
+    border-radius: 30px;
+    margin: 1rem;
+  }
+}
+
 /* RESPONSIVE 
 Términos & Condiciones (Móvil) */
 
