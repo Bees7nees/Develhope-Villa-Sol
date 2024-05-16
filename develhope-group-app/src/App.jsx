@@ -21,6 +21,7 @@ import CookiesBanner from "./Components/Cookies.jsx";//NUEVO*****
 import Login from "./Pages/Login";//NUEVO*****
 import BotonLogin from "./Components/BotonLogin";//NUEVO*****
 import { UserGlobalProvider } from "./globalvariable/Usuarioglobal.jsx";//NUEVO****
+import Galery from "./Pages/Galery.jsx"
 
 export default function App() {
 // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
