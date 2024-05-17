@@ -1,8 +1,8 @@
 import * as React from "react";
 import styles from "../Styles/Galery.module.css";
 import Button from "../Components/Buttons";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+// import Lightbox from "yet-another-react-lightbox";
+// import "yet-another-react-lightbox/styles.css";
 import azotea from "../Assets/Img/azotea.jpg";
 import bath from "../Assets/Img/bath.jpg"
 import eventsroom from "../Assets/Img/eventsroom.jpg"

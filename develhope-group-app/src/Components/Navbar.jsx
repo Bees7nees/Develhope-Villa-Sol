@@ -2,14 +2,16 @@ import { Link, useLocation } from "react-router-dom"
 import Difuminado from "/src/Components/Difuminado"
 import style from "/src/Styles/Navbar.module.css"
 import classes from "/src/Styles/SubNav.module.css"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { HashLink as Anchor } from 'react-router-hash-link';
 import BotonLogin from "./BotonLogin";
-
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
 
 
 export default function Navbar() {
-    
+
+    const context = useContext(Context);
     
     const [verRestauranteSubNav, setVerRestauranteSubNav] = useState(false);
     const [verSpaSubNav, setVerSpaSubNav] = useState(false);
@@ -47,9 +49,12 @@ export default function Navbar() {
                     <Link to="/"><img className={style.logo} src="/src/Assets/svg/logoBlack.svg" alt="logo"/></Link>
                     <ul className={style.navTopContainer}>
                     <li><Link className={style.navLinks} to="/">HOME</Link></li>
-                    <li><Link className={style.navLinks} to="/nosotros">NOSOTROS</Link></li>
-                    <li>
-                        <Link className={style.navLinks} to="/habitaciones">HABITACIONES</Link>
+                    <li><Link className={style.navLinks} to="/nosotros">
+                        <FormattedMessage id="nosotros"/>
+                    </Link></li>
+                    <li><Link className={style.navLinks} to="/habitaciones">
+                        <FormattedMessage id="habitaciones"/>
+                    </Link>
                     </li>
 
                     <li>
@@ -108,8 +113,12 @@ export default function Navbar() {
                     <li><Link className={style.navLinks} to="/galeria">GALERÍA</Link></li>
                     <li><Anchor className={style.navLinks} smooth={true} to="#contacto">CONTACTO</Anchor></li>
                     
-        <BotonLogin/> 
-                </ul>
+            <BotonLogin/> 
+            <div>
+                <button value="en" onClick={context.selectLang} className={style.langButton}>ES</button>
+                <button value="en-US" onClick={context.selectLang} className={style.langButton}>EN</button>
+            </div>
+        </ul>
         </nav>
         {(!verRestauranteSubNav && !verSpaSubNav) && <Difuminado />}
         <Difuminado top={verRestauranteSubNav || verSpaSubNav ? "190" : "95"} />       

@@ -20,8 +20,8 @@ import Booking from "./Pages/Booking"
 import CookiesBanner from "./Components/Cookies.jsx";//NUEVO*****
 import Login from "./Pages/Login";//NUEVO*****
 import BotonLogin from "./Components/BotonLogin";//NUEVO*****
-import { UserGlobalProvider } from "./globalvariable/Usuarioglobal.jsx";//NUEVO****
-import Galery from "./Pages/Galery.jsx";//NUEVO*****
+import {UserGlobalProvider} from "/src/globalvariable/usuarioglobal.jsx"
+import Gallery from "./Pages/Gallery.jsx";//NUEVO*****
 
 export default function App() {
 // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
@@ -69,7 +69,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/spa" element={<SpaPage />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Galeria" element={<Galery />} />
+        {/* <Route path="/Galeria" element={<Gallery />} /> */}
       </Routes>
       {showLogin && <Footer />}
     </>
