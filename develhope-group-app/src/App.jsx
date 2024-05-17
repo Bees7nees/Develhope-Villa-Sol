@@ -21,7 +21,7 @@ import CookiesBanner from "./Components/Cookies.jsx";//NUEVO*****
 import Login from "./Pages/Login";//NUEVO*****
 import BotonLogin from "./Components/BotonLogin";//NUEVO*****
 import { UserGlobalProvider } from "./globalvariable/Usuarioglobal.jsx";//NUEVO****
-import Galery from "./Pages/Galery.jsx"
+import Galery from "./Pages/Galery.jsx";//NUEVO*****
 
 export default function App() {
 // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN
@@ -71,7 +71,7 @@ export default function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Galeria" element={<Galery />} />
       </Routes>
-      {showLogin &&   <Footer />}
+      {showLogin && <Footer />}
     </>
     </UserGlobalProvider> 
   );
