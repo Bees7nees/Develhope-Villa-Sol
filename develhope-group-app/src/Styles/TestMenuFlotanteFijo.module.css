@@ -1,0 +1,21 @@
+.contenedor {
+    position: fixed;
+    bottom: 5vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 20rem;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.menu {
+    position: fixed;
+    bottom: 5vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 20rem;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
