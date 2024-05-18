@@ -3,8 +3,14 @@ import { UserMyContext } from "/src/globalvariable/usuarioglobal.jsx"
 // import style from "./Login.module.css";
 import style from "./Login.module.css";
 import { Link } from "react-router-dom";
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
 
 export default function Login() {
+
+  const context = useContext(Context);
+
   // VARIABLE GLOBAL
   const { globaluser, setGlobaluser } = useContext(UserMyContext);
   // VARIABLE GLOBAL
@@ -317,7 +323,9 @@ export default function Login() {
             onSubmit={añadirUser}
           >
             <div>
-              <p>Rellena tus datos</p>
+              <p>
+                <FormattedMessage id="datos"/>
+              </p>
               <div className={style.inputR}>
                 <input
                   type="text"
@@ -354,7 +362,9 @@ export default function Login() {
             </div>
 
             <br />
-            <button type="submit">crear cuenta</button>
+            <button type="submit">
+              <FormattedMessage id="cuenta"/>
+            </button>
           </form>
 
           {/* FORMULARIO LOGIN */}
@@ -363,7 +373,9 @@ export default function Login() {
             onSubmit={loginValidate}
           >
             <div>
-              <p>Inicio de Sesión</p>
+              <p>
+                <FormattedMessage id="sesion"/>
+              </p>
               <input
                 type="email"
                 required

@@ -1,7 +1,13 @@
 import styles from "../Styles/Cookies.module.css";
 import React, { useState, useEffect } from "react";
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
+
 
 export default function CookiesBanner() {
+
+  const context = useContext(Context);
   let [accept, setaccept] = useState(true);
 
   useEffect(() => {
@@ -35,16 +41,16 @@ export default function CookiesBanner() {
           />
 
           <p>
-            Este sitio web utiliza cookies para mejorar tu experiencia de
-            navegación. Al hacer clic en Aceptar, aceptas el uso de cookies de
-            acuerdo con nuestra <a href="#">política de privacidad</a>. Para
-            obtener más información o modificar tus preferencias de cookies,
-            visita nuestra política de cookies.
-            <span>¡Gracias por tu confianza y bienvenido a Villa del Sol!</span>
+            <FormattedMessage id="cookie"/>
+            <a href="#"> <FormattedMessage id="privacidad"/>
+            </a>  <FormattedMessage id="cookies"/>
+            <span>
+              <FormattedMessage id="cookiesjoi"/>
+            </span>
           </p>
           <div>
             <button onClick={handleDivClick} className={styles.accept}>
-              ACEPTO
+              <FormattedMessage id="aceptar"/>
             </button>
           </div>
         </div>

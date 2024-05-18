@@ -58,7 +58,9 @@ export default function Navbar() {
                     </li>
 
                     <li>
-                        <Link onClick={handleRestauranteClick} className={style.navLinks} to="/restauranteSunset">RESTAURANTES</Link>
+                        <Link onClick={handleRestauranteClick} className={style.navLinks} to="/restauranteSunset">
+                            <FormattedMessage id="restaurantes"/>
+                        </Link>
                     </li>
                     {verRestauranteSubNav && (
                         <nav className={classes.subNavContenedor}>
@@ -97,7 +99,9 @@ export default function Navbar() {
                     )}
 
                     <li>
-                        <Link onClick={handleSpaClick} className={style.navLinks} to="/spa">SPA</Link>
+                        <Link onClick={handleSpaClick} className={style.navLinks} to="/spa">
+                            <FormattedMessage id="spa"/>
+                        </Link>
                     </li>
                     {verSpaSubNav && ( 
                         <nav className={classes.subNavContenedor}>
@@ -110,8 +114,12 @@ export default function Navbar() {
                             </ul>
                         </nav>
                     )} 
-                    <li><Link className={style.navLinks} to="/galeria">GALERÍA</Link></li>
-                    <li><Anchor className={style.navLinks} smooth={true} to="#contacto">CONTACTO</Anchor></li>
+                    <li><Link className={style.navLinks} to="/galeria">
+                        <FormattedMessage id="galeria"/>
+                    </Link></li>
+                    <li><Anchor className={style.navLinks} smooth={true} to="#contacto">
+                        <FormattedMessage id="contacto"/>
+                    </Anchor></li>
                     
             <BotonLogin/> 
             <div>

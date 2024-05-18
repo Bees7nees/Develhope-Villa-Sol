@@ -25,13 +25,21 @@ import vippool from "../Assets/Img/vippool.jpg"
 import vistaarriba from "../Assets/Img/vistaarriba.jpg"
 import vistas from "../Assets/Img/vistas.jpg"
 import vistas2 from "../Assets/Img/vistas2.jpg"
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
 
 export default function Galery() {
+
+    const context = useContext(Context);
+
     const [open, setOpen] = React.useState(false);
 
     return (
         <>
-            <h1 className={styles.titulo}>Galería de Fotos de nuestro Hotel</h1>
+            <h1 className={styles.titulo}>
+                <FormattedMessage id="gallery"/>
+            </h1>
             <div className="galery-button"><Button type="blue" label="Abrir Galería completa" onClick={() => setOpen(true)} /></div>
 
             <Lightbox

@@ -6,25 +6,20 @@ import TitleDescription from "../Components/TitleDescription"
 import Mensaje from "../Components/Mensaje"
 import classes from "../Styles/Home.module.scss";
 import BookingMenu from "../Components/BookingMenu"
-import { useEffect, useState } from "react"
 import MenuMobile from "../Components/MenuMobile"
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
 
 
 export default function Dining() {
 
+    const context = useContext(Context);
 
     return (
         <>
         <BookingMenu />
-            <TitleDescription title="Restaurante Sunset" description="Ubicado en el corazón de Andalucía, este restaurante 5 estrellas fusiona 
-            la rica tradición culinaria andaluza con un toque contemporáneo de alta cocina. Al entrar, los huéspedes son recibidos por una atmósfera 
-            de elegancia y sofisticación, donde la decoración refleja la riqueza cultural de la región, con detalles que evocan la artesanía local y 
-            los paisajes emblemáticos. La carta ofrece una exquisita selección de platos elaborados con ingredientes frescos y de temporada, 
-            que celebran la diversidad gastronómica de Andalucía. Cada creación culinaria es una obra maestra en sí misma, presentada con una 
-            meticulosa atención al detalle y un equilibrio armonioso de sabores. El servicio impecable, atento y personalizado, garantiza una 
-            experiencia gastronómica inolvidable para cada comensal, mientras que la cuidada selección de vinos locales e internacionales 
-            complementa a la perfección cada bocado. Con su ambiente refinado y su excepcional calidad gastronómica, este restaurante se erige 
-            como un destino gastronómico de renombre en la escena culinaria de Andalucía."/> 
+            <TitleDescription title={<FormattedMessage id="sunset"/>} description={<FormattedMessage id="sunset_descripcion"/>}/> 
             <TipoMenu/>
             <div className={classes["divisor"]}>
                 <DividingLines color={"#213242"} length={"1rem"} />

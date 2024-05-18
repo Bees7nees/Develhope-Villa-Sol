@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import classes from "../Styles/ContactFooterVariant.module.scss";
 import { ContactPrompt } from "./ContactPrompt";
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
 
 export function ContactFooterVariant() {
+
+  const context = useContext(Context);
+
   const [promptVisibility, setPromptVisibility] = useState(false);
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
@@ -42,9 +47,11 @@ export function ContactFooterVariant() {
       )}
       <div className={classes["contact-footer-variant"]}>
         <section className={classes["header-section"]}>
-          <h1 className={classes["title"]}>Contacto</h1>
+          <h1 className={classes["title"]}>
+            <FormattedMessage id="contact"/>
+          </h1>
           <p className={classes["description"]}>
-            Queremos seguir mejorando, y tu opinión es muy importante.
+            <FormattedMessage id="contact_descripcion"/>
           </p>
         </section>
         <form className={classes["form"]} action="submit">
@@ -104,7 +111,7 @@ export function ContactFooterVariant() {
               className={classes["write-message"]}
               onClick={handleShowPrompt}
             >
-              Escribir mensaje
+              <FormattedMessage id="mensaje"/>
             </button>
           </section>
         </form>

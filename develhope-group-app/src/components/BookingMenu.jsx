@@ -12,8 +12,15 @@ import { BsPersonAdd } from "react-icons/bs";
 import { PiCallBellLight } from "react-icons/pi";
 import { RiCoupon3Line } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+
 
 export default function BookingMenu() {
+
+  
+  const context = useContext(Context);
+
   const [playSound] = useSound(BellHotel);
   const [firstDate, setFirstDate] = useState(new Date());
   const [lastDate, setLastDate] = useState(new Date());
@@ -96,7 +103,9 @@ export default function BookingMenu() {
         <div className={styles.bookingArrive}>
           <BsCalendarWeek className={styles.iconCalendar} />
           <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>LLEGADA</p>
+            <p className={styles.subtitle}>
+              <FormattedMessage id="llegada"/>
+            </p>
             <CalendarComponent setDate={setFirstDate} nextDate={lastDate} />
           </div>
         </div>
@@ -106,7 +115,9 @@ export default function BookingMenu() {
         <div className={styles.bookingLeft}>
           <BsCalendarWeek className={styles.iconCalendar} />
           <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>SALIDA</p>
+            <p className={styles.subtitle}>
+              <FormattedMessage id="salida"/>
+            </p>
             <CalendarComponent setDate={setLastDate} prevDate={firstDate} />
           </div>
         </div>
@@ -117,8 +128,13 @@ export default function BookingMenu() {
           </div>
           <div>
             <div className={styles.textDivBookingMenu}>
-              <p className={styles.subtitle}>NOCHES</p>
-              <p className={styles.normalTextBooking}>{nights} NOCHE</p>
+              <p className={styles.subtitle}>
+                <FormattedMessage id="noches"/>
+              </p>
+              <p className={styles.normalTextBooking}>
+                {nights}   
+                <FormattedMessage id="noche"/>
+              </p>
             </div>
           </div>
         </div>
@@ -128,10 +144,12 @@ export default function BookingMenu() {
             <BsPersonAdd className={styles.iconPerson} />
           </div>
           <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>HUÉSPEDES</p>
+            <p className={styles.subtitle}>
+              <FormattedMessage id="huespedes"/>
+            </p>
             <p className={styles.normalTextBooking}>
               {" "}
-              {numAdult} ADULTOS + {numKids} NIÑOS
+              {numAdult}   <FormattedMessage id="adultos"/> + {numKids}   <FormattedMessage id="niños"/>
             </p>
             {seeCounter && <CounterHost />}
             {
@@ -148,7 +166,9 @@ export default function BookingMenu() {
             <RiCoupon3Line className={styles.iconCoupon} />
           </div>
           <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>CUPÓN</p>
+            <p className={styles.subtitle}>
+              <FormattedMessage id="cupon"/>
+            </p>
             <input
               type="text"
               className={styles.inputCoupon}
