@@ -69,7 +69,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/spa" element={<SpaPage />} />
         <Route path="/Login" element={<Login />} />
-        {/* <Route path="/Galeria" element={<Gallery />} /> */}
+        <Route path="/Galeria" element={<Gallery />} />
       </Routes>
       {showLogin && <Footer />}
     </>
