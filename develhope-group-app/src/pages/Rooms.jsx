@@ -3,14 +3,11 @@ import styles from "../Styles/Rooms.module.css";
 import { useState } from "react";
 import classes from "/src/Styles/SubNav.module.css"
 import Difuminado from "/src/Components/Difuminado"
-import {Context} from "/src/Components/Language"
 import { FormattedMessage } from 'react-intl';
-import { useContext } from "react";
 
 
 export default function Rooms() {
 
-  const context = useContext(Context);
 
   const [seccion, setseccion] = useState("todas");
   // const [selectedStyle, setSelectedStyle] = useState({

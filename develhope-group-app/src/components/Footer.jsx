@@ -1,15 +1,12 @@
 import { Link } from 'react-router-dom'
 import classes from "/src/Styles/Footer.module.css"
 import { ContactFooterVariant } from './ContactFooterVariant'
-import {Context} from "/src/Components/Language"
 import { FormattedMessage } from 'react-intl';
-import { useContext } from "react";
 
 
 
 export default function Footer() {
 
-    const context = useContext(Context);
 
 
     return (
@@ -34,7 +31,7 @@ export default function Footer() {
                 <span className={classes.divisor}></span>
                 <section className={classes.reservasFooter}>
                     <Link className={classes.titulo}>
-                        <FormattedMessage id="reserva"/>
+                        <FormattedMessage id="reservar"/>
                     </Link> 
                         <div className={classes.downreserva}>
                             <Link className={classes.links}>

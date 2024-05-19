@@ -3,13 +3,10 @@ import { UserMyContext } from "/src/globalvariable/usuarioglobal.jsx"
 // import style from "./Login.module.css";
 import style from "./Login.module.css";
 import { Link } from "react-router-dom";
-import {Context} from "/src/Components/Language"
 import { FormattedMessage } from 'react-intl';
-import { useContext } from "react";
 
 export default function Login() {
 
-  const context = useContext(Context);
 
   // VARIABLE GLOBAL
   const { globaluser, setGlobaluser } = useContext(UserMyContext);
@@ -423,7 +420,7 @@ export default function Login() {
               }}
             >
               {" "}
-              Registrarse
+              <FormattedMessage id="registrarse"/>
             </span>
           </div>
           {/* TOGGLE CAMBIO FORMULARIO */}

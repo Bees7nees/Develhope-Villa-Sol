@@ -5,37 +5,35 @@ import Button from "../Components/Buttons";
 import DividingLines from "../Components/DividingLines";
 import TitleDescription from "../Components/TitleDescription";
 import classes from "../Styles/Spa.module.scss";
+import { FormattedMessage } from 'react-intl';
 
 export default function SpaPage() {
+
+
   return (
     <>
       <TitleDescription
-        title="Nuestro Wellness SPA"
-        description="Aprovecha tus días de vacaciones para mimarte y relajarte en nuestro centro de salud y belleza. Dispone de una piscina climatizada, paseo contracorriente, tres cuellos de cisne descontracturantes y camas de burbujas; 2 saunas y baño turco. baño de vapor, una fuente de hielo, un cubo de agua fría, una ducha oscilante, una ducha escocesa, una ducha vichy con chorros de agua en espalda y piernas con efecto micropeeling relajante y una bañera de hidromasaje aromático."
+        title={<FormattedMessage id="spa_titulo"/>}
+        description={<FormattedMessage id="wellness_description"/>}
       />
       <div className={classes["divisor"]}>
         <DividingLines color={"var(--blue900)"} length={"1rem"} />
         <DividingLines color={"var(--golden500)"} length={"1rem"} />
       </div>
-      <h3 className="h3-spa-title">SALUD Y BIENESTAR PARA TODA LA FAMILIA</h3>
+      <h3 className="h3-spa-title">
+        {<FormattedMessage id="title"/>}
+      </h3>
       <div className="spa-container">
         <img src={fotomasaje1} />
         <p>
-          Un mar de tranquilidad. Modernas y amplias instalaciones con Agua
-          Salada, tratamientos seleccionados y aplicados por expertas y formadas
-          manos y todo lo necesario para hacer realidad el cuidado de la Salud y
-          el Bienestar de toda la familia.
+          <FormattedMessage id="masaje"/>
         </p>
       </div>
 
       <div className="spa-container">
         <img src={fotomasaje2} />
         <p>
-          Más de 10 tratamientos faciales a su disposición. Los múltiples
-          efectos de mejora del bienestar de la piel conseguidos mediante el uso
-          de aguas termales han consolidado la oferta de tratamientos de
-          estética termal en los balnearios, más allá de las tradicionales y
-          conocidas curas termales para numerosos problemas de salud.
+          <FormattedMessage id="masajes"/>
         </p>
       </div>
       <div className={classes["divisor"]}>
@@ -43,34 +41,40 @@ export default function SpaPage() {
         <DividingLines color={"var(--golden500)"} length={"1rem"} />
       </div>
       <div className="tratamientos">
-        <h3>TRATAMIENTOS</h3>
+        <h3>
+          <FormattedMessage id="tratamientos"/>
+        </h3>
         <div className="tratamientos-container">
           <span>
-            <h5>MASAJES</h5>{" "}
+            <h5>
+              <FormattedMessage id="masaje_title"/>
+            </h5>{" "}
             <p>
-              Experiencia calmante que combina técnicas de masaje suave con
-              aromas relajantes para aliviar tensiones y promover bienestar.
+              <FormattedMessage id="masaje_des"/>
             </p>
           </span>
           <span>
-            <h5>FACIALES</h5>{" "}
+            <h5>
+              <FormattedMessage id="faciales"/>
+            </h5>{" "}
             <p>
-              Renueva tu piel con una limpieza profunda, exfoliación suave y
-              mascarilla hidratante, dejándola radiante y rejuvenecida.
+              <FormattedMessage id="faciales_des"/>
             </p>
           </span>
           <span>
-            <h5>CUIDADO DE MANOS Y PIES</h5>{" "}
+            <h5>
+              <FormattedMessage id="manicure"/>
+            </h5>{" "}
             <p>
-              Rejuvenece tus extremidades con una exfoliación suave, masaje
-              relajante y crema hidratante para manos y pies suaves y nutridos.
+              <FormattedMessage id="manicure_des"/>
             </p>
           </span>
           <span>
-            <h5>EXPERIENCIAS EN PAREJA</h5>{" "}
+            <h5>
+              <FormattedMessage id="experiencias"/>
+            </h5>{" "}
             <p>
-              Conexión y relajación en pareja con un masaje relajante
-              personalizado para disfrutar de intimidad y bienestar juntos.
+              <FormattedMessage id="experiencias_des"/>
             </p>
           </span>
         </div>
@@ -82,7 +86,9 @@ export default function SpaPage() {
             <img src={fotosauna} />
           </picture>
           <span className="horarios-container">
-            <h3>HORARIOS</h3>
+            <h3>
+              <FormattedMessage id="horario"/>
+            </h3>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="292"
@@ -98,12 +104,16 @@ export default function SpaPage() {
               />
             </svg>
             <section className={classes["section-horarios"]}>
-              <h4 className={classes["h4-spa"]}>LUNES - VIERNES</h4>{" "}
+              <h4 className={classes["h4-spa"]}>
+                <FormattedMessage id="lunes"/>
+              </h4>{" "}
               <h4 className={classes["h4-spa"]}>7:00 - 21:00</h4>
-              <h4 className={classes["h4-spa"]}>SÁBADOS & DOMINGOS</h4>{" "}
+              <h4 className={classes["h4-spa"]}>
+                <FormattedMessage id="sabado"/>
+              </h4>{" "}
               <h4>8:00 - 20:00</h4>
             </section>
-            <Button type="blue" label="Reservar" />
+            <Button type="blue" label={<FormattedMessage id="reservar"/>} />
           </span>
         </div>
       </div>

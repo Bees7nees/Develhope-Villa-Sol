@@ -27,6 +27,7 @@ export default function AboutUs() {
       <ElementAboutUs
         title={<FormattedMessage id="equipo"/>}
         parrafo={<FormattedMessage id="equipo_descripcion"/>}
+        url="\src\Assets\nuestro_equipo.png"
       />
 
       <ElementAboutUs
