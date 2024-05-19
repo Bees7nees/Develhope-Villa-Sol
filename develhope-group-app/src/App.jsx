@@ -1,25 +1,27 @@
+import "../src/Styles/App.css";
+import { Routes, Route, useLocation } from "react-router-dom";
+import TermsConditions from "./Pages/TermsConditions";
+import Navbar from "./Components/Navbar";
 import AboutUs from "./Pages/AboutUs";
+import Footer from "./Components/Footer";
+import Dining from "./Pages/Dining";
+import { Home } from "./Pages/Home";
+import ScrollUp from "./Components/botones/ScrollUp";
+import NotFound from "./Components/NotFound";
+import SpaPage from "./Pages/Spa";
+import Banner from "./Components/Banner";
+import BookingMenu from "./Components/BookingMenu";
+// import { GlobalProvider } from './GlobalContext';
+import Rooms from "./Pages/Rooms";
+import NavbarMobile from "./Components/NavbarMobile";
+import { useEffect, useState } from "react";
 import Booking from "./Pages/Booking";
 import CookiesBanner from "./Components/Cookies.jsx"; //NUEVO*****
-import Dining from "./Pages/Dining";
-import Footer from "./Components/Footer";
-import Galery from "./Pages/Galery.jsx"; //NUEVO*****
-import Home from "./Pages/Home";
 import Login from "./Pages/Login"; //NUEVO*****
-import Navbar from "./Components/Navbar";
-import NavbarMobile from "./Components/NavbarMobile";
-import Rooms from "./Pages/Rooms";
-import ScrollUp from "./Components/botones/ScrollUp";
-import SpaPage from "./Pages/Spa";
-import { Routes, Route, useLocation } from "react-router-dom";
+// import BotonLogin from "./Components/BotonLogin"; //NUEVO*****
+import Galery from "./Pages/Galery.jsx"; //NUEVO*****
 import { UserGlobalProvider } from "./globalvariable/Usuarioglobal.jsx";
-import { useEffect, useState } from "react";
-import { MenuFlotanteFijo } from "./Pages/TestMenuFlotanteFijo.jsx";
-import { Banner } from "./Components/Banner";
-import { BookingMenu } from "./Components/BookingMenu";
-import { NotFound } from "./Components/NotFound";
-import { TermsConditions } from "./Pages/TermsConditions";
-import "../src/Styles/App.css";
+import MenuFlotanteFijo from "./Pages/TestMenuFlotanteFijo.jsx";
 
 export default function App() {
   // NO MOSTRAR BOTON_LOGIN EN PAGINA LOGIN

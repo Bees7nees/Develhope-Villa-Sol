@@ -1,14 +1,12 @@
-import BookingMenu from "../Components/BookingMenu";
 import Booking from "./Booking";
 import classes from "../Styles/TestMenuFlotanteFijo.module.css";
+import BookingMenu from "../Components/BookingMenu";
 
 const MenuFlotanteFijo = () => {
   return (
-    <div>
+    <div className={classes.page}>
       <Booking />
-      <section className={classes.contenedor}>
-        <BookingMenu className={classes.menu} />
-      </section>
+      <BookingMenu />
     </div>
   );
 };

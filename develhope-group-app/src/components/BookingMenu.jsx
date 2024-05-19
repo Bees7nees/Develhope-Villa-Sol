@@ -11,7 +11,7 @@ import { BsMoonStars } from "react-icons/bs";
 import { BsPersonAdd } from "react-icons/bs";
 import { PiCallBellLight } from "react-icons/pi";
 import { RiCoupon3Line } from "react-icons/ri";
-import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
 
 export default function BookingMenu() {
   const [playSound] = useSound(BellHotel);
@@ -62,104 +62,81 @@ export default function BookingMenu() {
     };
   });
 
-  const [bookingData, setBookingData] = useState([]);
-  localStorage.setItem("bookingData", JSON.stringify(bookingData));
-
   function handleBooking() {
     playSound();
-
-    const newBookingData = {
-      id: uuidv4(),
-      clientName: "",
-      clientEmail: "",
-      clientPhone: "",
-      arriveDate: firstDate,
-      leaveDate: lastDate,
-      clientAdults: numAdult,
-      clientKids: numKids,
-      clientCoupon: textCoupon,
-      clientRooms: [],
-      priceTotal: 0 + "€",
-    };
-
-    try {
-      const updatedBookingData = [...bookingData, newBookingData];
-      localStorage.setItem("bookingData", JSON.stringify(updatedBookingData));
-      setBookingData(updatedBookingData);
-    } catch (error) {
-      console.error("Error storing booking data:", error);
-    }
   }
 
   return (
-      <div className={styles.bookingMenuDiv}>
-        <div className={styles.bookingArrive}>
-          <BsCalendarWeek className={styles.iconCalendar} />
-          <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>LLEGADA</p>
-            <CalendarComponent setDate={setFirstDate} nextDate={lastDate} />
-          </div>
-        </div>
-        <div className={styles.arrowBooking}>
-          <BsArrowLeftRight className={styles.iconArrow} />
-        </div>
-        <div className={styles.bookingLeft}>
-          <BsCalendarWeek className={styles.iconCalendar} />
-          <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>SALIDA</p>
-            <CalendarComponent setDate={setLastDate} prevDate={firstDate} />
-          </div>
-        </div>
-        <div className={styles.divideLine}></div>
-        <div className={styles.bookingNight}>
-          <div className={styles.iconSleepDiv}>
-            <BsMoonStars className={styles.iconMoon} />
-          </div>
-          <div>
-            <div className={styles.textDivBookingMenu}>
-              <p className={styles.subtitle}>NOCHES</p>
-              <p className={styles.normalTextBooking}>{nights} NOCHE</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.divideLine}></div>
-        <div className={styles.hosts} onClick={handleCounter} ref={menuRef}>
-          <div className={styles.iconUserpDiv}>
-            <BsPersonAdd className={styles.iconPerson} />
-          </div>
-          <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>HUÉSPEDES</p>
-            <p className={styles.normalTextBooking}>
-              {" "}
-              {numAdult} ADULTOS + {numKids} NIÑOS
-            </p>
-            {seeCounter && <CounterHost />}
-            {
-              //Puedo hacer un menu oculto que este en oculto, el padre tenga un position relative y el menu un position relative
-              //o un estado y un renderizado condicional (un estado que este en false y cuando le clicas este en true y cuando le clicas salga el componente (age>18 && age es el renderizado condicional))
-              //en cupon hacer una alarma que nuestre que se ha aplicado correctamente y si no es undifined se haga un descuento base
-              //Librery usesound https://www.educative.io/answers/how-to-play-sound-in-react importar el sonido mp3 con el sonido.
-            }
-          </div>
-        </div>
-        <div className={styles.divideLine}></div>
-        <div className={styles.coupon}>
-          <div className={styles.iconDiscountpDiv}>
-            <RiCoupon3Line className={styles.iconCoupon} />
-          </div>
-          <div className={styles.textDivBookingMenu}>
-            <p className={styles.subtitle}>CUPÓN</p>
-            <input
-              type="text"
-              className={styles.inputCoupon}
-              value={textCoupon}
-              onChange={handleCoupon}
-            />
-          </div>
-        </div>
-        <div className={styles.checkButton} onClick={handleBooking}>
-          <PiCallBellLight className={styles.iconBell} />
+    <div className={styles.bookingMenuDiv}>
+      <div className={styles.bookingArrive}>
+        <BsCalendarWeek className={styles.iconCalendar} />
+        <div className={styles.textDivBookingMenu}>
+          <p className={styles.subtitle}>LLEGADA</p>
+          <CalendarComponent setDate={setFirstDate} nextDate={lastDate} />
         </div>
       </div>
+      <div className={styles.arrowBooking}>
+        <BsArrowLeftRight className={styles.iconArrow} />
+      </div>
+      <div className={styles.bookingLeft}>
+        <BsCalendarWeek className={styles.iconCalendar} />
+        <div className={styles.textDivBookingMenu}>
+          <p className={styles.subtitle}>SALIDA</p>
+          <CalendarComponent setDate={setLastDate} prevDate={firstDate} />
+        </div>
+      </div>
+      <div className={styles.divideLine}></div>
+      <div className={styles.bookingNight}>
+        <div className={styles.iconSleepDiv}>
+          <BsMoonStars className={styles.iconMoon} />
+        </div>
+        <div>
+          <div className={styles.textDivBookingMenu}>
+            <p className={styles.subtitle}>NOCHES</p>
+            <p className={styles.normalTextBooking}>{nights} NOCHE</p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.divideLine}></div>
+      <div className={styles.hosts} onClick={handleCounter} ref={menuRef}>
+        <div className={styles.iconUserpDiv}>
+          <BsPersonAdd className={styles.iconPerson} />
+        </div>
+        <div className={styles.textDivBookingMenu}>
+          <p className={styles.subtitle}>HUÉSPEDES</p>
+          <p className={styles.normalTextBooking}>
+            {" "}
+            {numAdult} ADULTOS + {numKids} NIÑOS
+          </p>
+          {seeCounter && <CounterHost />}
+          {
+            //Puedo hacer un menu oculto que este en oculto, el padre tenga un position relative y el menu un position relative
+            //o un estado y un renderizado condicional (un estado que este en false y cuando le clicas este en true y cuando le clicas salga el componente (age>18 && age es el renderizado condicional))
+            //en cupon hacer una alarma que nuestre que se ha aplicado correctamente y si no es undifined se haga un descuento base
+            //Librery usesound https://www.educative.io/answers/how-to-play-sound-in-react importar el sonido mp3 con el sonido.
+          }
+        </div>
+      </div>
+      <div className={styles.divideLine}></div>
+      <div className={styles.coupon}>
+        <div className={styles.iconDiscountpDiv}>
+          <RiCoupon3Line className={styles.iconCoupon} />
+        </div>
+        <div className={styles.textDivBookingMenu}>
+          <p className={styles.subtitle}>CUPÓN</p>
+          <input
+            type="text"
+            className={styles.inputCoupon}
+            value={textCoupon}
+            onChange={handleCoupon}
+          />
+        </div>
+      </div>
+      <div className={styles.checkButton} onClick={handleBooking}>
+        <Link to="/Booking">
+          <PiCallBellLight className={styles.iconBell} />
+        </Link>
+      </div>
+    </div>
   );
 }
