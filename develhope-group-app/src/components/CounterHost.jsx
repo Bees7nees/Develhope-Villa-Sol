@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { GlobalContext } from './GlobalVariable';
 import styles from '../Styles/CounterHost.module.scss';
 
@@ -27,11 +27,11 @@ export default function CounterHost() {
 
   return (
     <div className={styles.counterDiv}>
-      <p>Adultos: {numAdult}</p>
+      <p>{numAdult > 1 ? "Adultos" : "Adulto"}: {numAdult}</p>
       <button className={styles.counterButton} onClick={sumaAdult}>+</button>
       <button className={styles.counterButton} onClick={restaAdult}>-</button>
 
-      <p>Niños: {numKids}</p>
+      <p>{numKids > 1 ? "Niños" : "Niño"}: {numKids}</p>
       <button className={styles.counterButton} onClick={sumaChildren}>+</button>
       <button className={styles.counterButton} onClick={restaChildren}>-</button>
     </div>

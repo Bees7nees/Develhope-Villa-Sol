@@ -1,21 +1,30 @@
-.btnScroll{
-    background-color: var(--golden400);
-    transition: all ease-in-out 0.2s;
-    z-index: 999;
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-    height: 3rem;
-    width: 3rem;
-    font-size: 2rem;
-    line-height: 0;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    color: white;
+.btnScroll {
+  background-color: var(--golden400);
+  transition: all ease-in-out 0.2s;
+  z-index: 999;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  line-height: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: white;
 }
-.btnScroll:hover{
-    background-color: var(--golden200) !important ;
-    transform: scale(1.1);
+.btnScroll:hover {
+  background-color: var(--golden200) !important ;
+  transform: scale(1.1);
+}
 
+@media screen and (max-width: 431px) {
+  .btnScroll {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+  }
 }
