@@ -2,40 +2,54 @@ import React, { useState, useRef, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../Styles/Pago.module.scss";
 import { GlobalContext } from "../Components/GlobalVariable";
+import emailjs from "@emailjs/browser";
 
 export default function Pago() {
   const formRef = useRef(null);
   const navigate = useNavigate();
-  const { textCoupon, numAdult, numKids, firstDate, lastDate, nights, finalPrice, couponOK, setPurchaseDone, purchaseDone } = useContext(GlobalContext);
+  const {
+    textCoupon,
+    numAdult,
+    numKids,
+    firstDate,
+    lastDate,
+    nights,
+    finalPrice,
+    couponOK,
+    setPurchaseDone,
+    purchaseDone,
+  } = useContext(GlobalContext);
 
-  const formattedFirstDate = firstDate instanceof Date ? firstDate.toLocaleDateString() : firstDate;
-  const formattedLastDate = lastDate instanceof Date ? lastDate.toLocaleDateString() : lastDate;
+  const formattedFirstDate =
+    firstDate instanceof Date ? firstDate.toLocaleDateString() : firstDate;
+  const formattedLastDate =
+    lastDate instanceof Date ? lastDate.toLocaleDateString() : lastDate;
 
   const [formData, setFormData] = useState({
-    nombre: '',
-    apellidos: '',
-    numeroCuenta: '',
-    mes: '',
-    año: '',
-    cvc: ''
+    nombre: "",
+    apellidos: "",
+    numeroCuenta: "",
+    mes: "",
+    año: "",
+    cvc: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
   const isFormValid = () => {
-    return Object.values(formData).every(value => value.trim() !== '');
+    return Object.values(formData).every((value) => value.trim() !== "");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isFormValid()) {
-        console.log("ha llegado aqui")
+      console.log("ha llegado aqui");
       setPurchaseDone(true);
     }
   };
@@ -44,12 +58,28 @@ export default function Pago() {
     if (formRef.current) {
       formRef.current.submit();
     }
+
+    emailjs
+      .sendForm(
+        "service_i5nnbia",
+        "template_6ubte7n",
+        formRef.current,
+        "z1Wn810fAxFwZ6Wmz"
+      )
+      .then(
+        () => {
+          console.log("SUCCESS");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   useEffect(() => {
     if (purchaseDone) {
-      alert('Pago realizado correctamente');
-      navigate('/');
+      alert("Pago realizado correctamente");
+      navigate("/");
     }
   }, [purchaseDone, navigate]);
 
@@ -59,7 +89,11 @@ export default function Pago() {
         <h2 className={styles.titlePago}>Detalles del pago</h2>
         <div className={styles.generalInfoPago}>
           <div className={styles.formPayment}>
-            <form className={styles.formPayment2} onSubmit={handleSubmit} ref={formRef}>
+            <form
+              className={styles.formPayment2}
+              onSubmit={handleSubmit}
+              ref={formRef}
+            >
               <div className={styles.setPago}>
                 <p className={styles.subtitlePagos}>NOMBRE</p>
                 <div className={styles.inputName}>
@@ -143,11 +177,11 @@ export default function Pago() {
           <div className={styles.infoPayment}>
             <div className={styles.sectionInfoPayment}>
               <p className={styles.subtitlePagos}>FECHA DE ENTRADA</p>
-              <p>{formattedFirstDate || 'Fecha no disponible'}</p>
+              <p>{formattedFirstDate || "Fecha no disponible"}</p>
             </div>
             <div className={styles.sectionInfoPayment}>
               <p className={styles.subtitlePagos}>FECHA DE SALIDA</p>
-              <p>{formattedLastDate || 'Fecha no disponible'}</p>
+              <p>{formattedLastDate || "Fecha no disponible"}</p>
             </div>
             <div className={styles.sectionInfoPayment}>
               <p className={styles.subtitlePagos}>NÚMERO DE NOCHES</p>
@@ -162,17 +196,26 @@ export default function Pago() {
               <p>{numKids || 0}</p>
             </div>
             <div className={styles.sectionInfoPayment}>
-              <p className={styles.subtitlePagos}>{couponOK && 'CUPÓN'}</p>
+              <p className={styles.subtitlePagos}>{couponOK && "CUPÓN"}</p>
               <p>{couponOK && textCoupon}</p>
             </div>
             <div className={styles.sectionInfoPayment}>
               <p className={styles.subtitlePagos}>PRECIO FINAL</p>
-              <p>{finalPrice ? `$${finalPrice}` : 'Precio no disponible'}</p>
-              {couponOK && <p className={styles.discountText}>Descuento del 10% aplicado</p>}
+              <p>{finalPrice ? `$${finalPrice}` : "Precio no disponible"}</p>
+              {couponOK && (
+                <p className={styles.discountText}>
+                  Descuento del 10% aplicado
+                </p>
+              )}
             </div>
           </div>
         </div>
-        <button onClick={handleButtonClick} className={styles.buttonSubmit} type="button" disabled={!isFormValid()}>
+        <button
+          onClick={handleButtonClick}
+          className={styles.buttonSubmit}
+          type="button"
+          disabled={!isFormValid()}
+        >
           Realizar pago
         </button>
       </div>
