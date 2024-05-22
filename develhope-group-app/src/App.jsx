@@ -12,7 +12,7 @@ import NotFound from "./Components/NotFound";
 import SpaPage from "./Pages/Spa";
 import Banner from "./Components/Banner";
 import BookingMenu from "./Components/BookingMenu";
-import { GlobalProvider } from "./GlobalContext";
+import { GlobalProvider } from "./Components/GlobalVariable.jsx";
 import Rooms from "./Pages/Rooms";
 import NavbarMobile from "./Components/NavbarMobile";
 import { useEffect, useState, createContext  } from "react";
@@ -24,7 +24,7 @@ export const GlobalContext = createContext();
 import CookiesBanner from "./Components/Cookies.jsx"; //NUEVO*****
 import Login from "./Pages/Login"; //NUEVO*****
 import BotonLogin from "./Components/BotonLogin"; //NUEVO*****
-import { UserGlobalProvider } from "/src/globalvariable/Usuarioglobal.jsx";
+import { UserGlobalProvider } from "/src/globalvariable/usuarioglobal.jsx";
 import Gallery from "./Pages/Gallery.jsx"; //NUEVO*****
 
 export default function App() {
