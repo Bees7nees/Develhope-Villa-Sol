@@ -12,7 +12,7 @@ import NotFound from "./Components/NotFound";
 import SpaPage from "./Pages/Spa";
 import Banner from "./Components/Banner";
 import BookingMenu from "./Components/BookingMenu";
-import { GlobalProvider } from "./Components/GlobalVariable.jsx";
+import { GlobalProvider } from "./Components/GlobalVariable";
 import Rooms from "./Pages/Rooms";
 import NavbarMobile from "./Components/NavbarMobile";
 import { useEffect, useState, createContext  } from "react";
@@ -20,7 +20,6 @@ import Booking from "./Pages/Booking";
 import Pago from "./Pages/Pago";
 
 export const GlobalContext = createContext();
-;
 import CookiesBanner from "./Components/Cookies.jsx"; //NUEVO*****
 import Login from "./Pages/Login"; //NUEVO*****
 import BotonLogin from "./Components/BotonLogin"; //NUEVO*****
@@ -52,6 +51,7 @@ export default function App() {
   }, []);
 
   return (
+    <GlobalProvider>
     <UserGlobalProvider>
       <>
         {showNavbarMobile && <NavbarMobile />}
@@ -69,6 +69,7 @@ export default function App() {
           <Route path="/restauranteSunset" element={<Dining />} />
           <Route path="/test" element={<ContactPrompt />} />
           <Route path="/Booking" element={<Booking />} />
+          <Route path="/Pago" element={<Pago />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/spa" element={<SpaPage />} />
           <Route path="/Login" element={<Login />} />
@@ -77,5 +78,6 @@ export default function App() {
         {showLogin && <Footer />}
       </>
     </UserGlobalProvider>
+    </GlobalProvider>
   );
 }
