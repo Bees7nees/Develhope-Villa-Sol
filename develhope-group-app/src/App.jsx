@@ -20,7 +20,7 @@ import Booking from "./Pages/Booking"
 import CookiesBanner from "./Components/Cookies.jsx";//NUEVO*****
 import Login from "./Pages/Login";//NUEVO*****
 import BotonLogin from "./Components/BotonLogin";//NUEVO*****
-import {UserGlobalProvider} from "/src/globalvariable/usuarioglobal.jsx"
+import {UserGlobalProvider} from "/src/globalvariable/Usuarioglobal.jsx"
 import Gallery from "./Pages/Gallery.jsx";//NUEVO*****
 
 export default function App() {

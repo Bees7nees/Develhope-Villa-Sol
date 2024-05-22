@@ -1,4 +1,4 @@
-import { UserMyContext } from "/src/globalvariable/usuarioglobal.jsx";
+import { UserMyContext } from "/src/globalvariable/Usuarioglobal.jsx";
 import { useContext, useState, useRef, useEffect } from "react";
 import style from "./BotonLogin.module.css";
 import { useNavigate } from "react-router-dom";
