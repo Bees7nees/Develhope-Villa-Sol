@@ -17,7 +17,7 @@
   z-index: 2;
   position: fixed;
   left: 50%;
-  top: 50%;
+  bottom: -3vh;
   transform: translate(-50%, -50%);
   width: fit-content;
   padding: 0.5rem 1rem;
@@ -85,6 +85,7 @@
   margin: auto;
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 
 .iconArrow {

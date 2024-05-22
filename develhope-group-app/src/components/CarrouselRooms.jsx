@@ -9,6 +9,11 @@ import RoomPremium from "../Assets/Img/Room_Premium.jpg";
 import RoomSuite from "../Assets/Img/Room_Suite.png";
 import { BsChevronCompactLeft } from "react-icons/bs";
 import { BsChevronCompactRight } from "react-icons/bs";
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
+
+
 
 const PrevArrow = ({ onClick }) => (
   <div onClick={onClick}>
@@ -43,6 +48,11 @@ TitleCarrouselRooms.propTypes = {
 };
 
 export default function CarrouselRooms() {
+
+
+  const context = useContext(Context);
+
+
   const settings = {
     // dots: true,
     lazyLoad: true,
@@ -87,26 +97,18 @@ export default function CarrouselRooms() {
             height={800}
             className={styles.imgCarrouselRoom}
           />
-          <TitleCarrouselRooms text="HABITACION ESTÁNDAR" />
+          <TitleCarrouselRooms text={<FormattedMessage id="estandar"/>} />
           {showCardStandar && (
             <div className={styles.tarjeta}>
-              <h2 className={styles.titleCard}>HABITACIÓN ESTÁNDAR</h2>
+              <h2 className={styles.titleCard}><FormattedMessage id="estandar"/></h2>
               <p className={styles.textCard}>
-                Sumérgete en el confort de nuestra habitación estándar, donde te
-                recibirá una lujosa cama king size al final del día lleno de
-                aventuras. Desde tu balcón privado, contempla las vistas de los
-                encantadores alrededores de Cádiz. Además podrás disfrutar de un
-                fabuloso desayuno buffet incluido en la estancia.
+                <FormattedMessage id="estandar_descripcion"/>
               </p>
               <textarea className={styles.textCardPhone}>
-                Sumérgete en el confort de nuestra habitación estándar, donde te
-                recibirá una lujosa cama king size al final del día lleno de
-                aventuras. Desde tu balcón privado, contempla las vistas de los
-                encantadores alrededores de Cádiz. Además podrás disfrutar de un
-                fabuloso desayuno buffet incluido en la estancia.
+                <FormattedMessage id="estandar_descripcion"/>
               </textarea>
               <a href="/Habitaciones" className={styles.buttonCard}>
-                Conocer más
+                <FormattedMessage id="conocer"/>
               </a>
             </div>
           )}
@@ -122,27 +124,19 @@ export default function CarrouselRooms() {
             height={800}
             className={styles.imgCarrouselRoom}
           />
-          <TitleCarrouselRooms text="HABITACIÓN PREMIUM" />
+          <TitleCarrouselRooms text={<FormattedMessage id="premium"/>} />
           {showCardPremium && (
             <div className={styles.tarjeta}>
-              <h2 className={styles.titleCard}>HABITACIÓN PREMIUM</h2>
+              <h2 className={styles.titleCard}><FormattedMessage id="premium"/></h2>
               <p className={styles.textCard}>
-                Disfruta de un nivel superior con nuestra habitación premium,
-                donde el espacio adicional te permite moverte con libertad y
-                disfrutar de una experiencia más indulgente. Además de todas las
-                comodidades de la habitación estándar, encontrarás una
-                refrescante ducha para revitalizarte por la mañana o relajarte
-                por la noche.
+                <FormattedMessage id="premium_descripcion"/>
               </p>
               <textarea className={styles.textCardPhone}>
-                Disfruta de un nivel superior con nuestra habitación premium,
-                donde el espacio adicional te permite moverte con facultad y
-                disfrutar de una experiencia más indulgente. إs de todas las
-                comodidades de la habitación estándar, encontrarás una
-                refrescante ducha para revitalizarte por la opción o relajarte
-                por la noche.
+                <FormattedMessage id="premium_descripcion"/>
               </textarea>
-              <button className={styles.buttonCard}>Conocer más</button>
+              <button className={styles.buttonCard}>
+              <FormattedMessage id="conocer"/>
+              </button>
             </div>
           )}
         </div>
@@ -157,33 +151,21 @@ export default function CarrouselRooms() {
             height={800}
             className={styles.imgCarrouselRoom}
           />
-          <TitleCarrouselRooms text="HABITACIÓN SUITE" />
+          <TitleCarrouselRooms text={<FormattedMessage id="suite"/>} />
           {showCardSuite && (
             <div className={styles.tarjeta}>
-              <h2 className={styles.titleCard}>HABITACIÓN SUITE</h2>
+              <h2 className={styles.titleCard}>
+                <FormattedMessage id="suite"/>
+              </h2>
               <p className={styles.textCard}>
-                Sumérgete en el lujo sin igual de nuestra suite, donde cada
-                detalle ha sido cuidadosamente diseñado para ofrecerte una
-                experiencia de hospedaje extraordinaria. Disfruta de un amplio
-                salón donde puedes relajarte y disfrutar de momentos de
-                tranquilidad, además de todas las comodidades de las
-                habitaciones anteriores. Déjate consentir con un desayuno
-                exquisito mientras contemplas las vistas desde tu balcón
-                privado, y relájate en la bañera para una experiencia de spa en
-                la comodidad de tu propia habitación.
+                <FormattedMessage id="suite_descripcion"/>
               </p>
               <textarea className={styles.textCardPhone}>
-                Sumérgete en el lujo sin igual de nuestra suite, donde cada
-                detalle ha sido cuidadosamente desarrollado para ofrecerte una
-                experiencia de hospedaje extraordinaria. Disfruta de un amplio
-                salón donde puedes relajarte y disfrutar de momentos de
-                tranquilidad, después de todas las comodidades de las
-                habitaciones anteriores. Déjate consentir con un desayuno
-                exquisito mientras contemplas las fotos desde tu balcón
-                privado, y relájate en la bañera para una experiencia de spa en
-                la comodidad de tu propia habitación.
+                <FormattedMessage id="suite_descripcion"/>
               </textarea>
-              <button className={styles.buttonCard}>Conocer más</button>
+              <button className={styles.buttonCard}>
+                <FormattedMessage id="conocer"/>
+              </button>
             </div>
           )}
         </div>

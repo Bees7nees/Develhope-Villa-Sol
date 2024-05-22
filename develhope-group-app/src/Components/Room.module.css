@@ -11,7 +11,7 @@
 .imgRoom {
   display: flex;
   justify-content: center;
-
+  margin: 2rem;
   max-height: 400px;
   overflow: hidden;
   width: 100%;
@@ -28,6 +28,7 @@
   gap: 3ch;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
+  margin: 2rem;
 }
 /* MEDIAS */
 @media (width<1100px) {

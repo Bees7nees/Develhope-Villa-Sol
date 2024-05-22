@@ -1,0 +1,148 @@
+
+@keyframes translateIn {
+  from {
+    transform:  translateY(200%);
+
+   
+    
+  }
+  to {
+    transform:  translateY(0);
+    
+  }
+  }
+
+
+@keyframes translateout {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200%);
+    display: none;
+  }
+}
+
+:root {
+  --color-primario: #213242;
+  --color-primario-transparecia: #213242ce;
+  --color-amarillo-transparencia: #b08812c0;
+  --color-amarillo: #B08912;
+}
+.animatedDiv {
+  
+  z-index: 99999;
+  position: fixed;
+  bottom: 0;
+  
+  
+  animation: translateIn 2s  forwards; 
+}
+.animatedout{
+  position: fixed;
+  bottom: 0;
+  
+  z-index: 99999;
+  animation: translateout 1s forwards;
+}
+
+
+.cookiesContent {
+  /* position: fixed; */
+   /* bottom: 0;
+   left: 0;  */
+  border: 2px solid #213242;
+  /* max-width: 700px; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000;
+    text-align: center;
+    /* border-radius: 0 20px 0  0; */
+    padding: 30px 30px 70px;
+    z-index: 99;
+}
+.cerrarB{
+min-width: 100%;
+display: flex;
+justify-content: end;
+}
+.rowbbanner{
+width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-evenly;
+align-items: center;
+gap: 5ch;
+
+
+}
+    .close {
+      width: 30px;
+      
+      font-size: 20px;
+      color: var(--color-primario-transparecia);
+      align-self: flex-end;
+      background-color: transparent;
+      border: none;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .close:hover{
+      color: var(--color-amarillo-transparencia);
+      transform: scale(1.15);
+
+    }
+    .rowbbanner img {
+      width: 82px;
+      margin-bottom: 15px;
+    }
+    .rowbbanner p {
+      /* margin-bottom: 40px; */
+      font-size: 1.3rem;
+      text-align: justify;
+      color: var(--color-primario);
+      -webkit-font-smoothing: antialiased;
+    }
+    .rowbbanner a {
+      /* margin-bottom: 40px; */
+      color: var(--color-amarillo);
+      text-decoration: none;
+    }
+    .rowbbanner a:hover {
+     
+      text-decoration: underline;
+    }
+    .rowbbanner span  {
+      width: 100%;
+      /* margin-bottom: 40px; */
+      font-size: 1.5rem;
+      text-align: justify;
+      font-weight: bold;
+      color: var(--color-primario);
+     
+      
+    }
+   .accept {
+      background-color: green;
+      border: none;
+      border-radius: 5px;
+       width: 200px; 
+   
+      padding: 14px; 
+      font-size: 16px;
+      color: white;
+      box-shadow: 0px 6px 18px -5px green;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .accept:hover{
+      opacity: 0.7;
+      transform: scale(1.05);
+
+    }
+   

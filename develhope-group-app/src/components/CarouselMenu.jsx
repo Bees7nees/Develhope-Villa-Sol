@@ -2,10 +2,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import classes from "/src/Styles/CarouselMenu.module.css"
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
 
 
 
 export default function CarouselMenu() {
+
+    const context = useContext(Context);
 
         const settings = {
             dots: false,
@@ -34,7 +39,9 @@ export default function CarouselMenu() {
 
     return (
         <div id="platosEstrella" className={classes.contenedor}>
-            <h3 className={classes.titulo}>PLATOS ESTRELLAS</h3>
+            <h3 className={classes.titulo}>
+                <FormattedMessage id="estrella"/>
+            </h3>
             <Slider {...settings}>
                 <div>
                 <img src= "/src/Assets/img/croquetas.jpg" className={classes.imagen}/>

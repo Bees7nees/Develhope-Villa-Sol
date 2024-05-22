@@ -3,11 +3,10 @@ import Button from "../Components/Buttons";
 import styles from "/src/Styles/BookingPage.module.css";
 import BookingMenu from "../Components/BookingMenu"
 import React, { useState, useContext } from 'react';
-import { loadStripe } from "@stripe/stripe-js";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../Components/GlobalVariable";
 
-const stripePromise = loadStripe();
+
 export default function Booking() {
 
 
@@ -36,7 +35,7 @@ export default function Booking() {
     
     return(<div>
         <BookingMenu />
-        <h2 className={styles.title}>Resumen de la reserva</h2>
+        <h2 className={styles.title}>Resumen de la reserva </h2>
       
         <div className={styles.RoomBookingDiv}>
             <h2 className={styles.subtitle}>Tipo de habitación</h2>

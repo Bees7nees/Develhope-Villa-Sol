@@ -116,7 +116,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+span,
+section {
   font-family: "PlayfairDisplay-Variable";
 }
 
@@ -137,11 +139,12 @@ a {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .sections-termscond h1 {
   font-size: 2rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -174,7 +177,6 @@ a {
   margin-right: 3rem;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
-  overflow: hidden;
 
   img {
       width: 100%;
@@ -183,10 +185,10 @@ a {
 }
 
 .ourhistory {
-  width: 42rem;
+  width: 90%;
   height: 12.5rem;
-  margin: 0 0 6rem 2rem;
-  line-height: 1.5rem;
+  margin: 3rem 0 6rem 2rem;
+  line-height: 1.8rem;
 }
 
 .contact {
@@ -308,6 +310,7 @@ a {
 .horarios-container {
   background-color: #ffffff;
   border-radius: 10px;
+  opacity: 88%;
   display: flex;
   width: 25.25rem;
   height: 28.75rem;
@@ -340,129 +343,149 @@ a {
   }
 }
 
-/* RESPONSIVE Términos & Condiciones (Tablet) */
+.galery-button {
+  margin: 0 0 3rem 4rem;
+  padding: 1rem;
+}   
 
-@media screen and (max-width: 768px) {
-  .termscond-2 {
-      display: flex;
-      flex-direction: column;
-  }
-  .history-contact {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin-bottom: 5rem;
-      text-align: center;
-      
-      .ourhistory, .contact {
-          width: 40%;
-      }
-  }
-
-/* RESPONSIVE SPA (Tablet) */
-
-  .intro-spa {
-    width: 90%;
-  }
-
-  .spa-container {
-      display: flex;
-      flex-direction: column-reverse;
-
-      p {
-          width: 80%;
-          margin-left: -2rem;
-      }
-
-      img {
-          margin-bottom: 2rem;
-      }
-  }
-
-  .tratamientos span {
-      margin-left: 1rem;
-  }
-
-  .horarios-container {
-      max-width: 30%;
-      max-height: 58%;
-      top: 32%;
-
-      svg {
-          width: 90%;
-      }
+.gal-imgs {
+  margin: 1rem 1rem 5rem 1rem;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  img {
+    width: 30%;
+    border-radius: 30px;
+    margin: 1rem;
   }
 }
 
-/* RESPONSIVE Términos & Condiciones (Móvil) */
+/* RESPONSIVE 
+Términos & Condiciones (Móvil) */
 
 @media screen and (max-width: 430px) {
-  
-  .ourhistory, .contact {
-      font-size: 16px;
-      line-height: normal;
 
+  .sections-termscond span{
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .history-contact {
+    width: 90%;
+  }
+
+  .termscond-2 {
+    display: flex;
+    flex-direction: column;
+    img{
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  .ourhistory, .contact {
+    width: 85%;
       h3 {
           font-size: 16px;
       }
+  }
+
+  .ourhistory {
+    margin-bottom: 18rem;
   }
 
 /* RESPONSIVE SPA (Móvil) */
 
   .intro-spa {
       h2 {
-          font-size: 36px;
+        font-size: 32px;
       }
   }
 
-  .spa-container p {
-      width: 90%;
+  .h3-spa-title {
+    font-size: 20px;
+  }
+
+  .spa-container {
+    display: flex;
+    flex-direction: column;
+  
+    p {
+      width: 70%;
       margin-left: 0.1rem;
+    }
   }
 
   .spa-container img {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
+  }
+
+  .tratamientos h3 {
+    margin-top: 0.6rem;
+    margin-bottom: 4rem;
+  }
+
+  .tratamientos-container {
+    margin-right: 1rem;
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 
   .tratamientos span {
       margin-bottom: 12rem;
   }
 
+  .spa-image-container {
+    img {
+      width: 100%;
+      height: 100%;
+      margin-left: 0.5rem;
+    }
+  }
+
   .horarios-container {
       background-color: #ffffff;
       border-radius: 10px;
+      opacity: 90%;
       display: flex;
-      min-width: 220px;
+      max-width: 220px;
       height: 13rem;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       position: absolute;
       top: 24%;
-      left: 35%;
-      letter-spacing: 0.075rem;
+      left: 38%;
+      letter-spacing: 0.045rem;
+      line-height: 0.01rem;
   
       button {
-          margin-top: 0.6rem;
-          padding: 4%;
-          margin-bottom: 0.3rem;
+        padding:2%;
+        font-size: 10px;
+        margin-top: -20px;
       }
   
       h3 {
           font-size: 1rem;
-          margin-bottom: -0.5rem;
+          margin-bottom: -1rem;
       }
   
       h4 {
           font-size: 12px;
-          font-weight: 100;
-          margin-top: 0.35rem;
-
+          font-weight: 500;
       }
   
       svg {
-          margin-top: 1.2rem;
+          position: relative;
+          top: 15%;
+          width: 70%;
       }
   }
 }
