@@ -15,8 +15,12 @@ import BookingMenu from "./Components/BookingMenu";
 //import { GlobalProvider } from './GlobalContext';
 import Rooms from "./Pages/Rooms";
 import NavbarMobile from "./Components/NavbarMobile";
-import { useEffect, useState } from "react";
-import Booking from "./Pages/Booking"
+import { useEffect, useState, createContext  } from "react";
+import Booking from "./Pages/Booking";
+import Pago from "./Pages/Pago";
+
+export const GlobalContext = createContext();
+
 export default function App() {
 
     const [showNavbarMobile, setShowNavbarMobile] = useState(false)
@@ -37,13 +41,14 @@ export default function App() {
 
   return (
     <>
+     <GlobalContext.Provider  value={{ showNavbarMobile }}>
       {showNavbarMobile && <NavbarMobile/>} 
       <Navbar />
       <Banner />
       <ScrollUp />
       <BookingMenu />
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/*<Route path="/" element={<Home />} />*/}
         <Route path="/Habitaciones" element={<Rooms />} />
         <Route path="/nosotros" element={<AboutUs />} />
         <Route path="/Terms&Conditions" element={<TermsConditions />} />
@@ -52,8 +57,10 @@ export default function App() {
         <Route path="/Booking" element={<Booking/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/spa" element={<SpaPage />} />
+        <Route path="/Pago" element={<Pago />} />
       </Routes>
       <Footer />
+      </GlobalContext.Provider>
     </>
   );
 }

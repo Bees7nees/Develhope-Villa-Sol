@@ -16,3 +16,16 @@
 .DescriptionRoomBooking{
     margin-right: 1.25rem;
 }
+.discountText{
+    font-family: "Spline Sans Mono";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    text-align: start;
+    line-height: 1;
+    color: var(--color-primario);
+    font-family: "Spline Sans Mono";
+    margin-bottom: 2ch;
+    font-size: .8rem;
+
+}

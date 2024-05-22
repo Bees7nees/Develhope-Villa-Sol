@@ -12,12 +12,15 @@ import { BsPersonAdd } from "react-icons/bs";
 import { PiCallBellLight } from "react-icons/pi";
 import { RiCoupon3Line } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
 
 export default function BookingMenu() {
   const [playSound] = useSound(BellHotel);
-  const [firstDate, setFirstDate] = useState(new Date());
-  const [lastDate, setLastDate] = useState(new Date());
-  const [nights, setNights] = useState(0);
+  //const [firstDate, setFirstDate] = useState(new Date());
+  const { firstDate, setFirstDate} = useContext(GlobalContext);
+  //const [lastDate, setLastDate] = useState(new Date());
+ // const [nights, setNights] = useState(0);
+  const { lastDate, setLastDate} = useContext(GlobalContext);
   const [seeCounter, setSeeCounter] = useState(false);
 
   function updateNights() {
@@ -36,14 +39,16 @@ export default function BookingMenu() {
   };
 
   const { textCoupon, setTextCoupon } = useContext(GlobalContext);
-  const { numNight, setNumNight } = useContext(GlobalContext);
+  const { nights, setNights } = useContext(GlobalContext);
   const { numKids, setNumKids } = useContext(GlobalContext);
   const { numAdult, setNumAdult } = useContext(GlobalContext);
   const handleCoupon = (event) => {
     setTextCoupon(event.target.value);
   };
 
-  setNumNight(nights);
+  useEffect(() => {
+    setNights(nights);
+}, [nights]);
 
   let menuRef = useRef();
 
@@ -51,7 +56,7 @@ export default function BookingMenu() {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
         setSeeCounter(false);
-        console.log(menuRef.current);
+        //console.log(menuRef.current);
       }
     };
 
@@ -62,10 +67,11 @@ export default function BookingMenu() {
     };
   });
 
+
   const [bookingData, setBookingData] = useState([]);
   localStorage.setItem("bookingData", JSON.stringify(bookingData));
 
-  function handleBooking() {
+/*  function handleBooking() {
     playSound();
 
     const newBookingData = {
@@ -89,11 +95,15 @@ export default function BookingMenu() {
     } catch (error) {
       console.error("Error storing booking data:", error);
     }
-  }
+  }*/
+
+  let textNights = nights === 1 ? 'noche' : 'noches';
+  let textAdult = numAdult === 1 ? 'ADULTO' : 'ADULTOS';
+  let textKid = numKids === 1 ? 'NIÑO' : 'NIÑOS';
 
   return (
     <section className={styles.bookingMenuBackground}>
-      <div className={styles.bookingMenuDiv}>
+      <div className={styles.bookingMenuDiv} >
         <div className={styles.bookingArrive}>
           <BsCalendarWeek className={styles.iconCalendar} />
           <div className={styles.textDivBookingMenu}>
@@ -119,7 +129,7 @@ export default function BookingMenu() {
           <div>
             <div className={styles.textDivBookingMenu}>
               <p className={styles.subtitle}>NOCHES</p>
-              <p className={styles.normalTextBooking}>{nights} NOCHE</p>
+              <p className={styles.normalTextBooking}>{nights} {textNights}</p>
             </div>
           </div>
         </div>
@@ -132,7 +142,7 @@ export default function BookingMenu() {
             <p className={styles.subtitle}>HUÉSPEDES</p>
             <p className={styles.normalTextBooking}>
               {" "}
-              {numAdult} ADULTOS + {numKids} NIÑOS
+              {numAdult} {textAdult} + {numKids} {textKid}
             </p>
             {seeCounter && <CounterHost />}
             {
@@ -158,8 +168,10 @@ export default function BookingMenu() {
             />
           </div>
         </div>
-        <div className={styles.checkButton} onClick={handleBooking}>
+        <div className={styles.checkButton} > {/* onClick={handleBooking} */}
+          <Link to="/Booking">
           <PiCallBellLight className={styles.iconBell} />
+          </Link>
         </div>
       </div>
     </section>
