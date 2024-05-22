@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useContext } from "react";
-import { UserMyContext } from "/src/globalvariable/usuarioglobal.jsx"
+import { UserMyContext } from "/src/globalvariable/Usuarioglobal.jsx"
 // import style from "./Login.module.css";
 import style from "./Login.module.css";
 import { Link } from "react-router-dom";
