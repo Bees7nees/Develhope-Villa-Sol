@@ -1,36 +1,41 @@
-.counterDiv{
-    background-color: white;
-    width: 9rem;
-    padding: 1rem;
-   // padding-left: 40px;
-    border-radius: 0.5rem;
-    box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
-    transition: bottom 0.5s ease-in-out;
-    position: fixed;
-    bottom: 100%;
+.counterDiv {
+  width: 9rem;
+  height: fit-content;
+  padding: 1rem;
+  // padding-left: 40px;
+  position: fixed;
+  right: 50%;
+  transform: translate(50%, -50%);
+  bottom: -1vh;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  transition: bottom 0.5s ease-in-out;
 }
 
 .counterDiv p {
-    width: max-content;
-    text-align: left;
-    font-size: 1rem;
-    color: rgba(49, 73, 96); 
+  width: max-content;
+  text-align: left;
+  font-size: 1rem;
+  color: rgba(49, 73, 96);
 }
 
 .counterButton {
-    height: 1.8rem;
-    width: 2rem;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: rgba(49, 73, 96, 1);
-    border: none; 
-    border-radius: 0.5rem; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
-    margin: 0.5rem 0.5rem 0.5rem 0;}
+  height: 1.8rem;
+  width: 2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(49, 73, 96, 1);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  margin: 0.2rem;
+}
+
 .counterButton:hover {
-    /* Cambia el sombreado al pasar el mouse sobre el botón */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  }
-  
+  /* Cambia el sombreado al pasar el mouse sobre el botón */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}

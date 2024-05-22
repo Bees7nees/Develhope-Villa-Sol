@@ -127,7 +127,7 @@
   display: none;
   z-index: 2;
   position: fixed;
-  left: 45%;
+  left: 50%;
   bottom: -2vh;
   transform: translate(-50%, -50%);
   width: fit-content;
@@ -155,6 +155,33 @@
   border-radius: 0.5rem;
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   background-color: white;
+}
+
+.phoneBookingCouponDropdown {
+  display: none;
+  z-index: 2;
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 2vh;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+.phoneBookingCouponDropdown .textDivBookingMenu,
+.phoneBookingDateDropdown .subtitle,
+.phoneBookingDateDropdown .inputCoupon {
+  width: 100%;
+  justify-self: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 431px) {
@@ -190,7 +217,6 @@
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     background-color: white;
     transition: all 0.3s ease;
-
   }
   .bookingNight {
     gap: 0.5rem;

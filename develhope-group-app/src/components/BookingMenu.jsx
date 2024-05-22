@@ -62,25 +62,45 @@ export default function BookingMenu() {
     };
   });
 
-  /* PHONE CALENDAR DISPLAY */
+  /* PHONE DISPLAY */
 
-  const [phoneCalendar, setPhoneCalendar] = useState(false);
+  const [phoneCalendarDisplay, setPhoneCalendarDisplay] = useState(false);
+  const [phoneCouponDisplay, setPhoneCouponDisplay] = useState(false);
 
   function handlePhoneCalendarDisplay(event) {
     event.preventDefault();
-    setPhoneCalendar(!phoneCalendar);
+    setPhoneCalendarDisplay(!phoneCalendarDisplay);
+  }
+
+  function handlePhoneCouponDisplay(event) {
+    event.preventDefault();
+    setPhoneCouponDisplay(!phoneCouponDisplay);
   }
 
   useEffect(() => {
     const dateDropdown = document.querySelector(
       `.${styles.phoneBookingDateDropdown}`
     );
-    dateDropdown.style.display = phoneCalendar ? "flex" : "none";
-  }, [phoneCalendar]);
+    const couponDropdown = document.querySelector(
+      `.${styles.phoneBookingCouponDropdown}`
+    );
+    dateDropdown.style.display = phoneCalendarDisplay ? "flex" : "none";
+    couponDropdown.style.display = phoneCouponDisplay ? "flex" : "none";
+    if (seeCounter === true) {
+      setPhoneCalendarDisplay(false);
+      setPhoneCouponDisplay(false);
+    }
+    if (phoneCalendarDisplay === true) {
+      setPhoneCouponDisplay(false);
+      setSeeCounter(false);
+    }
+    if (phoneCouponDisplay === true) {
+      setPhoneCalendarDisplay(false);
+      setSeeCounter(false);
+    }
+  }, [phoneCalendarDisplay, phoneCouponDisplay, seeCounter]);
 
-  
-
-  /* PHONE CALENDAR DISPLAY END */
+  /* PHONE DISPLAY END */
 
   function handleBooking() {
     playSound();
@@ -192,7 +212,21 @@ export default function BookingMenu() {
           {seeCounter && <CounterHost />}
         </div>
         <div className={styles.coupon}>
-          <RiCoupon3Line className={styles.iconCoupon} />
+          <section className={styles.phoneBookingCouponDropdown}>
+            <div className={styles.textDivBookingMenu}>
+              <p className={styles.subtitle}>CUPÓN</p>
+              <input
+                type="text"
+                className={styles.inputCoupon}
+                value={textCoupon}
+                onChange={handleCoupon}
+              />
+            </div>
+          </section>
+          <RiCoupon3Line
+            className={styles.iconCoupon}
+            onClick={handlePhoneCouponDisplay}
+          />
         </div>
         <div className={styles.checkButton} onClick={handleBooking}>
           <Link to="/Booking">
