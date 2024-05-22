@@ -1,15 +1,33 @@
+@import url(App.css);
+
+.prompt-completed-text {
+  display: none;
+  font-family: "SplineSansMono-Variable";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--blue500);
+}
+
+//Contact prompt wrapper styling
+
 .contact-panel {
+  z-index: 4;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
+  max-height: 80vh;
   height: fit-content;
-  width: fit-content;
+  min-width: fit-content;
+  max-width: 70vw;
+  width: 25rem;
   padding: 1rem 2rem;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
   flex-shrink: 0;
   border-radius: 1rem;
   background: white;
-  box-shadow: 0px 5.45px 5.45px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
 }
 
 .contact-prompt {
@@ -17,4 +35,259 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+//Contact prompt header styling
+
+.contact-prompt-header,
+.contact-prompt-header * {
+  box-sizing: border-box;
+}
+.contact-prompt-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+.expand-more {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+.contact-text {
+  font-family: "PlayfairDisplay-Variable";
+  text-align: center;
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+//Contact prompt name input styling
+
+.name-input,
+.name-input * {
+  box-sizing: border-box;
+}
+.name-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.name {
+  position: relative;
+  margin-left: 1rem;
+  text-align: left;
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
+}
+.enter-username-placeholder {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.name-content {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: var(--blue100);
+  border-width: 0.1rem;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.18);
+}
+.icons {
+  width: 1rem;
+  height: 1rem;
+  scale: 1.5;
+  fill: var(--blue100);
+}
+
+.enter-username {
+  position: relative;
+  color: var(--blue100);
+  text-align: left;
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
+}
+
+//Contact prompt email input styling
+
+.email-input,
+.email-input * {
+  box-sizing: border-box;
+}
+.email-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.email-address {
+  position: relative;
+  margin-left: 1rem;
+  text-align: left;
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
+}
+.enter-address-placeholder {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mail-content {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: var(--blue100);
+  border-width: 0.1rem;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.18);
+}
+
+.enter-email-address {
+  position: relative;
+  color: var(--blue100);
+  text-align: left;
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
+}
+
+.name-input input,
+.email-input input {
+  width: 80%;
+  left: 1rem;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-family: "SplineSansMono-Variable";
+  color: var(--blue100);
+  text-align: left;
+  position: relative;
+}
+
+//Contact prompt comment input styling
+
+.comments,
+.comments * {
+  box-sizing: border-box;
+}
+.comments {
+  width: 100%;
+  min-height: 4rem;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.add-your-comments {
+  width: 100%;
+  min-width: 100%;
+  min-height: 4rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: var(--blue100);
+  border-width: 0.1rem;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.18);
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
+  color: var(--blue100);
+  text-align: left;
+  position: relative;
+}
+
+.add-your-comments::placeholder {
+  color: var(--blue100);
+  text-align: left;
+  position: relative;
+}
+
+.add-your-comments:focus {
+  outline: none;
+}
+
+.add-your-comments::-webkit-scrollbar {
+  display: none;
+}
+
+//Contact prompt buttons styling
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+//Cancel button
+.cancel-button {
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
+  color: var(--blue100);
+  background-color: white;
+  border: 0.1rem solid var(--blue100);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  background: var(--blue50);
+  color: red;
+  border: 0.1rem solid red;
+}
+.cancel-button:active {
+  background: red;
+  color: var(--blue50);
+  border: 0.1rem solid var(--blue50);
+}
+
+//Submit button
+.submit-button {
+  font-family: "SplineSansMono-Variable";
+  font-size: 1rem;
+  color: var(--blue100);
+  background-color: white;
+  border: 0.1rem solid var(--blue100);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background: var(--blue50);
+  color: green;
+  border: 0.1rem solid green;
+}
+.submit-button:active {
+  background: green;
+  color: var(--blue50);
+  border: 0.1rem solid var(--blue50);
 }

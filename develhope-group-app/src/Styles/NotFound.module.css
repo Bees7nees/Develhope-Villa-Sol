@@ -1,0 +1,76 @@
+@import url(font.css);
+
+
+
+.contenedorFound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    height: 30rem;
+    margin: 5rem;
+    gap: 2rem;
+}
+
+.gatito{
+    border-radius: 0.625rem;
+    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.22);
+    height: 24rem;
+}
+
+.titulo{
+    color: #213242;
+    font-family: "Playfair Display";
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.14063rem;
+}
+
+
+.subtitulo{
+    color: #213242;
+    font-family: "Spline Sans Mono";
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+}
+
+.link{
+    color: #213242;
+    font-family: "Spline Sans Mono";
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+.link:hover{
+    color:#E8B51A;
+    border-bottom: #E8B51A solid 2px;
+}
+
+
+@media (max-width: 431px){
+    
+    .contenedorFound{
+        margin: 1rem;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .titulo{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .subtitulo{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .gatito{
+        width: 20rem;
+        height: 15rem;
+    }
+}

@@ -1,0 +1,140 @@
+.generalDivPago{
+    margin-top: 7rem;
+    
+    width: 60rem;
+    height: 40rem;
+    border-radius: 1rem;
+    background-color: #F4EEDC;
+    padding: 4rem;
+    display: flex;
+   // justify-content: center;
+   flex-direction: column;
+    align-items: center;
+}
+.generalInfoPago {
+    display: flex;
+}
+.backgroundPago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.titlePago {
+    width: 40rem;
+    font-family: "Spline Sans Mono";
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+}
+.subtitlePagos{
+    font-family: "Spline Sans", Helvetica;
+    font-weight: 700;
+    color: #213242;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    text-align: left;
+}
+
+.inputName{
+width: 13rem;
+height: 2rem;
+background-color: #ffffff;
+border-radius: 2rem;
+border: 1.36px solid;
+border-color: #8aa8c4;
+}
+
+/*.placeholderPago {
+    //color: var(--blue-50, #b1c5d8);
+  text-align: left;
+  font-family: var(
+    --text-regular-font-family,
+    "SplineSansMono-Regular",
+    sans-serif
+  );
+  font-size: var(--text-regular-font-size, 16px);
+  line-height: var(--text-regular-line-height, 24px);
+  font-weight: var(--text-regular-font-weight, 400);
+  position: relative;
+  left: auto;
+  border: none;
+  width: 80%;
+}*/
+
+.placeholderPago {
+    border:none;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.formPayment {
+    margin-top: 3rem;
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.formPayment2 {
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nDeCuenta {
+    width: 30rem;
+}
+
+.infoPayment {
+    padding-top: 2rem;
+    height: 28rem;
+    width: 19rem;
+    background-color: rgba(176, 137, 18, 0.2);
+    margin-left: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px #B08912 solid;
+}
+
+.sectionInfoPayment {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.4rem;
+}
+
+.buttonSubmit {
+    display: inline-flex;
+    padding: 16px 32px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid #d8e2eb00;
+    background-color: #355069;
+    color: #FFFF;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.buttonSubmit:hover {
+    border: 2px solid #FFFF;
+    background-color: #54789b;
+}
+
+.buttonSubmit:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+  }

@@ -1,68 +1,123 @@
+.bookingMenuBackground {
+  z-index: 2;
+ position: fixed;
+  bottom: -35%;
+  left: 50%;
+ transform: translate(-50%, -50%);
+  height: 20rem;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+// .bookingMenuBackground:hover {
+//   bottom: -30%;
+// }
+
 .bookingMenuDiv {
-    display: flex;
-    width: 1009px;
-    height: 64px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 16px;
-    position: relative;
-    border: 1px solid gray;
-    border-radius: 5px;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  bottom: -3vh;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  background-color: white;
 }
-.bookingArrive, .bookingLeft, .bookingNight, .hosts, .coupon {
-    width: 175px;
-    height: 64px;
-    padding: 5px 20px 5px 20px;
-    display: flex;
+
+.bookingArrive,
+.bookingLeft,
+.bookingNight,
+.hosts,
+.coupon {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--blue800);
 }
-.normalTextBooking{
-    width: 118px;
-    margin-top: -8px;
-    font-family: "Spline Sans", Helvetica;
-    font-weight: 400;
-    text-align: left;
+.normalTextBooking {
+  font-family: "SplineSansMono-Variable";
+  width: 100%;
+  text-align: left;
 }
-.inputCoupon{
-    margin-top: -8px;
-    border: none; 
-    background-color: rgba(49, 73, 96, 0.25); 
-    padding: 8px 12px; 
-    border-radius: 5px; 
-    outline: none;
+.inputCoupon {
+  border: none;
+  background-color: rgba(49, 73, 96, 0.25);
+  padding: 8px 12px;
+  border-radius: 5px;
+  outline: none;
 }
 .subtitle {
-    width: fit-content;
-    margin-top: -1px;
-    font-family: "Spline Sans Mono", Helvetica;
-    font-weight: 500;
-    color: #ECC140;
+  width: fit-content;
+  color: var(--golden500);
 }
-.textDivBookingMenu{
-    width: 95px;
-    height: 52px;
-    display: flex;
-    flex-direction: column;
+.textDivBookingMenu {
+  width: 95px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-.iconCalendarDiv, .iconSleepDiv, .iconUserpDiv, .iconDiscountpDiv{
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
+.iconCalendarDiv,
+.iconSleepDiv,
+.iconUserpDiv,
+.iconDiscountpDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.iconCalendar,
+.iconMoon,
+.iconPerson,
+.iconCoupon {
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.iconArrow {
+  margin: auto;
+  align-self: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.iconBell {
+  margin: auto;
+  align-self: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+}
+
 .checkButton {
-    width: 68px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-  
-    justify-content: center;
-  
-    background-color: #314960;
-    border-radius: 5px;
+  width: 68px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--blue800);
+  border-radius: 0.5rem;
 }
 
-.divideLine{
-    width: 1px;
-    height: 48px;
-    background-color: #314960;
+.divideLine {
+  width: 1px;
+  height: 48px;
+  background-color: var(--blue800);
 }

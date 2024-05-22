@@ -1,0 +1,31 @@
+.BookingRoomDiv{
+    width: 62rem;
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    border-radius: 1rem;
+    padding: 0.5rem 4rem 0.5rem 4rem;
+}
+.PhotoRoom {
+    border-radius: 0.6rem;
+    margin-right: 1.25rem;
+}
+
+.DescriptionRoomBooking{
+    margin-right: 1.25rem;
+}
+.discountText{
+    font-family: "Spline Sans Mono";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    text-align: start;
+    line-height: 1;
+    color: var(--color-primario);
+    font-family: "Spline Sans Mono";
+    margin-bottom: 2ch;
+    font-size: .8rem;
+
+}

@@ -1,59 +1,121 @@
-import { useEffect, useRef, useState } from "react";
-import classes from "../Styles/ReviewCardCarousel.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { ReviewCard } from "./ReviewCard";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
+import classes from "../Styles/ReviewCardCarousel.module.scss";
+import PropTypes from "prop-types";
 
-export function ReviewCardCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideCount = 12; // Total number of slides
-  const slideWidth = 100; // Width of each slide in %
-  const contentRef = useRef(null);
+ReviewCardCarousel.propTypes = {
+  nameInput: PropTypes.string,
+  emailInput: PropTypes.string,
+};
 
-  // Calculate the width of each slide and set the width of the .content element
-  useEffect(() => {
-    if (contentRef.current) {
-      const contentWidth =
-        slideCount * slideWidth * (contentRef.current.offsetWidth / 100);
-      contentRef.current.style.width = `${contentWidth}px`;
-    }
-  }, []);
+ArrowRight.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
 
-  // Update the scroll position of the .content element when the current slide index changes
-  useEffect(() => {
-    if (contentRef.current) {
-      contentRef.current.scrollLeft =
-        currentSlide * slideWidth * (contentRef.current.offsetWidth / 100);
-    }
-  }, [currentSlide]);
+ArrowLeft.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
 
-  // Function to handle previous button click
-  const handlePrevClick = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slideCount) % slideCount);
-  };
-
-  // Function to handle next button click
-  const handleNextClick = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slideCount);
-  };
-
+function ArrowRight(props) {
+  const { className, style, onClick } = props;
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <button type="button" className={classes.prevButton} onClick={handlePrevClick}>
-          <IoIosArrowBack style={{ fill: "black" }} />
-        </button>
-        <div className={classes.contentwrapper}>
-          <div className={classes.content} ref={contentRef}>
-            {[...Array(slideCount)].map((_, index) => (
-              <ReviewCard key={index} style={{ width: `${slideWidth}%` }} />
-            ))}
-          </div>
+    <div className={className} style={{ ...style }} onClick={onClick}>
+      <svg
+        className={classes.svgRight}
+        xmlns="http://www.w3.org/2000/svg"
+        width="21"
+        height="30"
+        viewBox="0 0 21 47"
+        fill="none"
+      ></svg>
+    </div>
+  );
+}
+
+function ArrowLeft(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} style={{ ...style }} onClick={onClick}>
+      <svg
+        className={classes.svgLeft}
+        xmlns="http://www.w3.org/2000/svg"
+        width="21"
+        height="30"
+        viewBox="0 0 21 47"
+        fill="none"
+        style={{ transform: "rotate(180deg)" }}
+      ></svg>
+    </div>
+  );
+}
+
+export default function ReviewCardCarousel() {
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    nextArrow: <ArrowRight />,
+    prevArrow: <ArrowLeft />,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          dots: false,
+          slidesToShow: 1,
+        },
+      },
+    ]
+  };
+  return (
+    <div>
+      <Slider {...settings}>
+        <div>
+          <ReviewCard />
         </div>
-        <button type="button" className={classes.nextButton} onClick={handleNextClick}>
-          <IoIosArrowForward style={{ fill: "black" }} />
-        </button>
-      </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+        <div>
+          <ReviewCard />
+        </div>
+      </Slider>
     </div>
   );
 }

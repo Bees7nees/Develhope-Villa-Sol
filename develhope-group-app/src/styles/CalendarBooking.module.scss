@@ -1,7 +1,11 @@
 .myDatePicker{
-    width: 80px;
-    height: 25px;
-    position: absolute;
-    bottom: 12%;
-    left: 4%;
+    width: 6rem;
+    position: relative;
+    font-size: 16px;
+    border: none;
+    font-family: "SplineSansMono-Variable";
+    font-size: 1rem;
+    color: var(--blue900);
+    outline: none;
+    cursor: pointer;
 }

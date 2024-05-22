@@ -1,17 +1,30 @@
+@import url(App.css);
+
 .ReviewCard {
+  margin: auto;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
-  width: 200px;
+  width: 15rem;
   height: fit-content;
   background: #ffffff;
   border-radius: 0.625rem;
   box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
-.ReviewCard h2,
-p {
+
+
+.ReviewCard p {
+  font-family: "SplineSansMono-Variable";
   color: black;
+}
+
+@media screen and (max-width: 431px) {
+  .ReviewCard {
+    gap: 0.5rem;
+  }
 }

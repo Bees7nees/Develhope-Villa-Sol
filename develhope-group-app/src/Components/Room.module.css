@@ -1,0 +1,52 @@
+.room_card {
+  display: flex;
+  flex-direction: column;
+  gap: 2ch;
+  justify-content: center;
+  align-items: center;
+  max-height: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.imgRoom {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  max-height: 400px;
+  overflow: hidden;
+  width: 100%;
+}
+.imgRoom img {
+  min-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.datos_section {
+  width: 60%;
+  display: grid;
+  gap: 3ch;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  margin: 2rem;
+}
+/* MEDIAS */
+@media (width<1100px) {
+  .datos_section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+/* <div className={styles.room_card}>
+       
+<div className={styles.imgRoom}>
+  <img src={url} alt="" />
+</div>
+<TitulosH1 title={`HABITACIÓN ${habitacion}`} parrafo={parrafo} />
+
+<div className={styles.datos_section}>
+  <CheckinCard habitacion={habitacion} />
+  <TitulosH6 title='DESCRIPCIÓN DE LA HABITACIÓN' parrafo={descripcionCompleta} />
+
+</div>
+</div> */

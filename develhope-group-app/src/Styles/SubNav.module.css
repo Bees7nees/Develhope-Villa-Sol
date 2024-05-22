@@ -37,7 +37,7 @@ body{
 
 .divisor{
     width: 3px;
-    height: 70%;
+    height: 60%;
     background: #314960;
 }
 
@@ -104,3 +104,9 @@ body{
     text-decoration: none;
 }
 
+@media (max-width: 431px){
+
+    .subNavContenedor{
+        display: none;
+    }
+}

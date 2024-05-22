@@ -1,6 +1,11 @@
 @font-face {
-  font-family: "PlayfairDisplay-Regular";
-  src: url(../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+  font-family: "PlayfairDisplay-Variable";
+  src: url(../Assets/Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Variable-Italic";
+  src: url(../Assets/Fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
@@ -21,6 +26,11 @@
 @font-face {
   font-family: "PlayfairDisplay-Italic";
   src: url(../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+
+@font-face {
+  font-family: "SplineSansMono-Variable";
+  src: url(../Assets/Fonts/Spline_Sans_Mono/SplineSansMono-VariableFont_wght.ttf);
 }
 
 @font-face {
@@ -78,37 +88,71 @@
   src: url(../Assets/Fonts/Spline_Sans/static/SplineSans-Light.ttf);
 }
 
+:root {
+  --blue50: #d8e2eb;
+  --blue100: #b1c5d8;
+  --blue200: #8aa8c4;
+  --blue300: #6690b0;
+  --blue400: #527ea1;
+  --blue500: #3b6d8e;
+  --blue600: #2f5f7b;
+  --blue700: #224f6a;
+  --blue800: #163f57;
+  --blue900: #0a2a43;
+  --golden50: #fbf3d9;
+  --golden100: #f7e6b3;
+  --golden200: #f3da8d;
+  --golden300: #efcf67;
+  --golden400: #ecc140;
+  --golden500: #e8b51a;
+  --golden600: #d79b1a;
+  --golden700: #c38817;
+  --golden800: #a97414;
+  --golden900: #8a6b0f;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "PlayfairDisplay-Regular";
+h6,
+span,
+section {
+  font-family: "PlayfairDisplay-Variable";
 }
 
 p {
-  font-family: "SplineSansMono-Regular";
+  font-family: "SplineSansMono-Variable";
+}
+
+a {
+  text-decoration: none;
+  font-family: "SplineSansMono-Variable";
 }
 
 .sections-termscond {
   display: flex;
   flex-direction: column;
-  width: 980px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5rem;
 }
 
 .sections-termscond h1 {
-  font-size: 32px;
+  font-size: 2rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
   text-align: center;
 }
 
 .sections-termscond section {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -121,21 +165,341 @@ p {
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
+
+  h3 {
+      font-size: 1.5rem;
+  }
 }
 
-.termscond-2 img {
-  width: 925px;
-  height: 530px;
+.fotomarketing {
+  max-width: 57.813rem;
+  min-width: 33.125rem;
   margin-right: 3rem;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+
+  img {
+      width: 100%;
+      object-fit: cover;
+  }
 }
 
 .ourhistory {
-  width: 500px;
-  height: 200px;
-  margin-bottom: 4rem;
+  width: 90%;
+  height: 12.5rem;
+  margin: 3rem 0 6rem 2rem;
+  line-height: 1.8rem;
 }
 
 .contact {
-  width: 380px;
-  height: 200px;
+  width: 31.25rem;
+  height: 12.5rem;
+  margin-left: 2rem;
 }
+
+.intro-spa {
+  text-align: center;
+  width: 56.25rem;
+  margin: auto;
+  margin-top: 15rem;
+  letter-spacing: 0.003rem;
+  line-height: 200%;
+  margin-bottom: 8rem;
+
+  h2 {
+      margin-top: 8rem;
+      font-size: 48px;
+      font-weight: 800;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+}
+
+.h3-spa-title {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 1.5rem;
+}
+
+.spa-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+
+  img {
+      width: 40rem;
+      height: 25rem;
+  }
+
+  p {
+      width: 30%;
+      letter-spacing: 0.05rem;
+      font-size: 1rem;
+      margin-left: 5rem;
+      text-align: justify;
+      line-height: 2.188rem;
+      color: #213242;
+  }
+}
+
+.tratamientos {
+  margin-top: 3rem;
+  h3 {
+      text-align: center;
+      font-family: "Playfair Display";
+      font-size: 1.5rem;
+      margin-top: 5rem;
+      margin-bottom: 8rem;
+  }
+
+  span {
+      max-width: 90%;
+      margin-left: 3rem;
+      height: 13.125rem;
+      border-top: 3px solid #B08912;
+      margin-bottom: 5rem;
+  }
+
+  span:hover {
+      cursor: pointer;
+  }
+
+  h5 {
+      font-size: 1rem;
+      font-weight: 600;
+  }
+
+  p {
+      font-family: "Spline Sans Mono";
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.875rem;
+      letter-spacing: 0.05rem;
+  }
+}
+
+.tratamientos-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.spa-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotosauna {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.fotosauna img {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 15rem;
+}
+
+.horarios-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  opacity: 88%;
+  display: flex;
+  width: 25.25rem;
+  height: 28.75rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.075rem;
+  line-height: 0.063rem;
+
+  button {
+      margin-top: 2rem;
+  }
+
+  h3 {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+  }
+
+  h4 {
+      font-size: 1.2rem;
+      font-weight: 500;
+  }
+
+  svg {
+      margin-bottom: 2rem;
+  }
+}
+
+.galery-button {
+  margin: 0 0 3rem 4rem;
+  padding: 1rem;
+}   
+
+.gal-imgs {
+  margin: 1rem 1rem 5rem 1rem;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  img {
+    width: 30%;
+    border-radius: 30px;
+    margin: 1rem;
+  }
+}
+
+/* RESPONSIVE 
+Términos & Condiciones (Móvil) */
+
+@media screen and (max-width: 430px) {
+
+  .sections-termscond span{
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .history-contact {
+    width: 90%;
+  }
+
+  .termscond-2 {
+    display: flex;
+    flex-direction: column;
+    img{
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  .ourhistory, .contact {
+    width: 85%;
+      h3 {
+          font-size: 16px;
+      }
+  }
+
+  .ourhistory {
+    margin-bottom: 18rem;
+  }
+
+/* RESPONSIVE SPA (Móvil) */
+
+  .intro-spa {
+      h2 {
+        font-size: 32px;
+      }
+  }
+
+  .h3-spa-title {
+    font-size: 20px;
+  }
+
+  .spa-container {
+    display: flex;
+    flex-direction: column;
+  
+    p {
+      width: 70%;
+      margin-left: 0.1rem;
+    }
+  }
+
+  .spa-container img {
+      width: 90%;
+      height: 90%;
+  }
+
+  .tratamientos h3 {
+    margin-top: 0.6rem;
+    margin-bottom: 4rem;
+  }
+
+  .tratamientos-container {
+    margin-right: 1rem;
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .tratamientos span {
+      margin-bottom: 12rem;
+  }
+
+  .spa-image-container {
+    img {
+      width: 100%;
+      height: 100%;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .horarios-container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      opacity: 90%;
+      display: flex;
+      max-width: 220px;
+      height: 13rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 24%;
+      left: 38%;
+      letter-spacing: 0.045rem;
+      line-height: 0.01rem;
+  
+      button {
+        padding:2%;
+        font-size: 10px;
+        margin-top: -20px;
+      }
+  
+      h3 {
+          font-size: 1rem;
+          margin-bottom: -1rem;
+      }
+  
+      h4 {
+          font-size: 12px;
+          font-weight: 500;
+      }
+  
+      svg {
+          position: relative;
+          top: 15%;
+          width: 70%;
+      }
+  }
+}
+
+/* Font media queries START */
+
+@media screen and (max-width: 431px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Font media queries END */

@@ -6,7 +6,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    height: 40rem;
+    height: 35rem;
 }
 
 .contenedorTexto{
@@ -49,7 +49,7 @@
     margin-top: -0.5rem;
 }
 
-@media (max-width: 768px){
+@media (max-width: 430px){
     
     .comillas{
         font-size: 2rem;

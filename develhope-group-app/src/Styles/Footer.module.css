@@ -1,193 +1,194 @@
 @import url(font.css);
 
-
-.footerContainer{
-    background: #213242;
-    width: 100%;
-    height: 35rem;
-
+.footerContainer {
+  background: #213242;
+  width: 100%;
+  height: 38rem;
+  padding-inline: 2rem;
 }
 
-.footer{
-    display: flex;
-    width: 95%;
-    height: 70%;
-    padding-inline: 2rem;
-    padding-top: 2rem;
-    align-items: center;
-    gap: 5rem;
+.footer {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  padding-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
 .nosotrosFooter,
-.reservasFooter{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5rem;
-    color: #FFF;
-    height: 100%;
+.reservasFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+  color: #fff;
+  height: 100%;
 }
 
-.redesFooter{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
-    color: #FFF;
-    height: 100%;
+.redesFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  color: #fff;
+  height: 100%;
+  cursor: pointer;
 }
 
-.downredes{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2rem;
+.downredes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-
-.titulo{
-    color: #FFF;
-    font-family: "Spline Sans", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-decoration: none;
-    margin-top: 2rem;
+.titulo {
+  color: #fff;
+  font-family: "Spline Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  margin-top: 2rem;
 }
 
+.titulo:hover {
+  color: #96cae9;
+}
 
 .downcontacto,
-.downreserva{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    height: 100%;
-
+.downreserva {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  height: 100%;
 }
 
-.links{
-    color: #FFF;
-    font-family: "Spline Sans Mono", monospace;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
+.links {
+  color: #fff;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
-.divisor{
-    width: 6px;
-    height: 25rem;
-    background: #FFF;
-    margin-top: -0.2rem;
+.links:hover {
+  color: #96cae9;
 }
 
-.svg{
-    width: 40px;
-    height: 40px;
-    fill: #E8B51A;
+.divisor {
+  width: 6px;
+  height: 25rem;
+  background: #fff;
+  margin-top: -0.2rem;
 }
 
-
-
-.bottomContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding-left: 2rem;
-    margin-top: 2rem;
-    gap: 2rem;
+.svg {
+  width: 40px;
+  height: 40px;
+  fill: #e8b51a;
 }
 
-.logo{
-    width: 8rem;
-    height: 100%;
-    margin-left: 0.5rem;
+.bottomContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  gap: 2rem;
 }
 
-
-.politicsContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 3rem;
-    height: 100%;
+.logo {
+  width: 8rem;
+  height: 100%;
+  margin-left: 0.5rem;
+  cursor: pointer;
 }
 
-.politics{
-    color: #FFF;
-    font-family: "Spline Sans Mono", monospace;
-    font-size: 0.7rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
+.politicsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+  height: 100%;
 }
 
-.politicstext{
-    color: #66829B;
-    font-family: "Spline Sans Mono", monospace;
-    font-size: 0.65rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.politics {
+  color: #fff;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
-
-
-
+.politicstext {
+  color: #66829b;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 0.65rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 @media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 50px;
+  }
 
-    .footer {
-        flex-direction: column; 
-        align-items: center;
-        padding: 0;
-        gap: 50px;
-    }
+  .footerContainer {
+    height: auto;
+  }
 
-    .footerContainer{
-        height: auto;
-    }
-    
-    .divisor{
-        width: 90%;
-        height: 3px;
-    }
+  .divisor {
+    width: 90%;
+    height: 3px;
+  }
 
-    .nosotrosFooter,
-    .reservasFooter,
-    .redesFooter {
-        align-items: center; 
-        text-align: center; 
-        gap: 3rem;
-    }
+  .nosotrosFooter,
+  .reservasFooter,
+  .redesFooter {
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
 
+  .downredes,
+  .downreserva,
+  .downcontacto {
+    align-items: center;
+    gap: 1rem;
+  }
 
-    .downredes,
-    .downreserva,
-    .downcontacto {
-        align-items: center;
-        gap: 1rem;
-    }
+  .titulo {
+    margin-top: 0.2rem;
+  }
 
-    .titulo {
-        margin-top: 0.2rem; 
-    }
+  .bottomContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
 
-
-    .bottomContainer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap:3rem;
-        padding: 1rem;
-        margin-top: 4rem;
-    }
-
-    .placeholder {
-        display: none;
-    }
+  .placeholder {
+    display: none;
+  }
 }
 
+@media screen and (max-width: 431px) {
+    .footerContainer {
+        padding: 2rem;
+    }    
+}

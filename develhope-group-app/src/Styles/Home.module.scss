@@ -1,0 +1,273 @@
+@import url(App.css);
+
+.home-container a:hover {
+  text-decoration: underline;
+  color: var(--blue300);
+}
+
+.home-container a:active {
+  color: var(--golden100);
+}
+
+.home-container a:visited {
+  color: var(--golden600);
+}
+
+.home-container {
+  margin-bottom: 5rem;
+}
+
+/* HOME TITLE SECTION START */
+
+.home-title {
+  width: auto;
+  height: fit-content;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 40vh;
+  padding-left: 5vw;
+  z-index: 3;
+}
+
+.home-title h1 {
+  font-family: "PlayfairDisplay-Variable-Italic";
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.home-title h1,
+.home-title p {
+  color: rgb(255, 255, 255);
+}
+
+.home-title h1 {
+  font-size: 3rem;
+}
+
+.home-banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.home-title p {
+  margin-top: 0.1rem;
+}
+
+.home-title a {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--golden300);
+}
+
+/* HOME TITLE SECTION END */
+
+.home-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 431px) {
+  .home-description {
+    width: 80vw;
+    margin: auto;
+    margin-top: 2rem;
+  }  
+}
+
+.divisor {
+  width: 90vw;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+// Restaurante
+
+.acceso-restaurante {
+  width: auto;
+  height: 110vh;
+  padding: 4rem;
+  background-image: url(src/Assets/Img/piscina.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: saturate(150%);
+}
+
+.acceso-restaurante-wrapper {
+  z-index: 1;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.27);
+  border-radius: 1rem;
+}
+
+.acceso-restaurante-img {
+  height: 100%;
+  width: 60%;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.acceso-restaurante-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 3rem;
+  width: 60%;
+  gap: 3rem;
+}
+
+.acceso-restaurante-title {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  color: #213242;
+}
+
+.acceso-restaurante-title p {
+  line-height: 1.5rem;
+  color: #213242;
+}
+
+.acceso-restaurante-content h1 {
+  font-family: "SplineSansMono-Variable";
+  font-size: 2rem;
+}
+
+.restaurante-horario {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.restaurante-horario-text {
+  line-height: 2rem;
+  color: #213242;
+}
+
+.restaurante-reservar {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #213242;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+}
+
+.restaurante-reservar:hover {
+  background-color: var(--golden300);
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 431px) {
+  .acceso-restaurante {
+    height: 100%;
+  }
+  .acceso-restaurante-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .acceso-restaurante-img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .acceso-restaurante-content {
+    width: 100%;
+    padding: 3rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .acceso-restaurante-title {
+    align-items: center;
+  }
+
+  .acceso-restaurante-title h1 {
+    text-align: center;
+  }
+}
+
+// Restaurante end
+
+// Opiniones
+
+.opiniones-clientes {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.opiniones-wrapper {
+  background-image: url(../Assets/Img/background-sand-plants.jpg);
+  backdrop-filter: blur(3.79);
+  -webkit-backdrop-filter: blur(10px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.opiniones-content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.opiniones-content h1 {
+  margin: auto;
+  width: 30vw;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  font-family: "FairplayDisplay-Variable";
+  color: #213242;
+  text-align: center;
+}
+
+.ver-mas {
+  margin: auto;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #213242;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ver-mas:hover {
+  background-color: var(--golden300);
+  text-decoration: none !important;
+}

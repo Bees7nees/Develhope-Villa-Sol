@@ -1,0 +1,26 @@
+
+:root{
+    --color-primario:#213242;
+    --color-primario-transparecia:#213242ce;
+    --color-amarillo-transparencia:#b08812c0;
+    --color-amarillo:#B08912;
+}
+.section{
+ font-family: "Playfair Display";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.7;
+    /* margin: 10% 0; */
+}
+.section div{
+width: 70%;
+}
+.titulo{
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size:3rem;
+    margin-bottom: 2ch; 
+    color: var(--color-primario);
+}
