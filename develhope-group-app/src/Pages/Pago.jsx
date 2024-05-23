@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../Styles/Pago.module.scss";
 import { GlobalContext } from "../Components/GlobalVariable";
 import { UserMyContext } from "/src/globalvariable/usuarioglobal.jsx";
-//import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
+
 export default function Pago() {
   const { globaluser, setGlobaluser } = useContext(UserMyContext);
   const navigate = useNavigate();
@@ -33,23 +34,7 @@ export default function Pago() {
     año: "",
     cvc: "",
   };
-/*  emailjs
-      .sendForm(
-        "service_i5nnbia",
-        "template_6ubte7n",
-        formRef.current,
-        "z1Wn810fAxFwZ6Wmz"
-      )
-      .then(
-        () => {
-          console.log("SUCCESS");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
 
-  };*/
   const [formData, setFormData] = useState(initialFormData);
   const [formSubmitted, setFormSubmitted] = useState(false); // Nuevo estado
 
@@ -65,12 +50,42 @@ export default function Pago() {
     return Object.values(formData).every((value) => value.trim() !== "");
   };
 
+  const formRef = useRef(); //Necesario para email.js
+
   const handleSubmitPago = (e) => {
     e.preventDefault();
     if (isFormValid()) {
-      setFormSubmitted(true); 
-      setFormData(initialFormData); 
+      setFormSubmitted(true);
+      setFormData(initialFormData);
       setPurchaseDone(true);
+
+      /* EmailJS config */
+
+      emailjs
+        .sendForm(
+          "service_i5nnbia",
+          "template_6ubte7n",
+          formRef.current,
+          "z1Wn810fAxFwZ6Wmz"
+        )
+        // .then(
+        //   sendForm(
+        //     "service_i5nnbia",
+        //     "template_ehqmjum",
+        //     formRef.current,
+        //     "z1Wn810fAxFwZ6Wmz"
+        //   )
+        // )
+        .then(
+          () => {
+            console.log("SUCCESS: Email sent to client");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+
+      /* EmailJS config end */
     }
   };
 
@@ -88,7 +103,11 @@ export default function Pago() {
         <h2 className={styles.titlePago}>Detalles del pago</h2>
         <div className={styles.generalInfoPago}>
           <div className={styles.formPayment}>
-            <form className={styles.formPayment2} onSubmit={handleSubmitPago}>
+            <form
+              className={styles.formPayment2}
+              onSubmit={handleSubmitPago}
+              ref={formRef}
+            >
               <div className={styles.setPago}>
                 <p className={styles.subtitlePagos}>NOMBRE</p>
                 <div className={styles.inputName}>
