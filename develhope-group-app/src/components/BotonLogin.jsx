@@ -48,7 +48,7 @@ export default function BotonLogin() {
   return (
     <div className={style.contenedor_btnLogin}>
       <div className={style.Boton_Login} onClick={handleClickBotton }>
-        {globaluser.login &&<span> `Hola, ${globaluser.name}!`</span>}
+        {globaluser.login &&<span> `Hola, {globaluser.name}!`</span>}
         <button
           style={{
             border: "none",
