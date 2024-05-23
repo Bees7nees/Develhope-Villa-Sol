@@ -28,6 +28,7 @@ import vistas2 from "../Assets/Img/vistas2.jpg"
 import {Context} from "/src/Components/Language"
 import { FormattedMessage } from 'react-intl';
 import { useContext } from "react";
+import { Zoom, Fullscreen } from "yet-another-react-lightbox/plugins";
 
 export default function Galery() {
 
@@ -69,6 +70,18 @@ export default function Galery() {
                     { src: vistas },
                     { src: vistas2 }
                 ]}
+                plugins={[Zoom, Fullscreen]}
+                zoom={{
+                    maxZoomPixelRatio: 2,
+                    zoomInMultiplier: 10,
+                    doubleTapDelay: 300,
+                    doubleClickDelay: 300,
+                    doubleClickMaxStops: 2,
+                    keyboardMoveDistance: 50,
+                    wheelZoomDistanceFactor: 100,
+                    pinchZoomDistanceFactor: 100,
+                    scrollToZoom: true,
+                }}
             />
 
             <div className="gal-imgs">
