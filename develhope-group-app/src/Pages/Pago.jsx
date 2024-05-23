@@ -1,13 +1,11 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../Styles/Pago.module.scss";
 import { GlobalContext } from "../Components/GlobalVariable";
-import emailjs from "@emailjs/browser";
-import { UserMyContext } from "/src/globalvariable/usuarioglobal.jsx"
-
+import { UserMyContext } from "/src/globalvariable/usuarioglobal.jsx";
+//import emailjs from "@emailjs/browser";
 export default function Pago() {
   const { globaluser, setGlobaluser } = useContext(UserMyContext);
-  const formRef = useRef(null);
   const navigate = useNavigate();
   const {
     textCoupon,
@@ -19,7 +17,6 @@ export default function Pago() {
     finalPrice,
     couponOK,
     setPurchaseDone,
-    purchaseDone,
   } = useContext(GlobalContext);
 
   const formattedFirstDate =
@@ -27,41 +24,16 @@ export default function Pago() {
   const formattedLastDate =
     lastDate instanceof Date ? lastDate.toLocaleDateString() : lastDate;
 
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     nombre: "",
     apellidos: "",
     numeroCuenta: "",
+    email: "",
     mes: "",
     año: "",
     cvc: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
   };
-
-  const isFormValid = () => {
-    return Object.values(formData).every((value) => value.trim() !== "");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isFormValid()) {
-      console.log("ha llegado aqui");
-      setPurchaseDone(true);
-    }
-  };
-
-  const handleButtonClick = () => {
-    if (formRef.current) {
-      formRef.current.submit();
-    }
-
-    emailjs
+/*  emailjs
       .sendForm(
         "service_i5nnbia",
         "template_6ubte7n",
@@ -77,14 +49,38 @@ export default function Pago() {
         }
       );
 
+  };*/
+  const [formData, setFormData] = useState(initialFormData);
+  const [formSubmitted, setFormSubmitted] = useState(false); // Nuevo estado
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const isFormValid = () => {
+    return Object.values(formData).every((value) => value.trim() !== "");
+  };
+
+  const handleSubmitPago = (e) => {
+    e.preventDefault();
+    if (isFormValid()) {
+      setFormSubmitted(true); 
+      setFormData(initialFormData); 
+      setPurchaseDone(true);
+    }
   };
 
   useEffect(() => {
-    if (purchaseDone) {
+    if (formSubmitted) {
       alert("Pago realizado correctamente");
       navigate("/");
+      setFormSubmitted(false);
     }
-  }, [purchaseDone, navigate]);
+  }, [formSubmitted, navigate]);
 
   return (
     <div className={styles.backgroundPago}>
@@ -92,11 +88,7 @@ export default function Pago() {
         <h2 className={styles.titlePago}>Detalles del pago</h2>
         <div className={styles.generalInfoPago}>
           <div className={styles.formPayment}>
-            <form
-              className={styles.formPayment2}
-              onSubmit={handleSubmit}
-              ref={formRef}
-            >
+            <form className={styles.formPayment2} onSubmit={handleSubmitPago}>
               <div className={styles.setPago}>
                 <p className={styles.subtitlePagos}>NOMBRE</p>
                 <div className={styles.inputName}>
@@ -132,6 +124,19 @@ export default function Pago() {
                     placeholder="Numero de cuenta"
                     className={styles.placeholderPago}
                     value={formData.numeroCuenta}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className={styles.setPago}>
+                <p className={styles.subtitlePagos}>EMAIL</p>
+                <div className={`${styles.inputName} ${styles.nDeCuenta}`}>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className={styles.placeholderPago}
+                    value={formData.email}
                     onChange={handleChange}
                   />
                 </div>
@@ -175,6 +180,13 @@ export default function Pago() {
                   />
                 </div>
               </div>
+              <button
+                className={styles.buttonSubmit}
+                type="submit"
+                disabled={!isFormValid()}
+              >
+                Realizar pago
+              </button>
             </form>
           </div>
           <div className={styles.infoPayment}>
@@ -213,14 +225,6 @@ export default function Pago() {
             </div>
           </div>
         </div>
-        <button
-          onClick={handleButtonClick}
-          className={styles.buttonSubmit}
-          type="button"
-          disabled={!isFormValid()}
-        >
-          Realizar pago
-        </button>
       </div>
     </div>
   );
