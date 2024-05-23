@@ -24,14 +24,15 @@ export default function CounterHost() {
       setNumKids((prevCounter) => prevCounter - 1);
     }
   };
-
+  let textAdult = numAdult === 1 ? 'adulto' : 'adultos';
+  let textKids = numKids === 1 ? 'niño' : 'niños';
   return (
     <div className={styles.counterDiv}>
-      <p>Adultos: {numAdult}</p>
+      <p>{textAdult}: {numAdult}</p>
       <button className={styles.counterButton} onClick={sumaAdult}>+</button>
       <button className={styles.counterButton} onClick={restaAdult}>-</button>
 
-      <p>Niños: {numKids}</p>
+      <p>{textKids}: {numKids}</p>
       <button className={styles.counterButton} onClick={sumaChildren}>+</button>
       <button className={styles.counterButton} onClick={restaChildren}>-</button>
     </div>

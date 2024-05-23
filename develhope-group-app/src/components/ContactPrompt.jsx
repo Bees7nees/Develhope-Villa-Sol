@@ -5,7 +5,7 @@ import { BsEnvelopeAt } from "react-icons/bs";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 ContactPrompt.propTypes = {
   nameInput: PropTypes.string,
@@ -63,20 +63,20 @@ export function ContactPrompt({ nameInput, emailInput }) {
       setFormData(updatedFormData);
       localStorage.setItem("formData", JSON.stringify(updatedFormData));
     } catch (error) {
-      console.error("Error storing form data:", error);
+      console.error("Error storing contact form data:", error);
     }
 
     emailjs
-      .sendForm('service_o1z5ae4', 'template_9t7i90n', formRef.current, {
-        publicKey: '20JS_vGzAR3qUxTjq',
+      .sendForm("service_o1z5ae4", "template_9t7i90n", formRef.current, {
+        publicKey: "20JS_vGzAR3qUxTjq",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log("SUCCESS!");
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.log("FAILED...", error.text);
+        }
       );
   };
 

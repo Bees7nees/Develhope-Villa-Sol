@@ -1,11 +1,14 @@
 import Room from "../Components/Room";
 import styles from "../Styles/Rooms.module.css";
 import { useState } from "react";
-import classes from "/src/Styles/SubNav.module.css"
-import Difuminado from "/src/Components/Difuminado"
+import classes from "/src/Styles/SubNav.module.css";
+import Difuminado from "/src/Components/Difuminado";
+import { FormattedMessage } from 'react-intl';
 
 
 export default function Rooms() {
+
+
   const [seccion, setseccion] = useState("todas");
   // const [selectedStyle, setSelectedStyle] = useState({
   //   todas: true,
@@ -37,7 +40,7 @@ export default function Rooms() {
           onClick={handlespan}
         >
           {" "}
-          TODAS{" "}
+          <FormattedMessage id="todas"/>{" "}
         </li>
         <span className={classes.divisor}></span>
         <li
@@ -45,7 +48,7 @@ export default function Rooms() {
           className={seccion === "estandar" ? `${styles.selected} ${styles.navlinks}` : styles.navlinks}
           onClick={handlespan}
         >
-          ESTÁNDAR{" "}
+          <FormattedMessage id="estandarLink"/>{" "}
         </li>
         <span className={classes.divisor}></span>
         <li

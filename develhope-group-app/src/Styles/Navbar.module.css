@@ -51,6 +51,23 @@
 }
 
 
+.langButton{
+    border: 2px solid  #53718b;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    background-color: var(--white);
+    color: #53718b;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.langButton:hover{
+    color: white;
+    background: #53718b;
+    transition: all 0.5s ease;
+}
+
+
 @media (max-width: 768px){
 
     .navLinks,

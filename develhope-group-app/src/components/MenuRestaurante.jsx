@@ -1,24 +1,39 @@
 import styles from "../Styles/MenuRestaurante.module.scss";
 import { BsArrowRightCircle } from "react-icons/bs";
+import {Context} from "/src/Components/Language"
+import { FormattedMessage } from 'react-intl';
+import { useContext } from "react";
 
 export default function MenuRestaurante() {
+
+  const context = useContext(Context);
+
+
   return (
     <div className={styles.restaurantDiv}>
       <div className={styles.menuTitleDiv}>
-        <h1 className={styles.menuTitle}>MENUS</h1>
+        <h1 className={styles.menuTitle}>
+          <FormattedMessage id="menus"/>
+        </h1>
       </div>
       <div className={styles.bodyRestaurantMenu}>
         <div className={styles.column}>
           <div className={styles.row}>
-            <h2 className={styles.menuTypes}>DESAYUNO</h2>
+            <h2 className={styles.menuTypes}>
+              <FormattedMessage id="desayuno"/>
+            </h2>
             <BsArrowRightCircle className={styles.arrowIcon} />
           </div>
           <div className={styles.row}>
-            <h2 className={styles.menuTypes}>MENÚ PRINCIPAL</h2>
+            <h2 className={styles.menuTypes}>
+                <FormattedMessage id="principal"/>
+            </h2>
             <BsArrowRightCircle className={styles.arrowIcon} />
           </div>
           <div className={styles.row}>
-            <h2 className={styles.menuTypes}>POSTRES</h2>
+            <h2 className={styles.menuTypes}>
+              <FormattedMessage id="postres"/>
+            </h2>
             <BsArrowRightCircle className={styles.arrowIcon} />
           </div>
         </div>
@@ -28,11 +43,15 @@ export default function MenuRestaurante() {
             <BsArrowRightCircle className={styles.arrowIcon} />
           </div>
           <div className={styles.row}>
-            <h2 className={styles.menuTypes}>BUFFET/MERIENDA</h2>
+            <h2 className={styles.menuTypes}>
+              <FormattedMessage id="merienda"/>
+            </h2>
             <BsArrowRightCircle className={styles.arrowIcon} />
           </div>
           <div className={styles.row}>
-            <h2 className={styles.menuTypes}>BAR</h2>
+            <h2 className={styles.menuTypes}>
+              <FormattedMessage id="bar"/>
+            </h2>
             <BsArrowRightCircle className={styles.arrowIcon} />
           </div>
         </div>

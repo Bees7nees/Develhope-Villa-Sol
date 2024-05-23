@@ -13,6 +13,7 @@
     font-weight: 800;
     letter-spacing: 2.25px;
     color: #213242;
+    margin-top: 3.5rem;
   }
 .checkedDiv {
     background-color: aquamarine;
@@ -32,6 +33,10 @@
     display: flex;
     justify-content: center;
     margin: 20px;
+}
+.buttonBooking.disabled {
+  pointer-events: none;
+  opacity: 0.2;
 }
 
   @media (max-width: 431px) {

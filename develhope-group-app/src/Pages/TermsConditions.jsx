@@ -1,12 +1,17 @@
 import fotomarketing from  "../Assets/Img/fotomarketing.jpg"
 import BookingMenu from "../Components/BookingMenu";
+import { FormattedMessage } from 'react-intl';
 
 function TermsConditions () {
+
+
     return (
         <>
         <BookingMenu />
         <div className="sections-termscond">
-            <h1>Términos & Condiciones</h1>
+            <h1>
+                <FormattedMessage id="condiciones"/>
+            </h1>
             <section>1. Reservas y cancelaciones</section> <span>Todas las reservas en Villa del Sol están sujetas a disponibilidad y deben ser confirmadas mediante un pago anticipado o una tarjeta de crédito válida. Se aplicarán cargos por cancelación según nuestras políticas establecidas.</span>
             <section>2. Registro de Entrada y Salida</section> <span>El registro de entrada se realiza a partir de las 15:00 horas y el de salida antes de las 12:00 horas del día de partida. Se pueden aplicar cargos adicionales por check-in anticipado o check-out tardío, sujeto a disponibilidad.</span>
             <section>3. Política de Pagos</section> <span>Los huéspedes deben proporcionar una tarjeta de crédito válida al momento del registro de entrada para cubrir los gastos adicionales durante su estadía. Se realizará una preautorización para cubrir posibles cargos adicionales.</span>
