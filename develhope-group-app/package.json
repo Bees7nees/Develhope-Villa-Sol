@@ -23,6 +23,7 @@
     "react-dom": "^18.2.0",
     "react-email": "^1.10.1",
     "react-i18next": "^14.1.1",
+    "react-intl": "^6.6.8",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "stripe": "^15.5.0",
